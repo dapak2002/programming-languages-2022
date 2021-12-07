@@ -1,0 +1,100 @@
+:setLang LamMem
+:env
+:load test/circular-list.lc 
+:env
+:load test/circular-list.lc 
+:setLang LamMem
+ptr := init;;
+:env
+init;;
+:env
+val init = let val a = new [] in let val b = new [] in a := new []; b := [2,a] ; a := [3,b] ; a ;;
+:env
+init;;
+:env
+init;;
+init
+val init = let val a = new [] in let val b = new [] in a := new []; b := [2,a] ; a := [3,b] ;;
+val init = let val a = new [] in a := [1,"NULL"]; val b = new []; b := [2,a] ; a := [3,b] ;;
+val init = val a = new []; a := [1,"NULL"]; val b = new []; b := [2,a] ; a := [3,b] ;;
+    a := [3,b] 
+    b := [2,a] ;
+    val b = new [];
+    a := [1,"NULL"];
+    val a = new [];
+val init = 
+!ptr;;
+:env
+ptr;;
+case !(!ptr) of { [e,x] -> ptr := x};;
+case !(!ptr) of { [_,x] -> ptr := x};;
+!(!ptr);;
+!ptr;;
+ptr;;
+:env
+ptr := a;;
+val ptr = new [];;
+:env
+a := [3,b];;
+b := [2,a];;
+val b = new [];;
+a := [1,"NULL"];;
+val a = new [];;
+a := [1,"NULL"];;
+:env
+val v = new [] ;;
+!b;;
+:env
+val b = 3;;
+:env
+:en
+a := 3;;
+:env
+val a = new [];;
+:env
+val a = 3;;
+val a := 3;;
+:env
+val a = new [];;
+:env
+ls
+val a = [];;
+:env
+val a = new [];;
+:env
+:load test/linked-list.lc 
+ls
+:env
+val a = cons 1 nil;;
+:env
+:load test/linked-list.lc 
+:setLang LamMem
+:help
+:hel;
+:setLang LamMem
+:help
+length [1,2];;
+length
+length l1;;
+length l1
+val l1 = cons 1 nil ;;
+:env
+length l1;;
+:load test/linked-list.lc 
+lengthRec l1;;
+length l1;;
+:env
+nil;;
+:env
+val l1 = cons 1 nil ;;
+length l1;;
+:env
+head (tail ! l1) := l1 ;;
+head (tail ! l1) ;;
+head tail ! l1 ;;
+tail ! l1 := l1;;
+tail ! l1;;
+head ! l1;;
+! l1;;
+:env
+val l1 = cons 1 nil;;

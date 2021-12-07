@@ -1,0 +1,59 @@
+src/LamFunSyntax.hs:12:3-88: Splicing declarations
+    singletons
+      [d| data Version_aDFp
+            = LamCBN_aDFq |
+              LamCBV_aDFr |
+              LamNat_aDFs |
+              LamRec_aDFt |
+              LamMem_aDFu |
+              LamArray_aDFv |]
+  ======>
+    data Version_aIJR
+      = LamCBN_aIJS |
+        LamCBV_aIJT |
+        LamNat_aIJU |
+        LamRec_aIJV |
+        LamMem_aIJW |
+        LamArray_aIJX
+    type LamCBNSym0 = LamCBN_aIJS
+    type LamCBVSym0 = LamCBV_aIJT
+    type LamNatSym0 = LamNat_aIJU
+    type LamRecSym0 = LamRec_aIJV
+    type LamMemSym0 = LamMem_aIJW
+    type LamArraySym0 = LamArray_aIJX
+    data instance Sing :: Version_aIJR -> ghc-prim-0.5.3:GHC.Types.Type
+      where
+        SLamCBN :: Sing LamCBN_aIJS
+        SLamCBV :: Sing LamCBV_aIJT
+        SLamNat :: Sing LamNat_aIJU
+        SLamRec :: Sing LamRec_aIJV
+        SLamMem :: Sing LamMem_aIJW
+        SLamArray :: Sing LamArray_aIJX
+    type SVersion =
+        (Sing :: Version_aIJR -> ghc-prim-0.5.3:GHC.Types.Type)
+    instance SingKind Version_aIJR where
+      type Demote Version_aIJR = Version_aIJR
+      fromSing SLamCBN = LamCBN_aIJS
+      fromSing SLamCBV = LamCBV_aIJT
+      fromSing SLamNat = LamNat_aIJU
+      fromSing SLamRec = LamRec_aIJV
+      fromSing SLamMem = LamMem_aIJW
+      fromSing SLamArray = LamArray_aIJX
+      toSing LamCBN_aIJS = SomeSing SLamCBN
+      toSing LamCBV_aIJT = SomeSing SLamCBV
+      toSing LamNat_aIJU = SomeSing SLamNat
+      toSing LamRec_aIJV = SomeSing SLamRec
+      toSing LamMem_aIJW = SomeSing SLamMem
+      toSing LamArray_aIJX = SomeSing SLamArray
+    instance SingI LamCBN_aIJS where
+      sing = SLamCBN
+    instance SingI LamCBV_aIJT where
+      sing = SLamCBV
+    instance SingI LamNat_aIJU where
+      sing = SLamNat
+    instance SingI LamRec_aIJV where
+      sing = SLamRec
+    instance SingI LamMem_aIJW where
+      sing = SLamMem
+    instance SingI LamArray_aIJX where
+      sing = SLamArray

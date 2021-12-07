@@ -1,0 +1,839 @@
+
+==================== FINAL INTERFACE ====================
+2019-11-21 22:26:17.614188 UTC
+
+interface LamFun-3.14.1-1NElG62CogO50XNaLIVWxW:LamFunParser 8064
+  interface hash: de2a5b78d22f2540deb06156d6e2e652
+  ABI hash: 3c4af5b35322123306b55c51e2e401f8
+  export-list hash: 8550250ae9fee5b1abd749e75cb7bfcc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d1a0d43fa8c8a041d5c583a7951527d6
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  LamFunParser.expr_Grammar
+  LamFunParser.parse
+  LamFunParser.program_Grammar
+  LamFunLexer.Token|{unTok}
+module dependencies: LamFunLexer LamFunSyntax
+package dependencies: Earley-0.13.0.1 ListLike-4.6 array-0.5.3.0
+                      base-4.12.0.0 binary-0.8.6.0 bytestring-0.10.8.2 containers-0.6.0.1
+                      deepseq-1.4.4.0 dlist-0.8.0.5 fmlist-0.9.2 ghc-boot-th-8.6.4
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0 mtl-2.2.2
+                      pretty-1.1.3.6 primitive-0.6.4.0 safe-0.3.17 singletons-2.5.1
+                      string-conv-0.1.2 syb-0.7 template-haskell-2.14.0.0 text-1.2.3.1
+                      th-abstraction-0.2.11.0 th-desugar-1.9 th-expand-syns-0.4.4.0
+                      th-lift-0.7.11 th-lift-instances-0.1.12 th-orphans-0.13.6
+                      th-reify-many-0.1.8 transformers-0.5.6.2
+                      unordered-containers-0.2.9.0 utf8-string-1.0.1.1 vector-0.12.0.2
+orphans: singletons-2.5.1:Data.Singletons.Prelude.Applicative
+         ListLike-4.6:Data.ListLike.Instances
+         ListLike-4.6:Data.ListLike.Text.Builder
+         ListLike-4.6:Data.ListLike.Text.Text
+         ListLike-4.6:Data.ListLike.Text.TextLazy
+         ListLike-4.6:Data.ListLike.UTF8
+         ListLike-4.6:Data.ListLike.Vector.Storable
+         ListLike-4.6:Data.ListLike.Vector.Unboxed
+         ListLike-4.6:Data.ListLike.Vector.Vector
+         ListLike-4.6:Data.ListLike.DList ListLike-4.6:Data.ListLike.FMList
+         hashable-1.2.7.0:Data.Hashable.Generic
+         singletons-2.5.1:Data.Singletons
+         singletons-2.5.1:Data.Singletons.Prelude.Semigroup
+         singletons-2.5.1:Data.Singletons.Prelude.Const
+         singletons-2.5.1:Data.Singletons.Prelude.Functor
+         singletons-2.5.1:Data.Singletons.Prelude.Identity
+         singletons-2.5.1:Data.Singletons.Prelude.Monoid
+         singletons-2.5.1:Data.Singletons.Prelude.Semigroup.Internal
+         singletons-2.5.1:Data.Singletons.TypeLits
+         singletons-2.5.1:Data.Singletons.ShowSing
+         singletons-2.5.1:Data.Singletons.TypeLits.Internal
+         singletons-2.5.1:Data.Singletons.Prelude.Ord
+         singletons-2.5.1:Data.Singletons.Prelude.Instances
+         singletons-2.5.1:Data.Singletons.Decide
+         th-orphans-0.13.6:Language.Haskell.TH.Instances
+         th-lift-0.7.11:Language.Haskell.TH.Lift
+         th-lift-instances-0.1.12:Instances.TH.Lift
+         text-1.2.3.1:Data.Text.Lazy vector-0.12.0.2:Data.Vector.Unboxed
+         vector-0.12.0.2:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         syb-0.7:Data.Generics.Instances text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: LamFun-3.14.1-1NElG62CogO50XNaLIVWxW:LamFunLexer
+                         LamFun-3.14.1-1NElG62CogO50XNaLIVWxW:LamFunSyntax
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.Graph
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         dlist-0.8.0.5:Data.DList ghc-boot-th-8.6.4:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.4:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         singletons-2.5.1:Data.Singletons
+                         singletons-2.5.1:Data.Singletons.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Applicative
+                         singletons-2.5.1:Data.Singletons.Prelude.Base
+                         singletons-2.5.1:Data.Singletons.Prelude.Bool
+                         singletons-2.5.1:Data.Singletons.Prelude.Const
+                         singletons-2.5.1:Data.Singletons.Prelude.Either
+                         singletons-2.5.1:Data.Singletons.Prelude.Enum
+                         singletons-2.5.1:Data.Singletons.Prelude.Eq
+                         singletons-2.5.1:Data.Singletons.Prelude.Foldable
+                         singletons-2.5.1:Data.Singletons.Prelude.Functor
+                         singletons-2.5.1:Data.Singletons.Prelude.Identity
+                         singletons-2.5.1:Data.Singletons.Prelude.Instances
+                         singletons-2.5.1:Data.Singletons.Prelude.IsString
+                         singletons-2.5.1:Data.Singletons.Prelude.List.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.List.Internal.Disambiguation
+                         singletons-2.5.1:Data.Singletons.Prelude.Maybe
+                         singletons-2.5.1:Data.Singletons.Prelude.Monad.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Monoid
+                         singletons-2.5.1:Data.Singletons.Prelude.Num
+                         singletons-2.5.1:Data.Singletons.Prelude.Ord
+                         singletons-2.5.1:Data.Singletons.Prelude.Semigroup
+                         singletons-2.5.1:Data.Singletons.Prelude.Semigroup.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Show
+                         singletons-2.5.1:Data.Singletons.Prelude.Traversable
+                         singletons-2.5.1:Data.Singletons.Prelude.Tuple
+                         singletons-2.5.1:Data.Singletons.Syntax
+                         singletons-2.5.1:Data.Singletons.TypeLits
+                         singletons-2.5.1:Data.Singletons.TypeLits.Internal
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         th-abstraction-0.2.11.0:Language.Haskell.TH.Datatype
+                         th-desugar-1.9:Language.Haskell.TH.Desugar.AST
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         vector-0.12.0.2:Data.Vector vector-0.12.0.2:Data.Vector.Primitive
+                         vector-0.12.0.2:Data.Vector.Storable
+                         vector-0.12.0.2:Data.Vector.Unboxed
+                         vector-0.12.0.2:Data.Vector.Unboxed.Base
+import  -/  Earley-0.13.0.1:Text.Earley 2b15b335010ee7193592897f958da502
+import  -/  Earley-0.13.0.1:Text.Earley.Derived c5289220523f0dcde59bc06914f1a495
+import  -/  Earley-0.13.0.1:Text.Earley.Grammar 80c0a1674533e1a0a7f8b790a7a5bceb
+import  -/  Earley-0.13.0.1:Text.Earley.Mixfix add91d1fb86ad88e81f02b6f6a79a334
+import  -/  Earley-0.13.0.1:Text.Earley.Parser.Internal abff4937ef77425723d2361ccb27f0c0
+import  -/  LamFunLexer 909df15affead5866583bc209f6af47c
+  exports: f670cb252481636297bb0f04d00aa46e
+  Token 0bb0e4d2077aae80c469f2ac62ee2d8c
+  Token f2c5a98949fb07f270f36c9e0675ac4d
+  colEnd f2c5a98949fb07f270f36c9e0675ac4d
+  colStart f2c5a98949fb07f270f36c9e0675ac4d
+  defaultPosition 484eeb2c5fd9547c6e3ba606d3968c2d
+  reservedKeywords f75dac88c65ec50fd1a0db76c20706a8
+  rowEnd f2c5a98949fb07f270f36c9e0675ac4d
+  rowStart f2c5a98949fb07f270f36c9e0675ac4d
+  tokenize a8ff9fb97bdcc99b4ddb387e131c685b
+  unTok f2c5a98949fb07f270f36c9e0675ac4d
+import  -/  LamFunSyntax ac1b0607f12c31259d1294cbc218e4ef
+  exports: dc40609dbddb7fe2711252054a4d6645
+  App_ 44cd2c47e39a557ea57808831e7e7059
+  Calculate_ 0a69ea79455ab744bf8f044173732400
+  Defn_ 2242581a46528d9da58ce752528b158c
+  Expr_ 2242581a46528d9da58ce752528b158c
+  Lambda_ 6ab41c492427c42269ff200154ea45d3
+  Program_ 8f11ad5d9dc6600f48b5495879bef02f
+  SLamArray 60dfda707a5a306895a04561379cbd75
+  SLamCBN f83f723b5c317986b6dfadbd0f976773
+  SLamCBV 4fd404b6d5ac476499cb80cb22349ea1
+  SLamMem 5c963575ea2daa0c39491a3584ce4b8c
+  SLamNat dc60e5a191d9c23ea13e08bb48f2df9f
+  SLamRec 4b8a502ef5f01d618fa650ae16307e46
+  Val_ f5ba880bb54794daeed35b43978231bf
+  Variable_ 85c54283b4978f64449bb6a4830a2240
+  unsafeMkAssign_ 995db1631fe4479f80310cd6fc04fa4e
+  unsafeMkBoolean_ b20e129295fd38da17d4c094a634706b
+  unsafeMkCase_ fa10a087001f645c93126e03259a0232
+  unsafeMkCons_ b39fc687b79142fa1c67c2da0d6180ea
+  unsafeMkContents_ 3c6b31440b0a7358e4f784511faf04d6
+  unsafeMkDefine_ f82870ef2adfd61f68f44092aeec1477
+  unsafeMkLet_ 9baa1f65825bd1ef9dff63d288bd6a49
+  unsafeMkNil_ a5894306a5bfb2e9361e09f77439d883
+  unsafeMkNumber_ 754ebee262867a7f8e536163178040fb
+  unsafeMkRec_ 90abe387d482aa8ab3bb2e3ffc05cf62
+  unsafeMkSequence_ 4e42ec4fcd77eb735e00e34f16e31e50
+  unsafeMkStrLit_ f333fc2982715cf3276c924661f100af
+  unsafeMkWhile_ 2cde02854edbcee3f7b542ebac75329a
+import  -/  base-4.12.0.0:Control.Applicative 2ae514eb141d45774730765c61bb41c0
+import  -/  base-4.12.0.0:Control.Arrow cda881e865dd3141fb08ed18f2efcca7
+import  -/  base-4.12.0.0:Data.Char 74f67fe9150a102afa18766e840f6832
+import  -/  base-4.12.0.0:Data.Either 423bee738f25e5ee983d072216009be8
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.String fa00d4c51cd8d22ee4f54a25f9e9c97d
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Unicode 87726eb81a3f9c9b22160a0afd5dc56a
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  containers-0.6.0.1:Data.Set afd5ab7eac5658da18a4fffc2d1b683c
+import  -/  containers-0.6.0.1:Data.Set.Internal a9b0d2c3208f9a74ef7f480a7813af2a
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  hashable-1.2.7.0:Data.Hashable 52de7ce057cbb2207689571a9d126e28
+import  -/  singletons-2.5.1:Data.Singletons 64c319757e65d960ff384963d903d8c8
+import  -/  singletons-2.5.1:Data.Singletons.Internal 3383ecc7c6d9935f4cf18f0b26ad969a
+import  -/  string-conv-0.1.2:Data.String.Conv 5e3d04602479634a311e8f9d4932abfb
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.Internal 537e168590e8068f673f691833f78483
+import  -/  text-1.2.3.1:Data.Text.Show b788b7edd0f190b1a7c4f4aba0e35f18
+import  -/  unordered-containers-0.2.9.0:Data.HashSet cbd07cbc3d5c6a0b2f41f60d9e126613
+7a16d265d8709e31206b884c84fbd137
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   LamFunParser.$trModule3
+                   LamFunParser.$trModule1) -}
+3459c9c605a5f95c1aac73b04cce5469
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamFunParser.$trModule2) -}
+e2d02596e23618a4eeccec96240dd111
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LamFunParser"#) -}
+22855da043d9eb67b7bf7a62233babab
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamFunParser.$trModule4) -}
+2387b988263aac9f63a2d21930223459
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("LamFun-3.14.1-1NElG62CogO50XNaLIVWxW"#) -}
+1a5d18f984a2376f011d0b486e1d7f16
+  $w$s$wupdateOrSnocWithKey ::
+    (Data.Text.Internal.Text -> v -> v -> v)
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+    -> Data.HashMap.Array.Array
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+  {- Arity: 6, Strictness: <L,C(C1(C1(U)))><S,U><S,U><S,U><L,U><S,U>,
+     Inline: [2],
+     Unfolding: (\ @ v
+                   (w :: Data.Text.Internal.Text -> v -> v -> v)
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w33 :: v)
+                   (w34 :: Data.HashMap.Array.Array#
+                             (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)) ->
+                 let {
+                   exit :: v
+                           -> Data.HashMap.Array.Array#
+                                (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                           -> GHC.Prim.Int#
+                           -> Data.Text.Internal.Text
+                           -> v
+                           -> Data.HashMap.Array.Array
+                                (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                     <join 5> {- Arity: 5, Strictness: <L,U><S,U><S,U><L,U><L,U> -}
+                   = \ (w35 :: v)[OneShot]
+                       (ww3 :: Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))[OneShot]
+                       (ww4 :: GHC.Prim.Int#)[OneShot]
+                       (k2 :: Data.Text.Internal.Text)[OneShot]
+                       (y :: v)[OneShot] ->
+                     case GHC.Magic.runRW#
+                            @ ('GHC.Types.TupleRep
+                                 '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                            @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                 Data.HashMap.Array.Array
+                                   (Data.HashMap.Base.Leaf Data.Text.Internal.Text v) #)
+                            (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                             case GHC.Prim.thawSmallArray#
+                                    @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                    @ GHC.Prim.RealWorld
+                                    ww3
+                                    0#
+                                    (GHC.Prim.sizeofSmallArray#
+                                       @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                       ww3)
+                                    s1 of ds2 { (#,#) ipv4 ipv5 ->
+                             case GHC.Prim.writeSmallArray#
+                                    @ GHC.Prim.RealWorld
+                                    @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                    ipv5
+                                    ww4
+                                    (Data.HashMap.Base.L
+                                       @ Data.Text.Internal.Text
+                                       @ v
+                                       k2
+                                       (w k2 w35 y))
+                                    ipv4 of s' { DEFAULT ->
+                             case GHC.Prim.unsafeFreezeSmallArray#
+                                    @ GHC.Prim.RealWorld
+                                    @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                    ipv5
+                                    s' of ds3 { (#,#) ipv6 ipv7 ->
+                             (# ipv6,
+                                Data.HashMap.Array.Array
+                                  @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                  ipv7 #) } } }) of ds2 { (#,#) ipv4 ipv5 ->
+                     ipv5 }
+                 } in
+                 letrec {
+                   $wgo1 :: GHC.Prim.ByteArray#
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> v
+                            -> Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> Data.HashMap.Array.Array
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                     <join 7> {- Arity: 7,
+                                 Strictness: <L,U><L,U><L,U><L,U><S,U><S,U><S,U>, Inline: [2] -}
+                   = \ (ww3 :: GHC.Prim.ByteArray#)
+                       (ww4 :: GHC.Prim.Int#)
+                       (ww5 :: GHC.Prim.Int#)
+                       (w35 :: v)
+                       (ww6 :: Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                       (ww7 :: GHC.Prim.Int#)
+                       (ww8 :: GHC.Prim.Int#) ->
+                     case GHC.Prim.>=# ww7 ww8 of lwild {
+                       DEFAULT
+                       -> case GHC.Prim.indexSmallArray#
+                                 @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                 ww6
+                                 ww7 of ds1 { Unit# ipv3 ->
+                          case ipv3 of wild1 { Data.HashMap.Base.L kx y ->
+                          case kx of wild2 { Data.Text.Internal.Text dt3 dt4 dt5 ->
+                          case GHC.Prim.==# ww5 dt5 of lwild1 {
+                            DEFAULT -> $wgo1 ww3 ww4 ww5 w35 ww6 (GHC.Prim.+# ww7 1#) ww8
+                            1#
+                            -> case {__pkg_ccall text-1.2.3.1 GHC.Prim.ByteArray#
+                                                              -> GHC.Prim.Word#
+                                                              -> GHC.Prim.ByteArray#
+                                                              -> GHC.Prim.Word#
+                                                              -> GHC.Prim.Word#
+                                                              -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                              -> (# GHC.Prim.State#
+                                                                      GHC.Prim.RealWorld,
+                                                                    GHC.Prim.Int# #)}
+                                      ww3
+                                      (GHC.Prim.int2Word# ww4)
+                                      dt3
+                                      (GHC.Prim.int2Word# dt4)
+                                      (GHC.Prim.int2Word# ww5)
+                                      GHC.Prim.realWorld# of wild5 { (#,#) ds2 ds3 ->
+                               case GHC.Prim.narrow32Int# ds3 of wild {
+                                 DEFAULT -> $wgo1 ww3 ww4 ww5 w35 ww6 (GHC.Prim.+# ww7 1#) ww8
+                                 0#
+                                 -> exit
+                                      w35
+                                      ww6
+                                      ww7
+                                      (Data.Text.Internal.Text ww3 ww4 ww5)
+                                      y } } } } } }
+                       1#
+                       -> case GHC.Magic.runRW#
+                                 @ ('GHC.Types.TupleRep
+                                      '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                 @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                      Data.HashMap.Array.Array
+                                        (Data.HashMap.Base.Leaf Data.Text.Internal.Text v) #)
+                                 (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.newSmallArray#
+                                         @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                         @ GHC.Prim.RealWorld
+                                         (GHC.Prim.+# ww8 1#)
+                                         (Data.HashMap.Array.undefinedElem
+                                            @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v))
+                                         s1 of ds { (#,#) ipv3 ipv4 ->
+                                  case GHC.Prim.copySmallArray#
+                                         @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                         @ GHC.Prim.RealWorld
+                                         ww6
+                                         0#
+                                         ipv4
+                                         0#
+                                         ww8
+                                         ipv3 of s2 { DEFAULT ->
+                                  case GHC.Prim.writeSmallArray#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                         ipv4
+                                         ww8
+                                         (Data.HashMap.Base.L
+                                            @ Data.Text.Internal.Text
+                                            @ v
+                                            (Data.Text.Internal.Text ww3 ww4 ww5)
+                                            w35)
+                                         s2 of s' { DEFAULT ->
+                                  case GHC.Prim.unsafeFreezeSmallArray#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                         ipv4
+                                         s' of ds2 { (#,#) ipv5 ipv6 ->
+                                  (# ipv5,
+                                     Data.HashMap.Array.Array
+                                       @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                                       ipv6 #) } } } }) of ds1 { (#,#) ipv3 ipv4 ->
+                          ipv4 } }
+                 } in
+                 $wgo1
+                   ww
+                   ww1
+                   ww2
+                   w33
+                   w34
+                   0#
+                   (GHC.Prim.sizeofSmallArray#
+                      @ (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+                      w34)) -}
+4a711b723f06c346711e6d4496f9c85a
+  $w$sinsert ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+  {- Arity: 5, Strictness: <S,U><S,U><S,U><L,U><L,1*U>, Inline: [2],
+     Unfolding: (\ @ v
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: v)
+                   (w33 :: Data.HashMap.Base.HashMap Data.Text.Internal.Text v) ->
+                 case {__pkg_ccall hashable-1.2.7.0 GHC.Prim.ByteArray#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Int# #)}
+                        ww
+                        (GHC.Prim.uncheckedIShiftL# ww1 1#)
+                        (GHC.Prim.uncheckedIShiftL# ww2 1#)
+                        -2578643520546668380#
+                        GHC.Prim.realWorld# of wild1 { (#,#) ds1 ds2 ->
+                 LamFunParser.$wpoly_go2
+                   @ v
+                   (GHC.Prim.int2Word# ds2)
+                   ww
+                   ww1
+                   ww2
+                   w
+                   0#
+                   w33 }) -}
+d8e36ae431530df7bc328bac1126b377
+  $w$slookup ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> GHC.Maybe.Maybe v
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,U><S,U><S,U><L,1*U>,
+     Inline: [2],
+     Unfolding: (\ @ v
+                   (ww :: GHC.Prim.ByteArray#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: Data.HashMap.Base.HashMap Data.Text.Internal.Text v) ->
+                 case {__pkg_ccall hashable-1.2.7.0 GHC.Prim.ByteArray#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.Int#
+                                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                          GHC.Prim.Int# #)}
+                        ww
+                        (GHC.Prim.uncheckedIShiftL# ww1 1#)
+                        (GHC.Prim.uncheckedIShiftL# ww2 1#)
+                        -2578643520546668380#
+                        GHC.Prim.realWorld# of wild1 { (#,#) ds1 ds2 ->
+                 LamFunParser.$wpoly_go3
+                   @ v
+                   (GHC.Prim.int2Word# ds2)
+                   ww
+                   ww1
+                   ww2
+                   0#
+                   w }) -}
+54d4eab1199c7104ab3d62220a228b9b
+  $wparse ::
+    GHC.Classes.Ord t =>
+    LamFunParser.G t
+    -> (t -> t')
+    -> Data.Text.Internal.Text
+    -> Data.Either.Either
+         (Text.Earley.Parser.Internal.Report
+            Data.Text.Internal.Text [Data.Text.Internal.Text])
+         t'
+  {- Arity: 4,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><S,1*U><L,1*C1(U)><L,1*U(U,U,U)>,
+     Inline: [2],
+     Unfolding: (\ @ t
+                   @ t'
+                   (w :: GHC.Classes.Ord t)
+                   (w33 :: LamFunParser.G t)
+                   (w34 :: t -> t')
+                   (w35 :: Data.Text.Internal.Text) ->
+                 case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                             ([t],
+                              Text.Earley.Parser.Internal.Report
+                                (LamFunLexer.Token Data.Text.Internal.Text)
+                                [LamFunLexer.Token Data.Text.Internal.Text]) #)
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case (Text.Earley.Grammar.$wrunGrammar
+                                 @ (GHC.ST.ST GHC.Prim.RealWorld)
+                                 @ (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t)
+                                 @ (Text.Earley.Grammar.Prod
+                                      (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t)
+                                      (LamFunLexer.Token Data.Text.Internal.Text)
+                                      (LamFunLexer.Token Data.Text.Internal.Text)
+                                      t)
+                                 (GHC.ST.$fMonadST_$c>>= @ GHC.Prim.RealWorld)
+                                 (GHC.ST.$fApplicativeST_$cpure @ GHC.Prim.RealWorld)
+                                 (\ @ a -> Control.Monad.ST.Imp.fixST1 @ a @ GHC.Prim.RealWorld)
+                                   `cast`
+                                 (forall (a :: <*>_N).
+                                  <a -> GHC.ST.ST GHC.Prim.RealWorld a>_R
+                                  ->_R Sym (GHC.ST.N:ST[0] <GHC.Prim.RealWorld>_N <a>_R))
+                                 (LamFunParser.parse2 @ t)
+                                   `cast`
+                                 (forall (e1 :: <*>_N) (t1 :: <*>_N) (a1 :: <*>_N).
+                                  <Text.Earley.Parser.Internal.ProdR
+                                     GHC.Prim.RealWorld t e1 t1 a1>_R
+                                  ->_R Sym (GHC.ST.N:ST[0]
+                                                <GHC.Prim.RealWorld>_N
+                                                <Text.Earley.Grammar.Prod
+                                                   (Text.Earley.Parser.Internal.Rule
+                                                      GHC.Prim.RealWorld t)
+                                                   e1
+                                                   t1
+                                                   a1>_R))
+                                 (w33 @ (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t)))
+                                `cast`
+                              (GHC.ST.N:ST[0]
+                                   <GHC.Prim.RealWorld>_N
+                                   <Text.Earley.Parser.Internal.ProdR
+                                      GHC.Prim.RealWorld
+                                      t
+                                      (LamFunLexer.Token Data.Text.Internal.Text)
+                                      (LamFunLexer.Token Data.Text.Internal.Text)
+                                      t>_R)
+                                s1 of ds3 { (#,#) ipv ipv1 ->
+                         case GHC.Prim.newMutVar#
+                                @ [Text.Earley.Parser.Internal.Cont
+                                     GHC.Prim.RealWorld
+                                     t
+                                     (LamFunLexer.Token Data.Text.Internal.Text)
+                                     (LamFunLexer.Token Data.Text.Internal.Text)
+                                     t
+                                     t]
+                                @ GHC.Prim.RealWorld
+                                (Text.Earley.Parser.Internal.initialState2
+                                   @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                   @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                   @ t
+                                   @ GHC.Prim.RealWorld)
+                                ipv of ds4 { (#,#) ipv2 ipv3 ->
+                         case GHC.Prim.newMutVar#
+                                @ (GHC.Maybe.Maybe
+                                     (GHC.STRef.STRef
+                                        GHC.Prim.RealWorld
+                                        (Text.Earley.Parser.Internal.Results GHC.Prim.RealWorld t)))
+                                @ GHC.Prim.RealWorld
+                                (GHC.Maybe.Nothing
+                                   @ (GHC.STRef.STRef
+                                        GHC.Prim.RealWorld
+                                        (Text.Earley.Parser.Internal.Results GHC.Prim.RealWorld t)))
+                                ipv2 of ds5 { (#,#) ipv4 ipv5 ->
+                         case Text.Earley.Parser.Internal.parse2
+                                @ [LamFunLexer.Token Data.Text.Internal.Text]
+                                @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                @ GHC.Prim.RealWorld
+                                @ t
+                                @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                (Data.ListLike.Base.$fListLike[]a
+                                   @ (LamFunLexer.Token Data.Text.Internal.Text))
+                                (GHC.Types.:
+                                   @ (Text.Earley.Parser.Internal.State
+                                        GHC.Prim.RealWorld
+                                        t
+                                        (LamFunLexer.Token Data.Text.Internal.Text)
+                                        (LamFunLexer.Token Data.Text.Internal.Text)
+                                        t)
+                                   (case ipv1 of dt1 { DEFAULT ->
+                                    Text.Earley.Parser.Internal.State
+                                      @ GHC.Prim.RealWorld
+                                      @ t
+                                      @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                      @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                      @ t
+                                      @ t
+                                      @ t
+                                      dt1
+                                      (Text.Earley.Parser.Internal.$fApplicativeResults6
+                                         @ t
+                                         @ GHC.Prim.RealWorld)
+                                        `cast`
+                                      (<t>_R
+                                       ->_R Sym (GHC.ST.N:ST[0]
+                                                     <GHC.Prim.RealWorld>_N
+                                                     <[t]>_R) ; Sym (Text.Earley.Parser.Internal.N:Results[0]
+                                                                         <GHC.Prim.RealWorld>_N
+                                                                         <t>_R))
+                                      Text.Earley.Parser.Internal.Previous
+                                      ipv3
+                                      ipv5 })
+                                   (GHC.Types.[]
+                                      @ (Text.Earley.Parser.Internal.State
+                                           GHC.Prim.RealWorld
+                                           t
+                                           (LamFunLexer.Token Data.Text.Internal.Text)
+                                           (LamFunLexer.Token Data.Text.Internal.Text)
+                                           t)))
+                                (case w35 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                                 case LamFunLexer.$w$stokenizer
+                                        LamFunLexer.tokenize1
+                                        ww1
+                                        ww2
+                                        ww3
+                                        LamFunLexer.defaultPosition of ww4 { (#,#) ww5 ww6 ->
+                                 case LamFunLexer.tokenize_go ww5 of dt1 { DEFAULT ->
+                                 Text.Earley.Parser.Internal.ParseEnv
+                                   @ GHC.Prim.RealWorld
+                                   @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                   @ [LamFunLexer.Token Data.Text.Internal.Text]
+                                   @ (LamFunLexer.Token Data.Text.Internal.Text)
+                                   @ t
+                                   (GHC.Types.[] @ (GHC.ST.ST GHC.Prim.RealWorld [t]))
+                                   (GHC.Types.[]
+                                      @ (Text.Earley.Parser.Internal.State
+                                           GHC.Prim.RealWorld
+                                           t
+                                           (LamFunLexer.Token Data.Text.Internal.Text)
+                                           (LamFunLexer.Token Data.Text.Internal.Text)
+                                           t))
+                                   LamFunParser.parse1
+                                     `cast`
+                                   (Sym (GHC.ST.N:ST[0] <GHC.Prim.RealWorld>_N <()>_R))
+                                   (GHC.Types.[] @ (LamFunLexer.Token Data.Text.Internal.Text))
+                                   0#
+                                   dt1 } } })
+                                ipv4 of ds1 { (#,#) ipv7 ipv8 ->
+                         LamFunParser.parse_$sgo2
+                           @ GHC.Prim.RealWorld
+                           @ (LamFunLexer.Token Data.Text.Internal.Text)
+                           @ t
+                           ipv8
+                           ipv7 } } } }) of ds3 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { (,) x3 ds ->
+                 let {
+                   fail :: GHC.Prim.Void#
+                           -> Data.Either.Either
+                                (Text.Earley.Parser.Internal.Report
+                                   Data.Text.Internal.Text [Data.Text.Internal.Text])
+                                t'
+                     <join 1> {- Arity: 1, Strictness: <L,A> -}
+                   = \ (ds1 :: GHC.Prim.Void#)[OneShot] ->
+                     case ds of wild1 { Text.Earley.Parser.Internal.Report p e u ->
+                     Data.Either.Left
+                       @ (Text.Earley.Parser.Internal.Report
+                            Data.Text.Internal.Text [Data.Text.Internal.Text])
+                       @ t'
+                       (Text.Earley.Parser.Internal.Report
+                          @ Data.Text.Internal.Text
+                          @ [Data.Text.Internal.Text]
+                          p
+                          (GHC.Base.map
+                             @ (LamFunLexer.Token Data.Text.Internal.Text)
+                             @ Data.Text.Internal.Text
+                             (LamFunLexer.unTok @ Data.Text.Internal.Text)
+                             e)
+                          (GHC.Base.map
+                             @ (LamFunLexer.Token Data.Text.Internal.Text)
+                             @ Data.Text.Internal.Text
+                             (LamFunLexer.unTok @ Data.Text.Internal.Text)
+                             u)) }
+                 } in
+                 case x3 of wild1 {
+                   [] -> fail GHC.Prim.void#
+                   : p ds1
+                   -> case Data.Set.Internal.fromList @ t w wild1 of wild2 {
+                        Data.Set.Internal.Bin dt1 ds2 ds4 ds5
+                        -> case dt1 of wild3 {
+                             DEFAULT -> fail GHC.Prim.void#
+                             1#
+                             -> Data.Either.Right
+                                  @ (Text.Earley.Parser.Internal.Report
+                                       Data.Text.Internal.Text [Data.Text.Internal.Text])
+                                  @ t'
+                                  (w34 p) }
+                        Data.Set.Internal.Tip -> fail GHC.Prim.void# } } } }) -}
+c5a68da1d905133f0955a67802696b54
+  $wpoly_go1 ::
+    GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf Data.Text.Internal.Text v)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Maybe.Maybe v
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,U><S,U><S,U>, Inline: [2] -}
+1408d2e1a92989049da487645f35f933
+  $wpoly_go2 ::
+    GHC.Prim.Word#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> v
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+  {- Arity: 7, Strictness: <S,U><L,U><L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [2] -}
+00846e28369e5476eb7bce68bf9d905f
+  $wpoly_go3 ::
+    GHC.Prim.Word#
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap Data.Text.Internal.Text v
+    -> GHC.Maybe.Maybe v
+  {- Arity: 6, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,U><L,U><S,1*U>, Inline: [2] -}
+c437e0079c504e9d700ef72136de50d2
+  type G t =
+    forall (r :: * -> * -> * -> *).
+    Text.Earley.Grammar.Grammar
+      r
+      (Text.Earley.Grammar.Prod
+         r
+         (LamFunLexer.Token Data.Text.Internal.Text)
+         (LamFunLexer.Token Data.Text.Internal.Text)
+         t)
+cbc8066094ed43ef52682869769d19b7
+  expr_Grammar ::
+    Data.Singletons.Internal.SingI ver =>
+    LamFunParser.G
+      (LamFunSyntax.Expr_
+         ver (LamFunLexer.Token Data.Text.Internal.Text))
+  {- Arity: 1, Strictness: <L,U> -}
+0a4a6de6f1ff341d3903c539be8cd3e0
+  parse ::
+    (GHC.Classes.Eq t, GHC.Classes.Ord t) =>
+    LamFunParser.G t
+    -> (t -> t')
+    -> Data.Text.Internal.Text
+    -> Data.Either.Either
+         (Text.Earley.Parser.Internal.Report
+            Data.Text.Internal.Text [Data.Text.Internal.Text])
+         t'
+  {- Arity: 5,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><S,1*U><L,1*C1(U)><L,1*U(U,U,U)>,
+     Inline: [2],
+     Unfolding: InlineRule (5, True, True)
+                (\ @ t
+                   @ t'
+                   (w :: GHC.Classes.Eq t)
+                   (w33 :: GHC.Classes.Ord t)
+                   (w34 :: LamFunParser.G t)
+                   (w35 :: t -> t')
+                   (w36 :: Data.Text.Internal.Text) ->
+                 LamFunParser.$wparse @ t @ t' w33 w34 w35 w36) -}
+ad06e9a48ef0f49162627c464f2c86a4
+  parse1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# s2, GHC.Tuple.() #)) -}
+c1204737ff311b300190379077977f1d
+  parse2 ::
+    Text.Earley.Parser.Internal.ProdR GHC.Prim.RealWorld t e1 t1 a1
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Text.Earley.Grammar.Prod
+            (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t) e1 t1 a1 #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ t
+                   @ e1
+                   @ t1
+                   @ a1
+                   (x3 :: Text.Earley.Parser.Internal.ProdR
+                            GHC.Prim.RealWorld t e1 t1 a1)
+                   (s2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Text.Earley.Parser.Internal.mkRule1
+                        @ GHC.Prim.RealWorld
+                        @ t
+                        @ e1
+                        @ t1
+                        @ a1
+                        x3
+                        s2 of ds3 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    case ipv1 of dt1 { Text.Earley.Parser.Internal.Rule ipv2 ipv3 ipv4 ->
+                    Text.Earley.Grammar.NonTerminal
+                      @ (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t)
+                      @ e1
+                      @ t1
+                      @ a1
+                      @ a1
+                      dt1
+                      (Text.Earley.Grammar.Pure
+                         @ (Text.Earley.Parser.Internal.Rule GHC.Prim.RealWorld t)
+                         @ e1
+                         @ t1
+                         @ (a1 -> a1)
+                         (GHC.Base.id @ a1)) } #) }) -}
+ca0e192d8ac99fa259ba8268abfc60ff
+  parse_$sgo2 ::
+    Text.Earley.Parser.Internal.Result
+      s e1 [LamFunLexer.Token Data.Text.Internal.Text] a1
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s,
+          ([a1],
+           Text.Earley.Parser.Internal.Report
+             e1 [LamFunLexer.Token Data.Text.Internal.Text]) #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+4a9696aac46043ccb2f6b24d1df7fa32
+  program_Grammar ::
+    Data.Singletons.Internal.SingI ver =>
+    LamFunParser.G
+      [LamFunSyntax.Program_
+         ver (LamFunLexer.Token Data.Text.Internal.Text)]
+  {- Arity: 1, Strictness: <L,U> -}
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

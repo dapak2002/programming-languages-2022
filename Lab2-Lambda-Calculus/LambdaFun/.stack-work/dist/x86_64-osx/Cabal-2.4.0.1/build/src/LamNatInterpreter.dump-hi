@@ -1,0 +1,1169 @@
+
+==================== FINAL INTERFACE ====================
+2019-11-21 22:26:18.553793 UTC
+
+interface LamFun-3.14.1-1NElG62CogO50XNaLIVWxW:LamNatInterpreter [orphan module] [family instance module] 8064
+  interface hash: 0afdaf79589ca3308eba6d3b8bddcc52
+  ABI hash: 8128571b756af08ffc0e2df5ec09f9c7
+  export-list hash: 96cd474e352805faffffc3cfb6adc08d
+  orphan hash: 5b3a9124a7e08ae89fb5e4bfaa673d52
+  flag hash: b9bd6ab19cfcda525536e9c89d2b1699
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+module dependencies: Environment LamFunInterpreter LamFunSyntax
+package dependencies: array-0.5.3.0 base-4.12.0.0 binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-boot-th-8.6.4 ghc-prim-0.5.3 hashable-1.2.7.0
+                      integer-gmp-1.0.2.0 mtl-2.2.2 pretty-1.1.3.6 primitive-0.6.4.0
+                      safe-0.3.17 singletons-2.5.1 syb-0.7 template-haskell-2.14.0.0
+                      text-1.2.3.1 th-abstraction-0.2.11.0 th-desugar-1.9
+                      th-expand-syns-0.4.4.0 th-lift-0.7.11 th-lift-instances-0.1.12
+                      th-orphans-0.13.6 th-reify-many-0.1.8 transformers-0.5.6.2
+                      vector-0.12.0.2
+orphans: hashable-1.2.7.0:Data.Hashable.Generic
+         singletons-2.5.1:Data.Singletons.Prelude.Applicative
+         singletons-2.5.1:Data.Singletons
+         singletons-2.5.1:Data.Singletons.Prelude.Semigroup
+         singletons-2.5.1:Data.Singletons.Prelude.Const
+         singletons-2.5.1:Data.Singletons.Prelude.Functor
+         singletons-2.5.1:Data.Singletons.Prelude.Identity
+         singletons-2.5.1:Data.Singletons.Prelude.Monoid
+         singletons-2.5.1:Data.Singletons.Prelude.Semigroup.Internal
+         singletons-2.5.1:Data.Singletons.TypeLits
+         singletons-2.5.1:Data.Singletons.ShowSing
+         singletons-2.5.1:Data.Singletons.TypeLits.Internal
+         singletons-2.5.1:Data.Singletons.Prelude.Ord
+         singletons-2.5.1:Data.Singletons.Prelude.Instances
+         singletons-2.5.1:Data.Singletons.Decide
+         th-orphans-0.13.6:Language.Haskell.TH.Instances
+         th-lift-0.7.11:Language.Haskell.TH.Lift
+         th-lift-instances-0.1.12:Instances.TH.Lift
+         text-1.2.3.1:Data.Text.Lazy vector-0.12.0.2:Data.Vector.Unboxed
+         vector-0.12.0.2:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         syb-0.7:Data.Generics.Instances text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: LamFun-3.14.1-1NElG62CogO50XNaLIVWxW:LamFunSyntax
+                         base-4.12.0.0:Control.Applicative base-4.12.0.0:Data.Complex
+                         base-4.12.0.0:Data.Functor.Compose base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.Graph
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         ghc-boot-th-8.6.4:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.4:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         primitive-0.6.4.0:Data.Primitive.PrimArray
+                         primitive-0.6.4.0:Data.Primitive.SmallArray
+                         primitive-0.6.4.0:Data.Primitive.UnliftedArray
+                         singletons-2.5.1:Data.Singletons
+                         singletons-2.5.1:Data.Singletons.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Applicative
+                         singletons-2.5.1:Data.Singletons.Prelude.Base
+                         singletons-2.5.1:Data.Singletons.Prelude.Bool
+                         singletons-2.5.1:Data.Singletons.Prelude.Const
+                         singletons-2.5.1:Data.Singletons.Prelude.Either
+                         singletons-2.5.1:Data.Singletons.Prelude.Enum
+                         singletons-2.5.1:Data.Singletons.Prelude.Eq
+                         singletons-2.5.1:Data.Singletons.Prelude.Foldable
+                         singletons-2.5.1:Data.Singletons.Prelude.Functor
+                         singletons-2.5.1:Data.Singletons.Prelude.Identity
+                         singletons-2.5.1:Data.Singletons.Prelude.Instances
+                         singletons-2.5.1:Data.Singletons.Prelude.IsString
+                         singletons-2.5.1:Data.Singletons.Prelude.List.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.List.Internal.Disambiguation
+                         singletons-2.5.1:Data.Singletons.Prelude.Maybe
+                         singletons-2.5.1:Data.Singletons.Prelude.Monad.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Monoid
+                         singletons-2.5.1:Data.Singletons.Prelude.Num
+                         singletons-2.5.1:Data.Singletons.Prelude.Ord
+                         singletons-2.5.1:Data.Singletons.Prelude.Semigroup
+                         singletons-2.5.1:Data.Singletons.Prelude.Semigroup.Internal
+                         singletons-2.5.1:Data.Singletons.Prelude.Show
+                         singletons-2.5.1:Data.Singletons.Prelude.Traversable
+                         singletons-2.5.1:Data.Singletons.Prelude.Tuple
+                         singletons-2.5.1:Data.Singletons.Syntax
+                         singletons-2.5.1:Data.Singletons.TypeLits
+                         singletons-2.5.1:Data.Singletons.TypeLits.Internal
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         th-abstraction-0.2.11.0:Language.Haskell.TH.Datatype
+                         th-desugar-1.9:Language.Haskell.TH.Desugar.AST
+                         vector-0.12.0.2:Data.Vector vector-0.12.0.2:Data.Vector.Primitive
+                         vector-0.12.0.2:Data.Vector.Storable
+                         vector-0.12.0.2:Data.Vector.Unboxed
+                         vector-0.12.0.2:Data.Vector.Unboxed.Base
+import  -/  Environment a013418ebe9191a5a7bbf317f9caf15d
+  exports: 0c6697da8f9fc7e0b1f6bfcddcec4a99
+  Env fc999455620934f57e8cb528cda499b8
+  Environment e13f5b6e82649b359ce8c6c205fe0e45
+  Ident ad9b4ece05fc4c0c239f92af5a62f139
+  defargs 13c78ad90ea363f15b50618a76674aa4
+  define 4235b3d0cc4cf6a3c206a24204d24fca
+  find 578c5903352aa03524a134604c17b04f
+  make_env 75efc5bbe882be103e1c576f3413c69e
+import  -/  LamFunInterpreter 91bbda8c9f8c9fa2af6799214502d40e
+  exports: 34ea99097816279d99b554c29b8e1797
+  GlobEnv cf25859979203b4fd295fc2f740d27cc
+  Interpreter f629e5351b65ad6b1c51b88e2d04401a
+  runProg ec8ce86587a0ebd064e6da29c7f8f3b2
+import  -/  LamFunSyntax ac1b0607f12c31259d1294cbc218e4ef
+  exports: dc40609dbddb7fe2711252054a4d6645
+  App_ 44cd2c47e39a557ea57808831e7e7059
+  Boolean_ 973ae2cb875d0403d7c004772eeb55aa
+  Calculate_ 0a69ea79455ab744bf8f044173732400
+  Cons_ e6f61002da6d7da73223dc3bdccf3833
+  Define_ 67df524f56e1d2a3a8602277b5cfaa37
+  Defn_ 2242581a46528d9da58ce752528b158c
+  Expr_ 2242581a46528d9da58ce752528b158c
+  LamNat 4e768e6e86ff13e053c3de13a03c8a11
+  Lambda_ 6ab41c492427c42269ff200154ea45d3
+  Nil_ 78d46fc755555128f68a5a2db304e84f
+  Number_ 41c9fe9ddcb4490b340972c40e7f6b2a
+  Program_ 8f11ad5d9dc6600f48b5495879bef02f
+  Val_ f5ba880bb54794daeed35b43978231bf
+  Variable_ 85c54283b4978f64449bb6a4830a2240
+import  -/  base-4.12.0.0:Control.Monad.IO.Class e96805f9d79f75be66a0d44eb83064c1
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Err ea5e313ef4146b40b5d8b27aa168e736
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Real af2b985dd29515c375fb78b2c9298d42
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:System.IO c961e5ee6731c0683a6e879272c9e9f6
+import  -/  containers-0.6.0.1:Data.Map 9f8de07f1b4905617d1dd889549a129c
+import  -/  containers-0.6.0.1:Data.Map.Internal 9e74e122af4fa0c1b8d4c844eeda9c98
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  integer-gmp-1.0.2.0:GHC.Integer.Type 6d87087aea24143d2650f78480d954a3
+9b01cc51b8dd57318a87a687672cbf5f
+  $fEqValue :: GHC.Classes.Eq LamNatInterpreter.Value
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ LamNatInterpreter.Value
+                  LamNatInterpreter.$fEqValue_$c==
+                  LamNatInterpreter.$fEqValue_$c/= -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fEqValue_$c/= ::
+    LamNatInterpreter.Value
+    -> LamNatInterpreter.Value -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: LamNatInterpreter.Value) (y :: LamNatInterpreter.Value) ->
+                 case LamNatInterpreter.$fEqValue_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fEqValue_$c== ::
+    LamNatInterpreter.Value
+    -> LamNatInterpreter.Value -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U> -}
+db3d783fa644347d5a0fbeab49cb256e
+  $fInterpreterLamNat ::
+    LamFunInterpreter.Interpreter 'LamFunSyntax.LamNat
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ 'LamFunSyntax.LamNat
+                  LamNatInterpreter.$fInterpreterLamNat4
+                    `cast`
+                  (Sym (Environment.N:Environment[0]) <LamNatInterpreter.Value>_N ; Sub (Sym (LamNatInterpreter.D:R:GlobEnvLamNat[0])))
+                  LamNatInterpreter.$fInterpreterLamNat_$cshow_env
+                  LamNatInterpreter.$fInterpreterLamNat1
+                    `cast`
+                  (<[LamFunSyntax.Program_
+                       'LamFunSyntax.LamNat Data.Text.Internal.Text]>_R
+                   ->_R <(LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat,
+                          LamFunInterpreter.RawEnv 'LamFunSyntax.LamNat)>_R
+                   ->_R Sym (GHC.Types.N:IO[0]
+                                 <(LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat,
+                                   LamFunInterpreter.RawEnv 'LamFunSyntax.LamNat)>_R)) -}
+fce52a87e1a50522b1064aaf8c9e8496
+  $fInterpreterLamNat1 ::
+    [LamFunSyntax.Program_
+       'LamFunSyntax.LamNat Data.Text.Internal.Text]
+    -> (LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat,
+        LamFunInterpreter.RawEnv 'LamFunSyntax.LamNat)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          (LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat,
+           LamFunInterpreter.RawEnv 'LamFunSyntax.LamNat) #)
+  {- Arity: 3, Strictness: <S,1*U><L,U(U,U)><S,U> -}
+bd2e56597290f7bca9ab4167f2ade781
+  $fInterpreterLamNat10 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat77
+                   LamNatInterpreter.$fInterpreterLamNat11) -}
+b0bd99c26626393ada8e72e16feb03de
+  $fInterpreterLamNat100 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat105,
+                  LamNatInterpreter.$fInterpreterLamNat101)) -}
+a9f2220c20d1f2f216f8db90cec7dbf0
+  $fInterpreterLamNat101 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat102) -}
+a79775a632744d846911b3022c40edef
+  $fInterpreterLamNat102 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat104
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat103
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.IntVal
+                                (GHC.Integer.Type.timesInteger a b) }) }) -}
+0a10a19c0fabd96e7b816b397c53ff6b
+  $fInterpreterLamNat103 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+8165981d4901ebd8a527da162747a4ea
+  $fInterpreterLamNat104 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+78e801837d32f9adebf1cd9ba7e18859
+  $fInterpreterLamNat105 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat106) -}
+f43afc5bd0a8957bd13ffd7062b6377c
+  $fInterpreterLamNat106 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("*"#) -}
+a2294309e0ec9c6c0347499c68b0a680
+  $fInterpreterLamNat107 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat112,
+                  LamNatInterpreter.$fInterpreterLamNat108)) -}
+f221509d082fac9d932abb0036948863
+  $fInterpreterLamNat108 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat109) -}
+f324cc08596b40019d2eabcb17d63e5d
+  $fInterpreterLamNat109 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat111
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat110
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.IntVal
+                                (GHC.Integer.Type.minusInteger a b) }) }) -}
+da41814cdd1664ba09fc11948d249853
+  $fInterpreterLamNat11 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat70
+                   LamNatInterpreter.$fInterpreterLamNat12) -}
+d18c1a7c1f9296b83aa5b7dae64ca4fe
+  $fInterpreterLamNat110 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+5cb06d044002ca06a5947c5c1932889b
+  $fInterpreterLamNat111 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+539b7364b3792c5edb9f3aae389f3c02
+  $fInterpreterLamNat112 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat113) -}
+537e8c2c7a29edf4341c820a209498ad
+  $fInterpreterLamNat113 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("-"#) -}
+9af62ae7894b9f888e72e9110f252d8a
+  $fInterpreterLamNat114 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat119,
+                  LamNatInterpreter.$fInterpreterLamNat115)) -}
+ac1a7c323e8141071299bc9b7a2503c8
+  $fInterpreterLamNat115 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat116) -}
+6a2b689910b54e2ed803c334f5da6f5b
+  $fInterpreterLamNat116 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat118
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat117
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.IntVal
+                                (GHC.Integer.Type.plusInteger a b) }) }) -}
+f2bbc3f8bff044674afd8abb39df8c59
+  $fInterpreterLamNat117 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+6deca9412c36ba0efd52ed3912bdb607
+  $fInterpreterLamNat118 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+3eb681b08c00a6c23d4f7bbeb9cce19d
+  $fInterpreterLamNat119 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat120) -}
+853e838142f7bd5d8c0b508f36ec8a35
+  $fInterpreterLamNat12 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat63
+                   LamNatInterpreter.$fInterpreterLamNat13) -}
+1ccdbbb7645d923ec547e02c2a0e2dd1
+  $fInterpreterLamNat120 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("+"#) -}
+e2e8d1de25fd2ad77833bb3dedc07169
+  $fInterpreterLamNat13 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat56
+                   LamNatInterpreter.$fInterpreterLamNat14) -}
+a96ced093e373e1b772b422bcf4acbec
+  $fInterpreterLamNat14 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat49
+                   LamNatInterpreter.$fInterpreterLamNat15) -}
+8b62e6a11fc5f8d252c6aef99f6ca46e
+  $fInterpreterLamNat15 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat44
+                   LamNatInterpreter.$fInterpreterLamNat16) -}
+032803f3aba3c52edd31649e4d8c31dd
+  $fInterpreterLamNat16 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat39
+                   LamNatInterpreter.$fInterpreterLamNat17) -}
+92a575e6ce55047c98d5d8a691c05c30
+  $fInterpreterLamNat17 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat32
+                   LamNatInterpreter.$fInterpreterLamNat18) -}
+b9d195f12ab17d910a497600788b5ba3
+  $fInterpreterLamNat18 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat26
+                   LamNatInterpreter.$fInterpreterLamNat19) -}
+6480b44b120e1d592018cc13af2679d3
+  $fInterpreterLamNat19 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat20
+                   (GHC.Types.[] @ (Environment.Ident, LamNatInterpreter.Value))) -}
+10b11e4c5b583dae39c9edc3614d9213
+  $fInterpreterLamNat2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat3) -}
+5ea5e684c7a2ee0aa6b1d4feb52553eb
+  $fInterpreterLamNat20 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat24,
+                  LamNatInterpreter.$fInterpreterLamNat21)) -}
+56b08156118aa8dbaa0f8fb283865d6b
+  $fInterpreterLamNat21 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat22) -}
+41d98d5b0249572a7f1f3065c9742f18
+  $fInterpreterLamNat22 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat23
+                   LamNatInterpreter.Cons ds t -> t }) -}
+e4110d4f4ef983c76f9bf138dfdf3644
+  $fInterpreterLamNat23 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+4b07d27674f5102287d90f94ec0b0632
+  $fInterpreterLamNat24 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat25) -}
+356e32053cb0d0f9520b189454529fc3
+  $fInterpreterLamNat25 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("tail"#) -}
+5abdbe87b5d190bdd0d45901c1e7c3b8
+  $fInterpreterLamNat26 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat30,
+                  LamNatInterpreter.$fInterpreterLamNat27)) -}
+67e3fb02d2a3b61fe15a8d780cf1c84b
+  $fInterpreterLamNat27 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat28) -}
+f4c7b927ebc55c022c8a1b168bfd2729
+  $fInterpreterLamNat28 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat29
+                   LamNatInterpreter.Cons h ds -> h }) -}
+fce53ae66a553662b4094310f02718c5
+  $fInterpreterLamNat29 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+a5f21c47b6056ee2f87ccd7292fcbb50
+  $fInterpreterLamNat3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\n"#) -}
+9ad197ad2641febf21df60646b16a7c0
+  $fInterpreterLamNat30 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat31) -}
+bb8c96f16e34a6518bc46422654ca8e8
+  $fInterpreterLamNat31 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("head"#) -}
+350746f08c1ef54dd28f2eea1c058c84
+  $fInterpreterLamNat32 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat37,
+                  LamNatInterpreter.$fInterpreterLamNat33)) -}
+9c6c1327f5b7fe383f28a8358ac9072c
+  $fInterpreterLamNat33 :: LamNatInterpreter.Value
+  {- HasNoCafRefs, Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat34) -}
+47f6351b0454f575b78f24f2125a81b6
+  $fInterpreterLamNat34 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m2,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat36
+                   LamNatInterpreter.IntVal ds
+                   -> LamNatInterpreter.$fInterpreterLamNat35 }) -}
+79ec5ab09e0d71bb322b3bb030e38d4b
+  $fInterpreterLamNat35 :: LamNatInterpreter.Value
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (LamNatInterpreter.BoolVal GHC.Types.True) -}
+691593f01c9ec149144d01ac5b29307e
+  $fInterpreterLamNat36 :: LamNatInterpreter.Value
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (LamNatInterpreter.BoolVal GHC.Types.False) -}
+b3613b5c9d17096b0ebe93e53159bd39
+  $fInterpreterLamNat37 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat38) -}
+031ff10c803522b4d62c0cf3f0713275
+  $fInterpreterLamNat38 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("int?"#) -}
+d5259ecf925185ae29ade04692af60b8
+  $fInterpreterLamNat39 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat42,
+                  LamNatInterpreter.$fInterpreterLamNat40)) -}
+0f1993a5cb1ba2f93540b64daf0838f8
+  $fInterpreterLamNat4 ::
+    Data.Map.Internal.Map Environment.Ident LamNatInterpreter.Value
+  {- Unfolding: (Environment.$sfromList
+                   @ LamNatInterpreter.Value
+                   LamNatInterpreter.$fInterpreterLamNat5) -}
+f7ee00732cf82fb7263caa371658955b
+  $fInterpreterLamNat40 :: LamNatInterpreter.Value
+  {- HasNoCafRefs, Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat41) -}
+c99fcbcd3da6b437fb0f5969c0a99105
+  $fInterpreterLamNat41 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 LamNatInterpreter.Function
+                   (\ (ds :: LamNatInterpreter.Value) ->
+                    LamNatInterpreter.BoolVal
+                      (LamNatInterpreter.$fEqValue_$c/= args ds))) -}
+7d720e4938f8c94be8476316702c9f77
+  $fInterpreterLamNat42 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat43) -}
+cfdb4c81a939509d7ec6a92e49d9f761
+  $fInterpreterLamNat43 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("!="#) -}
+48f1b443eaf2a0ec5a4f9b3e7f4f908d
+  $fInterpreterLamNat44 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat47,
+                  LamNatInterpreter.$fInterpreterLamNat45)) -}
+55b39c7b2ceba7b197e5b4785fe2e706
+  $fInterpreterLamNat45 :: LamNatInterpreter.Value
+  {- HasNoCafRefs, Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat46) -}
+98f51be664517384bf4371a53832154c
+  $fInterpreterLamNat46 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 LamNatInterpreter.Function
+                   (\ (ds :: LamNatInterpreter.Value) ->
+                    LamNatInterpreter.BoolVal
+                      (LamNatInterpreter.$fEqValue_$c== args ds))) -}
+828fa5b8e60140e0592a0152f8720bc9
+  $fInterpreterLamNat47 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat48) -}
+17394c1d33ee143f723adee758149333
+  $fInterpreterLamNat48 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("=="#) -}
+ad9a1d79992c7ec9aef9356c56dab16e
+  $fInterpreterLamNat49 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat54,
+                  LamNatInterpreter.$fInterpreterLamNat50)) -}
+ef99bf737ffded33407471387b126288
+  $fInterpreterLamNat5 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat114
+                   LamNatInterpreter.$fInterpreterLamNat6) -}
+71d207e5e2e195517386cdb1f7530afc
+  $fInterpreterLamNat50 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat51) -}
+57ea8ce63cec782f22ec0e408e19c4c3
+  $fInterpreterLamNat51 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat53
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat52
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.BoolVal
+                                (GHC.Integer.Type.geInteger a b) }) }) -}
+d322aad3b0fb1d7e82ea5328d300d350
+  $fInterpreterLamNat52 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+f06c57323dc9c929b48c4ccfdeed9508
+  $fInterpreterLamNat53 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+b05478e542904123abd156655a8cbb1e
+  $fInterpreterLamNat54 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat55) -}
+2cc4ad62941bce0dbe6dbd8cd8f20878
+  $fInterpreterLamNat55 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (">="#) -}
+7899b0bba2eb904b34c51bf7601b1001
+  $fInterpreterLamNat56 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat61,
+                  LamNatInterpreter.$fInterpreterLamNat57)) -}
+0079a70a8e9ebc64c43a3b42ccdf7cf1
+  $fInterpreterLamNat57 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat58) -}
+060207a8cd7bf507e707f697b97a16f2
+  $fInterpreterLamNat58 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat60
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat59
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.BoolVal
+                                (GHC.Integer.Type.gtInteger a b) }) }) -}
+3e82c3ddb567b42c91c6d16cd2e56a6b
+  $fInterpreterLamNat59 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+25c5b43753a0188d12d3725de0b9b0e3
+  $fInterpreterLamNat6 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat107
+                   LamNatInterpreter.$fInterpreterLamNat7) -}
+4fdf434d1bb91bc470fca486f766d292
+  $fInterpreterLamNat60 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+b587a020199bbfbfa0d55562fba0cf59
+  $fInterpreterLamNat61 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat62) -}
+e466e2dab35cf7755cf9957a68545431
+  $fInterpreterLamNat62 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (">"#) -}
+1e7bcfc1016c4ec4c62565d3c0529d09
+  $fInterpreterLamNat63 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat68,
+                  LamNatInterpreter.$fInterpreterLamNat64)) -}
+65b5a2b3f85607b60da5200fc6e71075
+  $fInterpreterLamNat64 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat65) -}
+6d4f9578776ec77fe81becb4fcab2cb6
+  $fInterpreterLamNat65 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat67
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat66
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.BoolVal
+                                (GHC.Integer.Type.leInteger a b) }) }) -}
+2efd34ba37a1c42ac442f775bdbc11d3
+  $fInterpreterLamNat66 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+425958c2bb6c42104e68f7c0a837435d
+  $fInterpreterLamNat67 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+b2a4af8ccf287ecf501d2b37d66f57a9
+  $fInterpreterLamNat68 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat69) -}
+79a37fc06769955caa552f1946770eae
+  $fInterpreterLamNat69 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<="#) -}
+66b6834ca701b2324f28e4bea79c40ff
+  $fInterpreterLamNat7 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat100
+                   LamNatInterpreter.$fInterpreterLamNat8) -}
+da6e9a8ff3693d4c7a301ff2e330bd91
+  $fInterpreterLamNat70 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat75,
+                  LamNatInterpreter.$fInterpreterLamNat71)) -}
+86bda0b413156ce7cdcda8ccdba79a2b
+  $fInterpreterLamNat71 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat72) -}
+c2f99f6e8ac211251287b5dd803df9bb
+  $fInterpreterLamNat72 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat74
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat73
+                           LamNatInterpreter.IntVal b
+                           -> LamNatInterpreter.BoolVal
+                                (GHC.Integer.Type.ltInteger a b) }) }) -}
+15fac460327b31a671377510ae0a0a20
+  $fInterpreterLamNat73 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+9184343f78c6e97474a90cc8a5135651
+  $fInterpreterLamNat74 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+1c4eb3f2cb597747fb82683c98827342
+  $fInterpreterLamNat75 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat76) -}
+df413bbc869c2fe11be62af6be8305ae
+  $fInterpreterLamNat76 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("<"#) -}
+d807e5af44ecfaf2ccb43a9bffa33816
+  $fInterpreterLamNat77 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat81,
+                  LamNatInterpreter.$fInterpreterLamNat78)) -}
+c32d882b1afb0d2649d0a2a8304c63e9
+  $fInterpreterLamNat78 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat79) -}
+57c5f0e9afd63bad28acb52a82d4d44f
+  $fInterpreterLamNat79 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m1,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat80
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.IntVal
+                        (GHC.Integer.Type.negateInteger a) }) -}
+ea7e9f62a700fb66cf8b964484ce6948
+  $fInterpreterLamNat8 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat92
+                   LamNatInterpreter.$fInterpreterLamNat9) -}
+fe425286ec7e28a6e6de798cc4945f2d
+  $fInterpreterLamNat80 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+6b8321f57dfc94bd43f000bb9d0bbf5b
+  $fInterpreterLamNat81 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat82) -}
+7e16bcb86b51a6d07661251491fc631b
+  $fInterpreterLamNat82 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("~"#) -}
+82ed6c712fe5a50877126ccfc57af773
+  $fInterpreterLamNat83 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat90,
+                  LamNatInterpreter.$fInterpreterLamNat84)) -}
+c8f5e6435042f199c78bf701889101a7
+  $fInterpreterLamNat84 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat85) -}
+962df6ad5b27fc45ff102882c5b39345
+  $fInterpreterLamNat85 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat89
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat88
+                           LamNatInterpreter.IntVal b
+                           -> case GHC.Integer.Type.eqInteger#
+                                     b
+                                     LamNatInterpreter.$fInterpreterLamNat87 of wild2 {
+                                DEFAULT
+                                -> LamNatInterpreter.IntVal (GHC.Real.$fIntegralInteger_$cmod a b)
+                                1# -> LamNatInterpreter.$fInterpreterLamNat86 } }) }) -}
+b15e19d2fa80d265333060fd4c1a8b53
+  $fInterpreterLamNat86 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+9c113804c25cc4190622a9f728a25102
+  $fInterpreterLamNat87 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+a6e3e9515c43577ae057e56e0e3a5075
+  $fInterpreterLamNat88 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+97c61c71a6828dc366f55540eacd7bd0
+  $fInterpreterLamNat89 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+67d4357a13a44f538f6f04ec9147f96a
+  $fInterpreterLamNat9 ::
+    [(Environment.Ident, LamNatInterpreter.Value)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Environment.Ident, LamNatInterpreter.Value)
+                   LamNatInterpreter.$fInterpreterLamNat83
+                   LamNatInterpreter.$fInterpreterLamNat10) -}
+620f69461ec63fa2c094b55207ed9af3
+  $fInterpreterLamNat90 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat91) -}
+71b51f58973a6a35bee5b4e022fe1161
+  $fInterpreterLamNat91 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("mod"#) -}
+d311508389791228e8a5a75ad4ddf536
+  $fInterpreterLamNat92 ::
+    (Environment.Ident, LamNatInterpreter.Value)
+  {- Strictness: m,
+     Unfolding: ((LamNatInterpreter.$fInterpreterLamNat98,
+                  LamNatInterpreter.$fInterpreterLamNat93)) -}
+a3b5c1af5982961037da5cf26ae50291
+  $fInterpreterLamNat93 :: LamNatInterpreter.Value
+  {- Strictness: m5,
+     Unfolding: (LamNatInterpreter.Function
+                   LamNatInterpreter.$fInterpreterLamNat94) -}
+bb8e958800fcf4c0c68c97343cd1a0e9
+  $fInterpreterLamNat94 ::
+    LamNatInterpreter.Value -> LamNatInterpreter.Value
+  {- Arity: 1, Strictness: <S,1*U>m5,
+     Unfolding: (\ (args :: LamNatInterpreter.Value) ->
+                 case args of wild {
+                   DEFAULT -> LamNatInterpreter.$fInterpreterLamNat97
+                   LamNatInterpreter.IntVal a
+                   -> LamNatInterpreter.Function
+                        (\ (ds :: LamNatInterpreter.Value) ->
+                         case ds of wild1 {
+                           DEFAULT -> LamNatInterpreter.$fInterpreterLamNat96
+                           LamNatInterpreter.IntVal b
+                           -> case GHC.Integer.Type.eqInteger#
+                                     b
+                                     LamNatInterpreter.$fInterpreterLamNat87 of wild2 {
+                                DEFAULT
+                                -> LamNatInterpreter.IntVal (GHC.Real.$fIntegralInteger_$cdiv a b)
+                                1# -> LamNatInterpreter.$fInterpreterLamNat95 } }) }) -}
+2a27eb6bf67a5051f3e7290bfd289c41
+  $fInterpreterLamNat95 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+2fe5457661cd1474b35bc589a53cc1dd
+  $fInterpreterLamNat96 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+64fad799fde6b943dc6638cbfbcae4e6
+  $fInterpreterLamNat97 :: LamNatInterpreter.Value
+  {- Strictness: x -}
+37b44f32c93a82c8e0fc22641d0f4b1e
+  $fInterpreterLamNat98 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString#
+                   LamNatInterpreter.$fInterpreterLamNat99) -}
+584b9e485b5621873c1e699ae2397091
+  $fInterpreterLamNat99 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/"#) -}
+c76d2bea75f0bc1b3198741fa36b853e
+  $fInterpreterLamNat_$cshow_env ::
+    LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: LamFunInterpreter.GlobEnv
+                            'LamFunSyntax.LamNat) ->
+                 case LamNatInterpreter.$fInterpreterLamNat_go13
+                        (GHC.Types.[] @ [GHC.Types.Char])
+                        ds
+                          `cast`
+                        (Sub (LamNatInterpreter.D:R:GlobEnvLamNat[0]) ; Environment.N:Environment[0] <LamNatInterpreter.Value>_N) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs1
+                   -> Data.OldList.intercalate_$spoly_go
+                        @ GHC.Types.Char
+                        x
+                        (Data.OldList.prependToAll
+                           @ [GHC.Types.Char]
+                           LamNatInterpreter.$fInterpreterLamNat2
+                           xs1) }) -}
+4578b9c647344abea5be2ed8d40add02
+  $fInterpreterLamNat_go13 ::
+    [[GHC.Types.Char]]
+    -> Data.Map.Internal.Map
+         Data.Text.Internal.Text LamNatInterpreter.Value
+    -> [[GHC.Types.Char]]
+  {- Arity: 2, Strictness: <L,1*U><S,1*U> -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fShowValue :: GHC.Show.Show LamNatInterpreter.Value
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ LamNatInterpreter.Value
+                  LamNatInterpreter.$fShowValue_$cshowsPrec
+                  LamNatInterpreter.$fShowValue_$cshow
+                  LamNatInterpreter.$fShowValue_$cshowList -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fShowValue1 ::
+    LamNatInterpreter.Value -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: LamNatInterpreter.Value)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (LamNatInterpreter.$fShowValue_$cshow x))
+                   s) -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fShowValue_$cshow :: LamNatInterpreter.Value -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fShowValue_$cshowList ::
+    [LamNatInterpreter.Value] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [LamNatInterpreter.Value]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ LamNatInterpreter.Value
+                   LamNatInterpreter.$fShowValue1
+                   ls
+                   s) -}
+9b01cc51b8dd57318a87a687672cbf5f
+  $fShowValue_$cshowsPrec ::
+    GHC.Types.Int -> LamNatInterpreter.Value -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: LamNatInterpreter.Value)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (LamNatInterpreter.$fShowValue_$cshow x))
+                   s) -}
+30c566a5f14412e5ab79252936a55b29
+  $tc'BoolVal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5464641903101404287##
+                   17440336155901519258##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tc'BoolVal2
+                   0#
+                   LamNatInterpreter.$tc'BoolVal1) -}
+0e0d12d97ecfc664e41a0a702dcee8ed
+  $tc'BoolVal1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7054a6e68ba834817128808400564a75
+  $tc'BoolVal2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tc'BoolVal3) -}
+534518c30adb3ef9be336c18a6c86392
+  $tc'BoolVal3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'BoolVal"#) -}
+3d23281807964554771e126127e31a40
+  $tc'Cons :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11476314283405628556##
+                   14000512222731742074##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tc'Cons2
+                   0#
+                   LamNatInterpreter.$tc'Cons1) -}
+0ce1f1e75e4e8f6defa00c71628000bd
+  $tc'Cons1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+89dff7632dd7f2e57120fcfa607e6fa5
+  $tc'Cons2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tc'Cons3) -}
+5fe685be623d068aba0af7399d2d4af7
+  $tc'Cons3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Cons"#) -}
+57924080f008b1ee4e866cf46d6421ac
+  $tc'Function :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11508579607179763860##
+                   16351178328069431948##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tc'Function2
+                   0#
+                   LamNatInterpreter.$tc'Function1) -}
+fe072681b574bcdc3b0041fa1f9b6ba4
+  $tc'Function1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+284b13397e28ee5c7de04a3146f74e4c
+  $tc'Function2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tc'Function3) -}
+e1d53b363341e9fa0b07a39d92a4151e
+  $tc'Function3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Function"#) -}
+0501e4b110478a9e5cdd430c96595534
+  $tc'IntVal :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2535092693476972743##
+                   12917162890609171884##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tc'IntVal2
+                   0#
+                   LamNatInterpreter.$tc'IntVal1) -}
+2cfee789bb3999c5025a01e48e41acc1
+  $tc'IntVal1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+ee698f9d33105a32f750a0d6cba43d63
+  $tc'IntVal2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tc'IntVal3) -}
+3e7431b60ccf84788d0e3a7d83490fd6
+  $tc'IntVal3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntVal"#) -}
+df2cec2def442be81bc3950c896b3e83
+  $tc'Nil :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13914484166053153390##
+                   11286134134700415805##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tc'Nil2
+                   0#
+                   LamNatInterpreter.$tc'Nil1) -}
+7de112e719a3039c7149f34a025fc242
+  $tc'Nil1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+f71946e247eba0020a2e3dc3dcc3855e
+  $tc'Nil2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tc'Nil3) -}
+714e2bea7771db381935cb9146699c1d
+  $tc'Nil3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Nil"#) -}
+385e2a50a1a9342623a6656ddbd96958
+  $tcValue :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5246383039385777583##
+                   12184891580238952873##
+                   LamNatInterpreter.$trModule
+                   LamNatInterpreter.$tcValue1
+                   0#
+                   GHC.Types.krep$*) -}
+3115b18131bdcaa29bc789a0fa60ad7a
+  $tcValue1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$tcValue2) -}
+2c31ba83b1ac5e3325ee2a5aee1ebb51
+  $tcValue2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Value"#) -}
+9cb8766010e2e837ba8a19f4dc69d356
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   LamNatInterpreter.$trModule3
+                   LamNatInterpreter.$trModule1) -}
+59c15ef55904995a9f34bcd8e6b5e6d4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$trModule2) -}
+9095760c62d8cc800ad140befaf3c49b
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LamNatInterpreter"#) -}
+461e63369ad3aac6ba657adfb36e690c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LamNatInterpreter.$trModule4) -}
+a0fc63346046b18161302472e6065c2b
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("LamFun-3.14.1-1NElG62CogO50XNaLIVWxW"#) -}
+fc7ae8fd0c8e5853b7a54b2fb42932f4
+  $w$sgo13 ::
+    Environment.Ident
+    -> GHC.Prim.ByteArray#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Internal.Map Environment.Ident a1
+    -> Data.Map.Internal.Map Environment.Ident a1
+  {- Arity: 6, Strictness: <L,U><L,U><L,U><L,U><L,U><S,1*U>,
+     Inline: [2] -}
+9b01cc51b8dd57318a87a687672cbf5f
+  axiom LamNatInterpreter.D:R:GlobEnvLamNat::
+      LamFunInterpreter.GlobEnv 'LamFunSyntax.LamNat
+        = LamNatInterpreter.Env
+c35df8d24fcf0fce9846c88598cce4ac
+  type Defn =
+    LamFunSyntax.Defn_ 'LamFunSyntax.LamNat Environment.Ident
+9b01cc51b8dd57318a87a687672cbf5f
+  type Env = Environment.Environment LamNatInterpreter.Value
+3255411e6d3d7df5c417c4d3e1e7e967
+  type Expr =
+    LamFunSyntax.Expr_ 'LamFunSyntax.LamNat Environment.Ident
+73cf6f3f6e22396fefac1155e0393569
+  type Program =
+    LamFunSyntax.Program_ 'LamFunSyntax.LamNat Environment.Ident
+9b01cc51b8dd57318a87a687672cbf5f
+  data Value
+    = IntVal GHC.Integer.Type.Integer
+    | BoolVal GHC.Types.Bool
+    | Nil
+    | Cons LamNatInterpreter.Value LamNatInterpreter.Value
+    | Function (LamNatInterpreter.Value -> LamNatInterpreter.Value)
+instance GHC.Classes.Eq [LamNatInterpreter.Value]
+  = LamNatInterpreter.$fEqValue
+instance [orphan] LamFunInterpreter.Interpreter [LamFunSyntax.LamNat]
+  = LamNatInterpreter.$fInterpreterLamNat
+instance GHC.Show.Show [LamNatInterpreter.Value]
+  = LamNatInterpreter.$fShowValue
+family instance LamFunInterpreter.GlobEnv [LamFunSyntax.LamNat]
+  = LamNatInterpreter.D:R:GlobEnvLamNat
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

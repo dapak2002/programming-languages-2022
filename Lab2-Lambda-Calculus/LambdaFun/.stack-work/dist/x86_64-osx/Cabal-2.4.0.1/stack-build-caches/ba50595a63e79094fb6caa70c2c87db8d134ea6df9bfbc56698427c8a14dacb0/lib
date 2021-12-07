@@ -1,0 +1,64 @@
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/LamFun.cabal:
+  hash: b2fe8a284de1633d831e7d0afeb3cc0d9687507df542926afa6fcd5615d6012a
+  size: 2079
+  modtime: 1638221404
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamMemInterpreter.hs:
+  hash: 067953b882be6667cc36a41fdf5d3629f24930d021daed27413d44749713421c
+  size: 7786
+  modtime: 1638463882
+? /Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/.stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/autogen/cabal_macros.h
+: hash: cc73b9d6ee352643dbf0e01c25ae263e37be5f33dc9b94ceab674602c017f939
+  size: 8517
+  modtime: 1637217195
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/package.yaml:
+  hash: 880b93bb175d405aff9cf5caea3f73a5422f35647f5d0714eee7ae67e854a90c
+  size: 974
+  modtime: 1573844890
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamFunParser.hs:
+  hash: 27af1b72976599b0e4009b9200db2e00f9158c8d989493801934386ab316102e
+  size: 8186
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamArrayInterpreter.hs:
+  hash: 84979df7068c7c93e87d4e9483e8f003caf759d01074846efcb59767cd0580ea
+  size: 6494
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/Memory.hs:
+  hash: ae2b75b992f74090173659fe47aaa92abbd17771b789365a2291d1c9648b0e89
+  size: 1592
+  modtime: 1574375152
+/Users/alexanderkurz/.stack/programs/x86_64-osx/ghc-8.6.4/lib/ghc-8.6.4/include/ghcversion.h:
+  hash: 529291d4a255ef1c3ec99116d8dca391f2db7bad8b5eab6dcbf9a70354c6eedf
+  size: 524
+  modtime: 1586582407
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamFunLexer.hs:
+  hash: 6f8ac09c698663424b0880d9b2cff0bd8b3a0077e8648991f773b59612e3ca49
+  size: 7330
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamFunInterpreter.hs:
+  hash: aa1962f1cf78503f1320fe2fc9fde309e8b9cff954eabc342af8a0315e12f87d
+  size: 622
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/Environment.hs:
+  hash: d10dc55d4bbad3d0c1878ad972ad90d654826e046d6e7e5d20e4fa506246df44
+  size: 1343
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamInterpreter.hs:
+  hash: 96f7069c8a856137163f3201afd95f87aa34089fc66bc49baf95e218c3238ee3
+  size: 3417
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/Utils.hs:
+  hash: fd92ea2714052a964e64d8a31ebef29b353731382c319514b73f9ddde369113f
+  size: 512
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamRecInterpreter.hs:
+  hash: 81cbc278fe24cec2702e83b07a4bcd713ff919ab97ef807f8021e7925c370519
+  size: 4941
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamFunSyntax.hs:
+  hash: 2530ab9212a08c93a99c4dbcc433890648f1335861bfd6f0a6568289fe7f011c
+  size: 6576
+  modtime: 1574375152
+/Users/alexanderkurz/alexhkurz-at-github/programming-languages-2021/Lab2-Lambda-Calculus/LambdaFun/src/LamNatInterpreter.hs:
+  hash: f714f3e0bded7d3f37d48c40288d3894f7db28c0f7716cc342557665c50520c9
+  size: 4658
+  modtime: 1574375152
