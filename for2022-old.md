@@ -36,32 +36,22 @@ You will keep both report.tex and report.pdf in your private github repository.
 
 ## Grading Guidelines
 
-- **D:** Demonstrates adequate understanding of the material, with possibly some missed deadlines and some wrong solutions. No project.
-- **C:** Demonstrates *good* understanding of the material. No missed deadlines. Correct solutions to the homework. A straightforward project.
-- **B:** Demonstrates *very good* understanding of the material. No missed deadlines. Correct solutions to the homework. The project explores a topic related to this course and shows that the student deepened their understanding significantly.
-- **A:** Demonstrates *excellent* understanding of the material. No missed deadlines. Correct solutions to the homework.  The project explores a topic related to this course and shows that the student deepened their understanding significantly.
+Programming Languages is a vast subject. At the core of this course are three interpreters of increasing complexity. They are assessed in three assignments. This is supplemented by some theory on lambda calculus and rewriting. But there are many topics we can only touch upon.  Most obviously, there is much more to Haskell than we strictly need for the course. Similarly, there are many theoretical topics we mention only in passing. The overarching rationale for the grading guidelines below is to assess how much you master of the practice of Haskell and the theory of programming languages and how far you engage with some of the ramifications of Programming Languages that go beyond the material of the course.
+
+- **D:** Demonstrates *basic* familiarity with Haskell and the theory of Programming Languages as presented in this course.
+- **C:** Demonstrates *adequate* familiarity with Haskell and the theory of Programming Languages as presented in this course. Discusses interesting features of Haskell and illustrates them with their own project. Reviews the theoretical concepts treated in the course and illustrates them with a selection of homework and own examples.
+- **B:** Demonstrates *good* understanding of Haskell and the theory of Programming Languages as presented in this course. In addition to the previous item: Develops material that goes beyond what has been treated in class. Can be recommended to next year's students as a learning resource. Makes connections between the practical and theoretical parts of the course. 
+
+A grade of B can be achieved with a report that contains a *Haskell tutorial* for beginners in Part 1 and demonstrates in Part 2 that the techniques needed to solve the *theory homeworks* have been mastered.  
+
+- **A:** Demonstrates *excellent* understanding of the area of Programming Languages as presented in this course. Is inspired by the course material but takes an independent perspective and *stands on its own*. Develops material that goes significantly beyond what has been treated in class. Can be highly recommended to next year's students as a learning resource. Makes interesting connections between the practical and theoretical aspects. 
+
+A grade of A can be achieved by adding more challenging material to the Haskell tutorial and the theory homeworks. But, typically, I expect a grade A report to be project based. Here are some examples of projects:
+- A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
+- A theorem proving project along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
+- A math project that explores the category theoretic foundations of programming languages. 
 
 A way to describe when a report gets the full 100 points: You would be proud to add it to your resume and I would be proud to show it to my colleagues bragging about how good our students are.
-
-## Example Project Topics
-
-I don't want to limit your creativity, so please get in touch if you have your own ideas.
-
-- Data Analysis:
-    - Github has an enormous amount of public available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GHArchive](https://www.gharchive.org/).
-- Programming:
-    - A software package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
-    - Implementing a calculator in a programming language other than Haskell.
-    - Writing an interpreter for LISP.
-    - A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
-- Theory:
-    - A theorem proving project along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
-    - Exploring Hoare logic in more depth.
-    - A math project that explores the category theoretic foundations of programming languages. 
-    - The Halting problem, Turing completeness, Church-Turing thesis, etc.
-    - Applying the methods of the class to the problem in the book Goedel, Escher, Bach.
-    - Typeinference in lambda calculus.
-
 
 ## Tips on Writing
 
@@ -78,7 +68,24 @@ I don't want to limit your creativity, so please get in touch if you have your o
 
 Make the report interesting to a readers including myself. Do not simply repeat material that is already in the lecture notes.  Explore on your own. If you write about material we have covered in the lectures, make your own examples and add your own angle. Your report can build on homework if you integrate them into your own narrative.
 
-### Theory Homework (obsolete)
+### Haskell Tutorial
+
+Some example topics:
+
+- What do you think you should have known when you started with Haskell?
+- Make your own examples that you think would help a beginning Haskeller to understand Haskell better.
+- Benchmark the same algorithms in Haskell, Python, etc. You can use [gnomon](https://github.com/paypal/gnomon) to measure the time that programs take to run.
+- I collected some ideas for [Haskell projects](haskell-projects.md) you might want to try.
+- Write about some features of Haskell that only appear on the sidelines in this course:
+    - Haskell is lazy
+    - Haskell has type classes
+    - Haskell has monads 
+    If you decide on such a topic, do not treat it too superficially. Always add code examples of your own.
+- You may decide to write on topics we didn't have time for at all, for example:
+    - History of Haskell  
+    - Application of Haskell in industry
+
+### Theory Homework
 
 A good starting point is the homework in the lecture notes. Topics of revelance are (choose some of them):
 - **Parsing.** Example topics: Give your own examples of ambiguous and non-ambiguous grammars. Explain, at the hand of an example, how to make a grammart non-ambiguous. Modify the grammar of your calculator by changing precedence levels and explain how different precedence levels correspond to different conventions about which parentheses can be dropped.

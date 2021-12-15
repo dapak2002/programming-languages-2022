@@ -1,6 +1,10 @@
 
 # Course Materials
 
+**New Links for 2022:**
+- https://tn1ck.github.io/MIU/
+- ...
+
 **Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ... [BNFC](BNFC-installation.md) ... [Haskell projects](haskell-projects.md) ... [Videos](videos.md)
 
 <!--
