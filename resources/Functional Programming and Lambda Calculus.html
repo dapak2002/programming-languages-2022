@@ -1,0 +1,1467 @@
+
+<!-- saved from url=(0058)https://www.cs.jhu.edu/~jason/465/readings/lambdacalc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- base href="http://cs.wwc.edu/~aabyan/221_2/PLBOOK/Functions.html" -->
+
+  <meta http-equiv="Content-Type" content="text/html"><title>Functional Programming</title></head>
+<body bgcolor="#ffffff">
+
+Here's some background material on lambda calculus.  I suggest that
+you read up to but not including the "denotational semantics" section.<p>
+
+The original URL for this material was
+http://cs.wwc.edu/~aabyan/221_2/PLBOOK/Functions.html .  Thanks to
+Anthony A. Aaby at Walla Walla College, and thanks to the Wayback
+Machine for saving a copy when it went offline.  I have corrected a
+few special characters.</p><p>
+
+</p><hr>
+
+<br><font size="-1">Permission to make digital/hard copy of part or all of
+this work for personal or classroom use is granted without fee provided
+that the copies are not made or distributed for profit or commercial advantage,
+the copyright notice, the title of the publication, and its date appear,
+and notice is given that copying is by permission of Anthony A. Aaby. To
+copy otherwise, to republish, to post on servers, or to redistribute to
+lists, requires prior specific permisiion and/or fee.</font>
+<br><font size="-1">� 1998 Anthony A. Aaby.
+<hr>
+
+<h1 align="center">Functional Programming</h1>
+<em>A <b>functional program</b> consists of an expression E (representing
+both the algorithm and the input).  This expression E is subject to some
+rewrite rules.  <b>Reduction</b> consists of replacing some part P of E by
+another expression P' according to the given rewrite rules. ... This process
+of reduction will be repeated until the resulting expression has no more
+parts that can be rewritten.  The expression E* thus obtained is called the
+<b>normal form</b> of E and constitutes the output of the functional
+program</em>  -H. P. Barendregt
+
+<p><em>Functional programming is characterized by the programming with
+values, functions and functional forms.</em></p>
+
+<p><em>Keywords and phrases:</em> Lambda calculus, free and bound variables,
+scope, environment, functional programming, combinatorial logic, recursive
+functions, functional,  curried function.</p>
+
+<p></p>
+<hr>
+
+<p>Functional programming languages are the result of both abstracting and
+generalizing the data type of maps. Recall, the mapping <em>m</em> from each
+element <em>x</em> of <em>S</em> (called the domain) to the corresponding
+element <em>m(x)</em> of <em>T</em>  (called the range) is written as:</p>
+
+<p></p>
+
+<center>
+m : S → T</center>
+
+<p>For example, the squaring function is a function of type:</p>
+
+<p></p>
+
+<center>
+sqr  :  Num → Num</center>
+
+<p>and may be defined as:</p>
+
+<p></p>
+
+<center>
+sqr where x |→ x*x</center>
+
+<p>A linear function f of type</p>
+
+<p></p>
+
+<center>
+f : Num → Num</center>
+
+<p>may be defined as:</p>
+
+<p></p>
+
+<center>
+f where x |→ 3*x + 4</center>
+
+<p>The function:</p>
+
+<p></p>
+
+<center>
+g where x |→ 3*x<sup>2</sup> + 4</center>
+
+<p>may be written as the composition of the functions f and sqr as:</p>
+
+<p></p>
+
+<center>
+f ° sqr</center>
+
+<p>where</p>
+
+<p></p>
+
+<center>
+(f ° sqr) (x) = f(sqr(x)) = f (x*x) = 3 * x<sup>2</sup> + 4</center>
+
+<p>The compositional operator is an example of a <em>functional form</em>.
+Functional programming is based on the mathematical concept of a function and
+functional programming languages include the following:</p>
+<ul>
+  <li>A set of primitive functions.</li>
+  <li>A set of functional forms.</li>
+  <li>The <em>application</em> operation.</li>
+  <li>A set of data objects and associated functions.</li>
+  <li>A mechanism for binding a name to a function.</li>
+</ul>
+LISP, FP, Scheme, ML, Miranda and Haskell are just some of the languages to
+implement this elegant computational paradigm.
+
+<p>The basic concepts of functional programming originated with LISP.
+Functional programming languages are important for the following reasons.</p>
+<ul>
+  <li>Functional programming dispenses with the assignment command freeing
+    the programmer from the rigidly sequential mode of thought required with
+    the assignment command.</li>
+  <li>Functional programming encourages thinking at <em>higher levels of
+    abstraction</em> by providing higher-order functions -- functions that
+    modify and combine existing programs.</li>
+  <li>Functional programming has natural implementation in concurrent
+    programming.</li>
+  <li>Functional programming has important application areas.  Artificial
+    intelligence programming is done in functional programming languages and
+    the AI techniques migrate to real-world applications.</li>
+  <li>Functional programming  is useful for developing <em>executable
+    specifications</em> and <em>prototype implementations</em>.</li>
+  <li>Functional programming has a close relationship to computer science
+    theory.  Functional programming is based on the lambda-calculus which in
+    turn provides a framework for studying  decidability questions of
+    programming.  The essence of denotational semantics is the translation of
+    conventional programs into equivalent functional programs.</li>
+</ul>
+
+<blockquote>
+  <b>Terminology.</b> Functional programming languages are called
+  <em>applicative</em> since the functions are applied to their arguments,
+  <em>declarative</em> and <em>non-procedural</em> since the definitions
+  specify what is computed and not how it is computed.</blockquote>
+
+<h2>1 <a name="lambda">The Lambda Calculus</a></h2>
+Functional programming languages are based on the lambda-calculus. The
+lambda-calculus grew out of an attempt by Alonzo Church and Stephen Kleene in
+the early 1930s to formalize the  notion of computability (also known as
+<em>constructibility</em> and <em>effective calculability</em>). It is a
+formalization of the notion of functions as rules (as opposed to functions as
+tuples). As with mathematical expressions, it is characterized by the
+principle that <em>the  value of an expression depends only on the values of
+its subexpressions.</em> The lambda-calculus is a simple language with few
+constructs and a simple semantics. But, it is expressive; it is sufficiently
+powerful to express all computable functions.
+
+<p>As an informal example of the lambda-calculus, consider the function
+defined by the polynomial expression</p>
+
+<p></p>
+
+<center>
+x<sup>2</sup> + 3x - 5.</center>
+
+<p>The variable x is a parameter.  In the lambda-calculus, the notation λx.M
+is used to denote a function with parameter x and body M.  That is, x is
+mapped to M. We rewrite our function in this format</p>
+
+<p></p>
+
+<center>
+λx.(x<sup>2</sup>+ 3x - 5)</center>
+
+<p>and read it as ``the function of <em>x</em> whose value  is defined by
+x<sup>2</sup> + 3x - 5''. The lambda-calculus uses prefix form and so we
+rewrite the body in prefix form,</p>
+
+<p></p>
+
+<center>
+λx. (- (+ (* x x) (* 3 x)) 5).</center>
+
+<p>The lambda-calculus <em>curries</em> its functions of more than one
+variable i.e. (+ x y) is written as ((+ x) y), the function (+ x) is the
+function which adds something to x.   Rewriting our example in this form we
+get:</p>
+
+<p></p>
+
+<center>
+λx.((- ((+ ((* x) x)) ((* 3) x))) 5)</center>
+
+<p>To denote the application of a function f to an argument a we write</p>
+
+<p></p>
+
+<center>
+f a</center>
+To apply our example to the value 1 we write
+
+<p></p>
+
+<center>
+λx.((- ((+ ((* x) x)) ((* 3) x))) 5) 1.</center>
+
+<p>To evaluate the function application, we remove the λx. and replace each
+remaining occurence of x with 1 to get</p>
+
+<p></p>
+
+<center>
+((- ((+ ((* 1) 1)) ((* 3) 1))) 5)</center>
+
+<p>then evaluate the two multiplication expressions</p>
+
+<p></p>
+
+<center>
+((- ((+ 1) 3)) 5)</center>
+
+<p>then the addition</p>
+
+<p></p>
+
+<center>
+((- 4) 5)</center>
+
+<p>and finally the subtraction</p>
+
+<p></p>
+
+<center>
+<sup>-</sup>1.</center>
+
+<p>We say that the variable x is <em>bound</em> in the lambda-expression
+λx.B. A variable occuring in the lambda-expression which is not bound is said
+to be <em>free</em>. The variable x is free in the lambda-expression λy.((+
+x) y).  The <em>scope</em> of the variable introduced (or bound) by lambda is
+the entire body of the lambda-abstraction.</p>
+
+<p>The lambda-notation extends readily to functions of several arguments.
+Functions of more than one argument can be <em>curried</em> to produce
+functions of single arguments. For example, the polynomial expression xy can
+be written as</p>
+
+<p></p>
+
+<center>
+λx. λy. xy</center>
+
+<p>When the lambda-abstraction λx. λy. xy is applied to a single argument as
+in  (λx. λy. xy 5) the result is  λy. 5y, a function which multiplies its
+argument by 5. A function of more than one argument is reguarded as a
+<em>functional</em> of one variable whose value is a function of the
+remaining variables, in this case,  ``multiply by a constant function.''</p>
+
+<p>The special character of the lambda-calculus is illustrated when it is
+recognized that functions may be applied to other functions and even permit
+self application.  For example let C = λf. λx . (f(fx))</p>
+
+<p>The pure lambda-calculus does not have any built-in functions or
+constants. Therefore, it is appropriate to speak of the lambda-calculi as a
+family of languages for computation with functions. Different languages are
+obtained for different choices of functions and constants.</p>
+
+<p>We will extend the lambda-calculus with common mathematical operations and
+constants so that λx.((+  3)  x) defines a function that maps x to x+3. We
+will drop some of the parentheses to improve the readability of the lambda
+expressions.</p>
+
+<p>A lambda-<em>expression</em> is <em>executed</em> by <em>evaluating</em>
+it. Evaluation proceeds by repeatedly selecting a <em>reducible
+expression</em> (or <em>redex</em>) and reducing it. For example, the
+expression (+  (* 5 6)  (* 8 3)) reduces to 54 in the following sequence of
+reductions.</p>
+
+<blockquote>
+  <pre>(+  (*  5 6) (* 8 3))        → (+  30  (* 8 3)) 
+                        → (+  30   24) 
+                        → 54</pre>
+</blockquote>
+When the expression is the application of a lambda-abstraction to a term, the
+term is substituted for the bound variable.  This substitution is called
+β-<em>reduction</em>. In the following sequence of reductions, the first
+step an example of β-<em>reduction</em>.  The second step is the
+reduction required by the addition operator.
+
+<blockquote>
+  <pre>(λx.((+ 3) x)) 4<br>
+
+
+
+((+  3) 4)<br>
+
+
+
+7</pre>
+</blockquote>
+The pure lambda-calculus has just three constructs: primitive symbols,
+function application, and function creation. Figure N.1gives the syntax of
+the lambda-calculus.
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.1: <b>The Lambda Calculus</b></center>
+  Syntax:
+
+  <blockquote>
+    L in Lambda Expressions<br>
+    x in Symbols<br>
+
+
+    <p>L ::= x | (L L) | (λx.L)</p>
+  </blockquote>
+  (L L) is function application, and<br>
+  (λx.L) is a lambda-abstraction which defines a function with argument
+  x and body L.</blockquote>
+<hr>
+
+<p>We say that the variable x is <em>bound</em> in the lambda-expression
+λx.B. A variable which occurs in but is not bound in a lambda-expression is
+said to be <em>free</em>.  The <em>scope</em> of λx. is B. In the
+lambda-expression λy.x+y, x is free and y is bound.</p>
+
+<p>We adopt the following notational conventions:</p>
+<ul>
+  <li>We extend the lambda-calculus with the usual constants and functions so
+    we allow
+
+    <blockquote>
+      (λx.((+ x) 3))  to represent the function x + 3</blockquote>
+  </li>
+  <li>We usually drop the outermost parentheses so we may write
+
+    <blockquote>
+      λx.((+ x) 3) instead of (λx.((+ x) 3)) and<br>
+      λx.((+ x) 3) 4 instead of (λx.((+ x) 3) 4)</blockquote>
+  </li>
+  <li>Function application associates to the left so we may write
+
+    <blockquote>
+      (+ x 3) instead of ((+ x) 3) that is, we may write<br>
+      λx.+ x 3 instead of λx.((+ x) 3)</blockquote>
+  </li>
+  <li>The body of a lambda-abstraction extends as far right as possible so we
+    <em>must</em> write
+
+    <blockquote>
+      (λx.+ x 3) 4 instead of λx.+ x 3 4</blockquote>
+  </li>
+  <li>Replace the body of a lambda-abstraction with conventional infix
+    notation so we may write
+
+    <blockquote>
+      (λx.x + 3) 4 instead of (λx.+ x 3) 4</blockquote>
+  </li>
+  <li>Multiple parameters are written together so we may write
+
+    <blockquote>
+      λxy.x + y instead of λx.λy.x + y</blockquote>
+  </li>
+</ul>
+
+<h3>Operational Semantics</h3>
+Calculation in the lambda-calculus is by rewriting (reducing) a
+lambda-expression to a normal form.  For the pure lambda-calculus,
+lambda-expressions are reduced by substitution.  That is, occurrences of the
+parameter in the body are replaced with (copies of) the argument.  In our
+extended lambda-calculus we also apply the usual reduction rules.   For
+example,
+
+<blockquote>
+
+  <center>
+
+  <table width="50%">
+    <tbody>
+      <tr>
+        <td>1.</td>
+        <td>λx.(x<sup>2</sup> - 5) 3</td>
+        <td>f(3) where f(x) = x<sup>2</sup> - 5</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>3<sup>2</sup> - 5</td>
+        <td>by substitution</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>9 - 5</td>
+        <td>power</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>4</td>
+        <td>subtraction</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+</blockquote>
+The normal form is formally defined in the following definition.
+
+<blockquote>
+  <b>Definition:</b> A lambda-expression is said to be in <b>normal form</b>
+  if no <b>β-redex</b>, a subexpression of the form (λx.P Q ), occurs in
+  it.</blockquote>
+Non-terminating computations are examples of expressions that do not have
+normal forms. The lambda-expression
+
+<p></p>
+
+<center>
+(λx.x x) (λx.x x)</center>
+
+<p>does not have a normal form as we shall soon see.</p>
+
+<p>We define substitution, B[x:M], to be the replacement of all free
+occurences of x in B with M.  Figure N.2 contains a formal definition of
+substitution.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.2: <b>Substitution</b></center>
+
+  <p></p>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>s[x:M]</td>
+        <td>= if (s=x) then M else s</td>
+      </tr>
+      <tr>
+        <td>(A B)[x:M]</td>
+        <td>= (A[x:M]  B[x:M])</td>
+      </tr>
+      <tr>
+        <td>(λx.B)[x:M]</td>
+        <td>= (λx.B)</td>
+      </tr>
+      <tr>
+        <td>(λy.B)[x:M]</td>
+        <td>= if (z is a symbol not free in B or M) then
+          λz.(B[y:z][x:M])</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+  where s is a symbol, M, A and B are lambda-expressions.</blockquote>
+<hr>
+
+<p></p>
+
+<p>Lambda expressions are simplified using β-reduction. β-reduction
+applies a lambda-abstraction to an argument producing an instance of the body
+of the lambda-abstraction in which (free) occurrences of the formal parameter
+in the body are replaced with (copies of) the argument.  With the definition
+of substitution in Figure N.2 and the formal definition of β-reduction in
+Fugure N.3, we have the tools needed to reduce lambda-expressions to normal
+forms.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.3: <b>β-reduction</b></center>
+
+  <p></p>
+
+  <center>
+  (λx.B)  e ⇒ B[x:e]</center>
+</blockquote>
+<hr>
+
+<p>It is easy to see that the lambda-expression</p>
+
+<p></p>
+
+<center>
+(λx.x x) (λx.x x)</center>
+
+<p>does not have a normal form because when the second expression is
+substituted into the first, the resulting expression is identical to the
+given lambda-expression.</p>
+
+<p>Figure 2 defines the operational semantics of the lambda-calculus in terms
+of β-reduction.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.4: <b>Operational semantics for the lambda-calculus</b></center>
+
+  <p>Interpreter:  reduce expression E to normal form.</p>
+
+  <p><em>Reduce</em> in <b>L</b> → <b>L</b></p>
+
+  <p></p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><em>Reduce</em>[s]</td>
+        <td>= s</td>
+      </tr>
+      <tr>
+        <td><em>Reduce</em>[λx.B  M]</td>
+        <td>= <em>Reduce</em>[ B[x:M] ]</td>
+      </tr>
+      <tr>
+        <td><em>Reduce</em>[L<sub>1</sub> L<sub>2</sub>]</td>
+        <td>= (<em>Reduce</em>[ L<sub>1</sub> ] <em>Reduce</em>[
+          L<sub>2</sub> ])</td>
+      </tr>
+    </tbody>
+  </table>
+  where
+
+  <p>s is a symbol and B, L<sub>1</sub>, L<sub>2</sub>, and M are
+  lambda-expressions</p>
+</blockquote>
+<hr>
+
+<p>The operational semantics of Figure N.4 describe a syntactic
+transformation of the lambda-expressions.</p>
+
+<h4>Reduction Order</h4>
+Given a lambda-expression, the substitution  and β-reduction rules provide
+the tools required to reduce a lambda-expression to normal form but do not
+tell us what order to apply the reductions when more than one redex is
+avaliable. The following theorem, due to Curry, states that if an expression
+has a normal form, then that normal form can be found by leftmost reduction.
+
+<p></p>
+
+<blockquote>
+  <b>Theorem:</b> If  E has a normal form N then there is a leftmost
+  reduction of E to N.</blockquote>
+<a name="lazy">The</a> leftmost outermost reduction (<em>normal order
+reduction</em>) strategy is called <em>lazy reduction</em> because it does
+not first evaluate the arguments but substitutes the arguments directly into
+the expression.   <em>Eager reduction</em> is when the arguments are reduced
+before substitution.
+
+<p>A function is <em>strict</em> if it is sure to need its argument. If a
+function is non-strict, we say that it is <em>lazy</em>.</p>
+
+<p>parameter passing: by value, by name, and  lazy evaluation</p>
+
+<p>Infinite Data Structures</p>
+
+<p>call by need</p>
+
+<p>streams and perpetual processes</p>
+
+<p>A function f is <em>strict</em> if and only if (f ⊥) = ⊥</p>
+
+<p>Scheme evaluates its parameters before passing (eliminates need for
+renaming) a space and time efficiency consideration.</p>
+
+<h3>Denotational Semantics</h3>
+In the previous section we looked at the <em>operational</em> semantics of
+the lambda-calculus.  It is called operational because it is `dynamic', it
+sees a function as a sequence of operations. A lambda-expression was
+evaluated by purely <em>syntactic</em> transformations without reference to
+what the expressions `mean'. The purpose of the <em>denotational
+semantics</em> of a language is to assign a value to every expression in the
+langauge.
+
+<p>We can express the semantics of the lambda-calculus as a mathematical
+function, <b>Eval</b>, from expressions to values. For example,</p>
+
+<p></p>
+
+<center>
+<b>Eval</b>[+  3  4] = <b>7</b></center>
+defines the value of the expression (+ 3 4) to be <b>7</b>. Actually
+something more is required, in the case of variables and function names, the
+function <b>Eval</b> requires a second parameter containing the environment
+<em>rho</em> which contains the associations between variables and their
+values. Some programs go into infinite loops, some abort with a runtime
+error. To handle these situations we introduce the symbol ⊥ pronounced
+`bottom'. 
+
+<p>Figure N.5 gives a denotational semantics for the lambda-calculus.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.5: <b>Denotational semantics for the lambda-calculus</b></center>
+
+  <p>Semantic Domains:</p>
+
+  <blockquote>
+    <b>s</b> in <b>D</b></blockquote>
+  Semantic Function:
+
+  <blockquote>
+    <em>Eval</em> in <b>L</b> → <b>D</b><br>
+  </blockquote>
+  Semantic Equations:
+
+  <blockquote>
+
+    <table>
+      <tbody>
+        <tr>
+          <td><em>Eval</em> [ s ]</td>
+          <td>=  <b>s</b></td>
+        </tr>
+        <tr>
+          <td><em>Eval</em> [ (λx.B  M) ]</td>
+          <td>= <em>Eval</em> [ B[x:M] ]</td>
+        </tr>
+        <tr>
+          <td><em>Eval</em> [ (L<sub>1</sub> L<sub>2</sub>) ]</td>
+          <td>= (<em>Eval</em> [ L<sub>1</sub> ]   <em>Eval</em> [
+            L<sub>2</sub> ])</td>
+        </tr>
+        <tr>
+          <td><em>Eval</em> [ E ]</td>
+          <td>=  <b>_|_</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  where s is a symbol, B, L<sub>1</sub>, L<sub>2</sub>, and M are
+  expressions, B[x:M] is substitution as in Figure N.2, E is an expression
+  which does not have a normal form, and <b>_|_</b> is pronounced
+bottom.</blockquote>
+<hr>
+
+<p>The denotational semantics of Figure N.5 describe a mapping of lambda
+expressions to values in some semantic domain.</p>
+
+<h3>Recursive Functions</h3>
+We extend the syntax of the lambda-calculus to include named expressions as
+follows:
+
+<blockquote>
+  Lambda Expressions
+
+  <p></p>
+
+  <blockquote>
+    L ::= ...| x : L | ...</blockquote>
+  where x is the name of the lambda-expression L.</blockquote>
+With the introduction of named expressions we have the potential for
+recursive definitions since the extended syntax permits us to name
+lambda-abstractions and then refer to them within a lambda-expression.
+Consider the following recursive definition of the factorial function.
+
+<p></p>
+
+<center>
+FAC : λn.(if (= n 0) 1 (*  n (FAC (- n 1))))</center>
+
+<p>which with syntactic sugaring is</p>
+
+<p></p>
+
+<center>
+FAC : λn.if (n = 0) then 1 else (n * FAC (n - 1))</center>
+
+<p>We can treat the recursive call as a free variable and replace the
+previous definition with the following.</p>
+
+<p></p>
+
+<center>
+FAC : (λfac.(λn.(if (= n 0) (* n (fac (- n 1))))) FAC)</center>
+
+<p>Let</p>
+
+<p></p>
+
+<center>
+H : λfac.(λn.(if (= n 0) 1 (* n (fac (- n 1)))))</center>
+
+<p>Note that H is not recursively defined. Now we can redefine FAC as</p>
+
+<p></p>
+
+<center>
+FAC : (H  FAC)</center>
+
+<p>This definition is like a mathematical equation. It states that when the
+function H is applied to FAC, the result is FAC. We say that FAC is a
+<em>fixed point</em> or <em>fixpoint</em> of H. In general functions may have
+more than one fixed point.  In this case the desired fixed point is the
+mathematical function factorial. In general, the `right' fixed point  turns
+out to be the unique <em>least fixed point</em>.</p>
+
+<p>It is desirable that there be a function which applied to a
+lambda-abstraction returns the least fixed point of that abstraction. Suppose
+there is such a function Y where,</p>
+
+<p></p>
+
+<center>
+FAC : Y  H</center>
+
+<p>Y is called a <em>fixed point combinator</em>. With the function Y, this
+definition of FAC does not use of recursion. From the previous two
+definitions, the function Y has the property that</p>
+
+<p></p>
+
+<center>
+Y  H = H (Y H)</center>
+
+<p>As an example,  here is the computation of FAC 1 using the Y
+combinator.</p>
+
+<blockquote>
+  <pre>FAC 1 = (Y H) 1
+      = H  (Y H) 1
+      = λfac.(λn.(if (= n 0) 1 (*  n (fac (- n 1)))))  (Y H) 1
+      = λn.(if (= n 0) 1 (*  n((Y H)(- n 1)))) 1
+      = if (= 1 0) 1 (*  1 ((Y H)(-11)))
+      = (* 1 ((Y H)(-11)))
+      = (* 1 ((Y H)0))
+      = (* 1 (H  (Y H) 0))
+      ...
+      = (* 1 1)
+      =  1</pre>
+</blockquote>
+The function Y can be defined in the lambda-calculus.
+
+<p></p>
+
+<center>
+Y : λh.(λx.(h  (x  x)) λx.(h  (x  x)))</center>
+
+<p>It is especially interesting because it is defined as a lambda-abstraction
+without using recursion. To show that this lambda-expression properly defines
+the Y combinator, here it is applied to H.</p>
+
+<blockquote>
+  <pre>(Y H)  =  (λh.(λx.(h  (x  x)) λx.(h  (x x))) H)
+       =  (λx.(H  (x  x)) λx.(H  (x x)))
+       =  H  ( λx.(H  (x x))λx.(H  (x x)))
+       =  H  (Y  H)</pre>
+</blockquote>
+
+<h3>Lexical Scope Rules</h3>
+Blocks with local definitions may be defined in the lambda-calculus. We
+introduce two kinds of blocks, let and letrec expressions.  Nonrecursive
+definitions are introduced with let expressions:
+
+<p></p>
+
+<center>
+let  n : E in B is an abbreviation for (λn.B) E</center>
+
+<p>Here is an example using the let-extension.</p>
+
+<p></p>
+
+<center>
+let x : 3 in (* x x)</center>
+
+<p>Lets may be used where ever a lambda-expression is permitted. For
+example,</p>
+
+<p></p>
+
+<center>
+λy. let x : 3 in (* y x)</center>
+
+<p>is equivalent to</p>
+
+<p></p>
+
+<center>
+λy. (* y 3)</center>
+
+<p>Simple recursive definitions are introduced with letrec expressions which
+are defined in terms of let expressions and the Y combinator:</p>
+
+<p></p>
+
+<center>
+letrec  n : E in B is an abbreviation for let n : Y (λn.E) in B</center>
+
+<p>Let and letrec expressions may be nested. The definitions of the let and
+letrec expressions are restated in Figure N.6.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure M.6: <b>Lexical Scope Rules</b></center>
+
+  <p></p>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>let  n : E in B</td>
+        <td>=</td>
+        <td>(λn.B) E<br>
+        </td>
+      </tr>
+      <tr>
+        <td>letrec  n : E in B</td>
+        <td>=</td>
+        <td>let n : Y (λn.E) in B</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+</blockquote>
+<hr>
+
+<p>Mutual recursion may also be defined but is beyond the scope of this
+text.</p>
+
+<h3>Translation Semantics and Combinators</h3>
+The β-reduction rule is expensive to implement.   It requires the textual
+substitution of the argument for each occurrence of the parameter and further
+requires that no free variable in the argument should become bound.  This has
+lead to the study of ways in which variables can be eliminated.
+
+<p>Curry, Feys, and Craig define a number of <em>combinators</em> among them
+the following:</p>
+
+<blockquote>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><b>S</b> = λf .( λg .( λx. f x ( g x ) ) )</td>
+      </tr>
+      <tr>
+        <td><b>K</b> = λx .λy. x</td>
+      </tr>
+      <tr>
+        <td><b>I</b> = λx.x</td>
+      </tr>
+      <tr>
+        <td><b>Y</b> = λf. λx.( f(x x)) λx.(f (x x))</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+</blockquote>
+These definitions lead to transformation rules for sequences of combinators.
+The reduction rules for the SKI calculus are given in Figure N.7.
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.7: <b>Reduction rules for SKI calculus</b></center>
+
+  <p></p>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><b>S</b> f g x</td>
+        <td>→ f x (g x)</td>
+      </tr>
+      <tr>
+        <td><b>K</b> c x</td>
+        <td>→ c</td>
+      </tr>
+      <tr>
+        <td><b>I</b> x</td>
+        <td>→ x</td>
+      </tr>
+      <tr>
+        <td><b>Y</b> e</td>
+        <td>→ e (<b>Y</b> e)</td>
+      </tr>
+      <tr>
+        <td>(A B)</td>
+        <td>→ A B</td>
+      </tr>
+      <tr>
+        <td>(A B C)</td>
+        <td>→ A B C</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+</blockquote>
+<hr>
+
+<p>The reduction rules require that reductions be performed left to right. If
+no <b>S</b>, <b>K</b>, <b>I</b>, or <b>Y</b> reduction applies, then brackets
+are removed and reductions continue.</p>
+
+<p>The SKI calculus is computationally complete; that is, these three
+operations are sufficient to implement any operation.  This is demonstrated
+by the  rules in Figure N.8.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.8: <b>Translation Semantics for the Lambda calculus</b></center>
+
+  <p></p>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><em>Compile</em> [ s ]</td>
+        <td>→ s</td>
+      </tr>
+      <tr>
+        <td><em>Compile</em> [ (E<sub>1</sub> E<sub>2</sub>)]</td>
+        <td>→ (<em>Compile</em> [ E<sub>1</sub>]  <em>Compile</em> [
+          E<sub>2</sub> ])</td>
+      </tr>
+      <tr>
+        <td><em>Compile</em> [ λx.E]</td>
+        <td>→ <em>Abstract</em> [ (x, <em>Compile</em> [ E] ) ]</td>
+      </tr>
+      <tr>
+        <td><em>Abstract</em> [ (x, s) ]</td>
+        <td>→ if (s=x) then <b>I</b> else (<b>K</b> s)</td>
+      </tr>
+      <tr>
+        <td><em>Abstract</em> [ (x, (E<sub>1</sub> E<sub>2</sub>))]</td>
+        <td>→ ((<b>S</b> <em>Abstract</em> [ (x, E<sub>1</sub>)] )
+          <em>Abstract</em> [ (x, E<sub>2</sub>) ] )</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+
+  <p>where s is a symbol.</p>
+</blockquote>
+<hr>
+
+<p>which translate lambda-expressions to formulas in the SKI calculus.</p>
+
+<p>Any functional programming language can be implemented by a machine that
+implements the SKI combinators since, functional languages can be transformed
+into lambda-expressions and thus to SKI formulas.</p>
+
+<p>Function application is relatively expensive on conventional computers.
+The principle reason  is the complexity of maintaining the data structures
+that support access to the bound identifiers.  The problems are especially
+severe when higher-order functions are permitted.  Because a formula of the
+SKI calculus contains no bound identifiers, its reduction rules can be
+implemented as simple data structure manipulations.  Further, the reduction
+rules can be applied in any order, or in parallel.  Thus it is possible to
+design massively parallel computers (<em>graph reduction machines</em>) that
+execute functional languages efficiently.</p>
+
+<p>Recursive functions may be defined with the Y operator.</p>
+
+<h3>Optimizations</h3>
+Notice that the size of the SKI code grows quadratically in the number of
+bound variables.  Figure N.9.
+
+<blockquote>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><b>B</b> = λx .( λy .( λz. ((x y) z)))</td>
+      </tr>
+      <tr>
+        <td><b>C</b> = λx .(λy.(λz((x z) y)))</td>
+      </tr>
+    </tbody>
+  </table>
+  </center>
+</blockquote>
+with the corresponding reduction rules.
+
+<p></p>
+
+<center>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>B</b> a b c</td>
+      <td>→((a b) c)</td>
+    </tr>
+    <tr>
+      <td><b>C</b> a b c</td>
+      <td>→((a c) b)</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>Having these combinators we can simplify the expressions obtained by
+applying the rules in Figure N.9.</p>
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.9: <b>Optimizations for SKI code</b></center>
+
+  <p></p>
+
+  <center>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><b>S</b> (<b>K</b> e) (<b>K</b> f)</td>
+        <td>→ <b>K</b> (e f)</td>
+      </tr>
+      <tr>
+        <td><b>S</b> (<b>K</b> e) <b>I</b></td>
+        <td>→ e</td>
+      </tr>
+      <tr>
+        <td><b>S</b> (<b>K</b> e) f</td>
+        <td>→ (<b>B</b> e) f</td>
+      </tr>
+      <tr>
+        <td><b>S</b> e (<b>K</b> f)</td>
+        <td>→ (<b>C</b> e) f</td>
+      </tr>
+    </tbody>
+  </table>
+  The optimizations must be applied in the order given.</center>
+</blockquote>
+<hr>
+
+<p>Just as machine language (assembler) can be used for programming,
+combinatorial logic can be used as a programming language.  The programming
+language FP is a programming language based on the idea of combinatorial
+logic.</p>
+
+<h2>2 Scheme</h2>
+Scheme, a descendent of LISP, is based on the lambda-calculus. Although it
+has imperative features, in this section we ignore those features and
+concentrate on the lambda-calculus like features of Scheme. Scheme has two
+kinds of objects, <b>atoms</b> and <b>lists</b>.  Atoms are represented by
+strings of non-blank characters.  A list is represented by a sequence of
+atoms or lists separated by blanks and enclosed in parentheses.
+<b>Functions</b> in Scheme are also represented by lists. This facilitates
+the creation of functions which create other functions. A function can be
+created by another function and then the function applied to a list of
+arguments. This is an important feature of languages for AI applications.
+
+<h3>Syntax</h3>
+The syntax of Scheme is similar to that of the lambda calculus.
+
+<blockquote>
+  Scheme Syntax
+
+  <blockquote>
+    E in Expressions<br>
+    A in Atoms ( variables and constants )<br>
+    ...<br>
+    E ::= A | (E...) | (lambda (A...) E) | ...</blockquote>
+</blockquote>
+Expressions are atoms which are variables or constants, lists of arbitrary
+length (which are also function applications), lambda-abstractions of one or
+more parameters, and other built-in functions.
+
+<p>Scheme provides a number of built in functions among which are +, -, *, /,
+&lt;, &lt;=, =, &gt;=,&gt;, and not.  Scheme provides for conditional expressions of
+the form (if E<sub>0</sub> E<sub>1</sub> E<sub>2</sub>) and (if E<sub>0</sub>
+E<sub>1</sub>). Among the constants provided in Scheme are numbers, #f and
+the empty list () both of which count as false, and #t and any thing other
+than #f and () which count as true. nil is also used to represent the empty
+list.</p>
+
+<h3>Definitions</h3>
+Scheme implements definitions with the following syntax
+
+<blockquote>
+  E ::= ...| (define I E) | ...</blockquote>
+
+<h3>Lists with <tt>nil, cons, car</tt> and <tt>cdr</tt></h3>
+The list is the basic data structure with <tt>nil</tt> repesenting the empty
+list.   Among the built in functions for list manipulation provided in Scheme
+are <tt>cons</tt> for attaching an element to the head of a list,
+<tt>car</tt> for extracting the first element of a list, and <tt>cdr</tt>
+which returns a list minus its first element.
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.10: <b>Stack operations in Scheme</b></center>
+
+  <p></p>
+  <pre>( define empty_stack 
+   ( lambda ( stack ) ( if ( null? stack ) \#t \#f )))
+
+( define push
+   ( lambda ( element stack ) ( cons element stack ) ))
+
+(define pop
+   ( lambda ( element stack ) ( cdr stack )))
+
+(define top
+   ( lambda ( stack ) ( car stack )))</pre>
+</blockquote>
+<hr>
+
+<p>Figure N.10 contains an example of stack operations writtem in Scheme. The
+figure illustrates definitions, the conditional expression, the list
+predicate <tt>null?</tt> for testing whether a list is empty, and the list
+manipulation functions <tt>cons, car,</tt> and <tt>cdr</tt>.</p>
+
+<h3>Local Definitions</h3>
+Scheme provides for local definitions with the following syntax
+
+<blockquote>
+  Scheme Syntax
+
+  <blockquote>
+    ...<br>
+    B in Bindings<br>
+    ...
+
+    <p>E ::= ...| (let B<sub>0</sub> E<sub>0</sub>) | (let* B<sub>1</sub>
+    E<sub>1</sub>) | (letrec B<sub>2</sub> E<sub>2</sub>) |...<br>
+    B ::=  ((I E)...)</p>
+  </blockquote>
+</blockquote>
+The <tt>let</tt> definitions are done independently of each other (collateral
+bindings), the <tt>let*</tt>  values and bindings are computed sequentially
+and the <tt>letrec</tt> bindings are in effect while values are being
+computed to permit mutually recursive definitions.
+
+<h2>3 ML</h2>
+
+<h2>4 Haskell</h2>
+In contrast with LISP and Scheme,  Haskell is a modern functional programming
+language.
+
+<p></p>
+<hr>
+
+<blockquote>
+
+  <center>
+  Figure N.11: <b>A sample program in Haskell</b></center>
+
+  <p></p>
+  <pre>module AStack( Stack, push, pop, top, size ) where
+data Stack a = Empty
+             | MkStack a (Stack a)
+push :: a -&gt; Stack a -&gt; Stack a
+push x s = MkStack x s
+
+size :: Stack a -&gt; Integer
+size s = length (stkToLst s) where
+            stkToLst Empty         = []
+            stktoLst (MkStack x s) = x:xs where xs = stkToLst s
+
+pop :: Stack a -&gt; (a, Stack a)
+pop (MkStack x s) = (x, case s of r -&gt; i r where i x = x)
+
+top :: Stack a -&gt; a
+top (MkStack x s) = x</pre>
+</blockquote>
+<hr>
+
+<p></p>
+<pre>module Qs where
+
+qs :: [Int] -&gt; [Int]
+qs [] = []
+qs (a:as) = qs [x | x &lt;- as, x &lt;=a] ++ [a] ++ qs [x | x &lt;- as, x&gt; a]</pre>
+<pre>module Primes where
+
+primes :: [Int]
+primes = map head (iterate sieve [2 ..])
+
+sieve :: [Int] -&gt; [Int]
+sieve (p:ps) = [x | x &lt;- ps, (x `mod` p)=0] </pre>
+<pre>module Fact where
+
+fact :: Integer -&gt; Integer    
+fact 0 = 1
+fact (n+1) = (n+1)*fact n -- * "Foo"
+fact _ = error "Negative argument to factorial"</pre>
+<pre>module Pascal where
+
+pascal :: [[Int]]
+pascal = [1] : [[x+y | (x,y) &lt;- zip ([0]++r) (r++[0])] | r &lt;- pascal] tab :: Int -&gt; ShowS
+tab 0 = λx -&gt; x
+tab (n+1) = showChar ' ' . tab n
+
+showRow :: [Int] -&gt; ShowS 
+showRow [] = showChar '\n'
+showRow (n:ns) = shows n . showChar ' ' . showRow ns
+
+showTriangle 1 (t:_) = showRow t
+showTriangle (n+1) (t:ts) = tab n . showRow t . showTriangle n ts</pre>
+
+<blockquote>
+  <pre>module Merge where
+                
+merge :: [Int] -&gt; [Int] -&gt; [Int]
+merge [] x = x  
+merge x [] = x
+merge l1@(a:b) l2@(c:d) = if a &lt; c then a:(merge b l2)
+                                   else c:(merge l1 d)
+
+half [] = []
+half [x] = [x]
+half (x:y:z) = x:r where r = half z
+
+sort [] = []
+sort [x] = [x]
+sort l = merge (sort odds) (sort evens) where
+             odds = half l
+             evens = half (tail l)</pre>
+</blockquote>
+
+<h2>5 Historical Perspectives and Further Reading</h2>
+In the 1930s Alonso Church developed the lambda-calculus as an alternative to
+set theory for the foundations of mathematics and Haskell B. Curry developed
+conbinatory logic for the same reason. While their goal was not realized, the
+lambda-calculus and combinators capture the most general formal properties of
+the notion of a mathematical function.
+
+<p>The lambda-calculus and combinatory logic are abstract models of
+computation equivalent to the Turing machine, recursive functions, and Markov
+chains. Unlike the Turning machine which is sequential in nature, they retain
+the implicit parallelism that is present in mathematical expressions.</p>
+
+<p>The lambda-calculus is a direct influence on the programming language
+LISP, the <em>call by name</em> parameter passing mechanism of Algol-60, and
+textual substitution performed by macro generators.</p>
+
+<p>Explicit and systematic use of the lambda-calculus in computer science was
+initiated in the early 1960s by Peter Landin, Christopher Strachy and others
+who started a formal theory of semantics for programming languages called
+<em>denotational semantics</em>.  Dana Scott (1969) discovered the first
+mathematical model for the type-free lambda-calculus.</p>
+
+<p>New hardware designs are appearing to support the direct execution of the
+lambda-calculus or combinators which support parallel execution of functional
+programs, removing the burden (side-efficts, synchonization, communication)
+of controlling parallelism from the programmer.</p>
+
+<p>LISP (LISt Processing) was designed by John McCarthy in 1958.   LISP grew
+out of interest in symbolic computation.  In particular, interest in areas
+such as mechanizing theorem proving, modeling human intelligence, and natural
+language processing.  In each of these areas, list processing was seen as a
+fundamental requirement. LISP was developed  as a system for list processing
+based on recursive functions. It provided for recursion, first-class
+functions, and garbage collection. All new concepts at the time. LISP was
+inadvertantly implemented with dynamic rather than static scope rules. Scheme
+is a modern incarnation of LISP.  It is a relatively small language with
+static rather than dynamic scope rules. LISP was adopted as the language of
+choice for artificial intelligence applications and continues to be in wide
+use in the aritficial intelligence community.</p>
+
+<p>ML</p>
+
+<p>Miranda</p>
+
+<p>Haskell is a modern language  named after the logician Haskell B. Curry,
+and designed by a 15-member international committee. The design goals for
+Haskell are have a functional language which incorporates all recent ``good
+ideas'' in functional  language research and which is suitable for for
+teaching, research and application. Haskell contains an overloading facility
+which is incorporated with the polymorphic type system, purely functional
+i/o,  arrays, data abstraction, and information hiding.</p>
+
+<p>Functional programming languages have been presented in terms of a
+sequence of virtual machines.   Functional programming languages can be
+translated into the lambda-calculus, the lambda-calculus into combinatorial
+logic and combinatorial logic into the code for a graph reduction machine.
+All of these are virtual machines.</p>
+
+<p>Models of the lambda-calculus.</p>
+
+<p>History \cite{McCarthy60} For an easily accessable introduction to
+functional programming, the lambda-calculus, combinators and a graph machine
+implementation see Revesz (1988). For Backus' Turing Award paper on
+functional programming see \cite{Backus78}. The complete reference for the
+lambda-calculus is \cite{Bare84}. For all you ever wanted to know about
+combinatory logic see \cite{CF68,CHS72,HS86}. For an introduction to
+functional programming see Henderson (1980), BirdWad88, MLennan90. For an
+intoduction to LISP see \cite{McCarthy65} and for common LISP see
+\cite{Steele84}. For a through introduction to Scheme see \cite{AbSus85}.
+Haskell On the relationship of the lambda-calculus to programming languages
+see \cite{Landin66}. For the implementation of functional programming
+languages see Henderson (1980) and Peyton-Jones (1987).</p>
+<dl>
+  <dt>Henderson, Peter (1980)</dt>
+    <dd><i>Functional Programming: Application and Implementation</i>
+      Prentice-Hall International.</dd>
+  <dt>Peyton-Jones, Simon L (1987)</dt>
+    <dd><i>The Implementation of Functional Programming Languages</i>
+      Prentice-Hall International.</dd>
+  <dt>Revesz, G. E. (1988)</dt>
+    <dd><i>Lambda-Calculus, Combinators, and Functional Programming</i>
+      Cambridge University Press.</dd>
+</dl>
+<dl>
+  <dt></dt>
+    <dd><i></i></dd>
+</dl>
+
+<h2>6 Exercises</h2>
+<ol>
+  <li>[Time/Difficulty](section)</li>
+  <li>Simplify the following expressions to a final (<em>normal</em>) form,
+    if one exists.  If one does not exist, explain why.
+    <ol>
+      <li>((λx. (xy))(λz.z))</li>
+      <li>((λx. ((λy.(xy))x))(λz.w))</li>
+      <li>((((λf.(λg.(λx.((fx)(gx)))))(λm.(λn.(nm))))(λn.z))p)</li>
+      <li>((λx.( xx))(λx.(xx)))</li>
+      <li>((λf.((λg.((ff)g))(λh.(kh))))(λy.y)))</li>
+      <li>(λg.((λf.((λx.(f(xx)))(λx.(f(xx)))))g))</li>
+      <li>(λx.(λy.((-y)x)))45</li>
+      <li>((λf.(f3))(λx.((+1)x)))</li>
+    </ol>
+  </li>
+  <li>Find a lambda-expression that not only does not have a normal form but
+    grows in length as well.</li>
+  <li>In addition to the β-rule, the lambda-calculus includes the
+    following two rules:
+
+    <blockquote>
+      <pre>α-rule: (λx.E) ⇒ (λy.E[x:y])
+η-rule: (\x.E  x) ⇒ E where x does not occur free in  E</pre>
+    </blockquote>
+    Redo the previous exercise making use of the η-rule whenever possible.
+    What value is there in the α-rule?</li>
+  <li>The lambda-calculus can be used to simulate computation on truth values
+    and numbers.
+    <ol>
+      <li>Let <b>true</b> be the name of the lambda-expression λx. λy. x and
+        <b>false</b> be the name of the lambda-expression λx. λy. y. Show
+        that ((\mbox{true} E<sub>1</sub>)E<sub>2</sub>) ⇒ E<sub>1</sub>
+        and ((\mbox{false} E<sub>1</sub>)E<sub>2</sub>) ⇒ E<sub>2</sub>.
+        Define lambda-expressions <b>not, and,</b> and <b>or</b> that behave
+        like their Boolean operation counterparts.</li>
+      <li>Let <b>0</b> be the  name of the lambda-expression λx. λy. y,
+        <b>1</b> be the  name of the lambda-expression λx. λy. (xy), <b>2</b>
+        be the  name of the lambda-expression λx. λy. (x(xy)), <b>3</b> be
+        the  name of the lambda-expression λx. λy. (x;(x(xy))), and so on.
+        Prove that the lambda-expression <b>succ</b> defined as λz. λx. λy.(x
+        ((zx)y)) rewrites a number to its successor.</li>
+    </ol>
+  </li>
+  <li>Recursively defined functions can also be simulated in the
+    lambda-calculus.  Let <b>Y</b> be the name of the expression λf.
+    λx.(f(xx)) λx.(f(xx))
+    <ol>
+      <li>Show that for any expression E, there exists an expression W such
+        that (<b>Y</b>E) ⇒ (WW), and that (WW) ⇒ (E(WW)). Hence,
+        (<b>Y</b>E) ⇒ E(E(E(...E(WW)...)))</li>
+      <li>Using the lambda-expressions that you defined in the previous parts
+        of this exercise, define a recursive lambda-expression <b>add</b>
+        that performs addition on the numbers defined earlier, that is,
+        ((<b>add</b>m)n) ⇒ m+n.</li>
+    </ol>
+  </li>
+  <li>Let T = AA where A = λxy.y(xxy).  Show T F = F (T F).  T is Turing's
+    fixed point combinator.</li>
+  <li>Data constructors can be modeled in the lambda-calculus.  Let
+    <b>cons</b> = (λa. λb. λf. f a b), <b>head</b> = (λc. c (λa. λb. a)) and
+    <b>tail</b> = (λc. c (λa. λb. b)).  Show that
+    <ol>
+      <li><b>head</b> ( <b>cons</b> a b ) = a</li>
+      <li><b>tail</b> ( <b>cons</b> a b ) = b</li>
+    </ol>
+  </li>
+  <li>Show that (((S(KK))I)S) is (KS).</li>
+  <li>What is (((SI)I)X) for any formula X?</li>
+  <li>Compile (λx.+xx) to SKI code.</li>
+  <li>Compile λx. (F (xx)) to SKI code.</li>
+  <li>Compile λx. λy. xy to SKI code.  Check your answer by reducing both
+    ((λx. λy. xy) a b) and the SKI code applied to a b.</li>
+  <li>Apply the optimizations to the SKI code for λx. λy. xy and compare the
+    result with the unoptimized code.</li>
+  <li>Apply the optimizations to the SKI code for λx. (F (xy)) and λy. (F
+    (xy)).</li>
+  <li>Association lists etc</li>
+  <li>HOF</li>
+  <li>Construct an interpreter for the lambda calculus.</li>
+  <li>Construct an interpreter for combinatorial logic.</li>
+  <li>Construct a compiler to compile lambda expressions to combinators.</li>
+</ol>
+<hr>
+� 1996 by <a href="http://web.archive.org/web/20021220070553/http://web.archive.org/web/20021220070553/http://cs.wwc.edu/~aabyan/221_2/PLBOOK/Notices.html">A. Aaby</a><script language="Javascript">
+<!--
+
+// FILE ARCHIVED ON 20021220070553 AND RETRIEVED FROM THE
+// INTERNET ARCHIVE ON 20041019183546.
+// JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+// ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+// SECTION 108(a)(3)).
+
+   var sWayBackCGI = "http://web.archive.org/web/20021220070553/";
+
+   function xLateUrl(aCollection, sProp) {
+      var i = 0;
+      for(i = 0; i < aCollection.length; i++)
+         if (aCollection[i][sProp].indexOf("mailto:") == -1 &&
+             aCollection[i][sProp].indexOf("javascript:") == -1)
+            aCollection[i][sProp] = sWayBackCGI + aCollection[i][sProp];
+   }
+
+   if (document.links)  xLateUrl(document.links, "href");
+   if (document.images) xLateUrl(document.images, "src");
+   if (document.embeds) xLateUrl(document.embeds, "src");
+
+   if (document.body && document.body.background)
+      document.body.background = sWayBackCGI + document.body.background;
+
+//-->
+
+</script>
+
+</font></body></html>

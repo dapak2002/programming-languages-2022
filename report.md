@@ -26,15 +26,23 @@ You will keep both report.tex and report.pdf in your private github repository.
     - Week 12: (Optional) Hoare Logic.
 
 - Part 2 
-    - A specification of your project is due on the Sunday before the Thanksgiving break.
-    - The full report is due on the Sunday of the examination week. 
+    - A specification of your project is due on the last day of September.
+    - A prototype implementation (or the core section of a theoretical report) is due on the last day of October.
+    - A draft of Part 2 is due on Sunday before the Thanksgiving break.
+
+- The full report is due on the Sunday of the examination week. 
 
 **Submissions:** 
-- For Part 1, by [email](mailto:akurz@chapman.edu?subject=Report%20Week%20X), where X denotes the number of the week;
-- For Part 2, by [email](mailto:akurz@chapman.edu?subject=Report%20Part%202)
-- In all cases, send a link to the pdf in your private github where you keep your .tex and .pdf as well as any accompanying code for Part 2. (Get in touch if you want to do a theory project without Haskell code.) 
+- For Part 1, by [email](mailto:akurz@chapman.edu?subject=Report%20Week%20X), where you replace "X" in the subject by the relevant number of the week;
+- For Part 2, by [email](mailto:akurz@chapman.edu?subject=Report%20Part%202).
+- For the final submission, [email](mailto:akurz@chapman.edu?subject=Report%20Final).
+- In all cases, send
+    - a pdf 
+    - a link to your private github where you keep your .tex and .pdf as well as any accompanying code. 
 
-Do not make different copies of report.tex or report.pdf. I will use version control if I need to go back to an earlier version.
+(A programming project without working code on git will get no points. Get in touch early if you want to do a theory project without code.) 
+
+Do not make different copies of report.tex or report.pdf. I will use git to verify timestamps and git's version control if I need to go back to an earlier version.
 
 ## Grading Guidelines
 

@@ -16,3 +16,4 @@ local/
 *.thy~
 .history
 ChangeLog.md
+*.o
