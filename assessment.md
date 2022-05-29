@@ -1,6 +1,6 @@
 ## Assessment
 
-Assessment will be divided in a total of 200 points.
+Assessment will be divided into a total of 200 points.
 
 - 3 programming [assignments](assignments.md) each worth 30 points (90 points total)
 

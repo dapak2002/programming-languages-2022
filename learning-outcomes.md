@@ -1,5 +1,7 @@
 ## Course Learning Outcomes
 
+(to be revised)
+
 See also the [Fowler School of Engineering Program Learning Outcomes](https://docs.google.com/document/d/1OESCtPUolnWFV_qRFuRzNrzxmUtYr5H-dFaYVmPUKY0/edit?usp=sharing).
 
 

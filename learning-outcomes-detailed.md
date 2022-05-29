@@ -1,7 +1,7 @@
-learning-outcomes-detailed.md
 
 # Learning Outcomes
 
+(under construction)
 
 - How to write programs with recursion over abstract syntax trees (Assignment 1).
 
@@ -14,4 +14,6 @@ learning-outcomes-detailed.md
 
 
 - How to prove partial correctness of a while program using Hoare logic.
+
+- ...
 

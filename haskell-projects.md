@@ -4,7 +4,7 @@ I list some Haskell projects that should not be too difficult in themselves, but
 
 ## Starting Out
 
-Maybe the following examples can inspire you to choose your Haskell project:
+Maybe the following examples can inspire you to choose a Haskell project:
 
 - Two nice beginner's projects that do not require any prerequisites were implemented by [Gary Zeri](https://github.com/GaryZ700/Haskell_Blog/blob/master/README.md) for the 2020 Programming Languages course. 
 
@@ -12,6 +12,9 @@ Maybe the following examples can inspire you to choose your Haskell project:
 
 - Let me know your own ideas ...
 
+... more to come ...
+
+<!--
 ## From the Programming Languages Course
 
 ### Successor Arithmetic (and, possibly, Theorem Proving)
