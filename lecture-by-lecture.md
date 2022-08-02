@@ -3,7 +3,7 @@
 
 **Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ... [BNFC](BNFC-installation.md) ... [Haskell projects](haskell-projects.md) ... [Videos](videos.md)
 
-### Part 0: Functional Programming 
+## Part 0: Functional Programming 
 
 - [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw).
 
@@ -15,15 +15,15 @@
 
 ... to be continued ...
 
-### Part 1: A Calculator
+## Part 1: A Calculator
 
-### Part 2: Lambda Calculus
+## Part 2: Lambda Calculus
 
-### Part 3: Rewriting
+## Part 3: Rewriting
 
-### Part 4: An Interpreter for a Functional Programming Language
+## Part 4: An Interpreter for a Functional Programming Language
 
-### Part 5: Advanced Topics 1
+## Part 5: Advanced Topics 1
 
 ## Part 6: An Interpreter for an Imperative Programming Language
 

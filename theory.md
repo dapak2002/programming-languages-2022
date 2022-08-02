@@ -1,6 +1,6 @@
 ## Summary of Some Theoretical Concepts
 
-(under construction ... just a more or less random collection for now ... links to be added ... )
+(... under construction ... links to be added ... )
 
 I list some theoretical concepts that will come up during the courses on Programming Languages and Compiler Construction. Some concepts, such as rewriting, normal forms, invariants, DFA and NFA, will be discussed in some detail, others will be only mentioned in passing to provide some general background. In each case, I will take care to explain how the theoretical concepts solve practical problems. 
 
@@ -53,9 +53,9 @@ In particular, we will learn more about the following:
 
     where x is ranging over a given set of "variables".
 
-- rewriting, term-rewriting, confluence, termination, Church-Rosser, normal form: see [the lecture on ARSs]().
+- rewriting, term-rewriting, confluence, termination, Church-Rosser, normal form.
 
-- syntax, semantics, soundness, completeness ... see [this lecture]() for details.
+- syntax, semantics, soundness, completeness.
 
 - abstract syntax
 

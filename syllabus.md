@@ -3,10 +3,10 @@
 ## General Information
 - Class: CPSC 354 Programming Languages 
 - Instructor: [Alexander Kurz](https://alexhkurz.github.io/)  
-- Lectures in Leatherby Libraries Lab B13 (Aug 30 - Dec 18): 
-  - 354-01: TuTh 8:30AM - 9:45AM 
-  - 354-02: TuTh 10:00AM - 11:15PM 
-- Office Hours: TuTh after the second lecture 11:30 - 13:00 via [zoom](https://chapman.zoom.us/j/91616790270) ... or contact me via [email](mailto:akurz@chapman.edu?subject=CPSC-354). 
+- Lectures:
+  - 354-01: TuTh 11:30 - 12:45 in Keck 130
+  - 354-02: TuTh 13:00 - 14:15 in Keck 153
+- Office Hours: TuTh after the second lecture 14:15 - 15:30 in ... and/or via [zoom](https://chapman.zoom.us/j/91616790270) ... or contact me via [email](mailto:akurz@chapman.edu?subject=CPSC-354). 
 
 
 ## Course Description 

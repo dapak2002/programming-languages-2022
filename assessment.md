@@ -14,4 +14,4 @@ Assessment will be divided into a total of 200 points.
   - Thinking about questions is the best way to start revising the material.
   - Every question you ask is feedback that helps me to make the course more relevant to you.
 
-**Homework:** Most lectures will finish with some homework. Homework is not graded. Come to my office hourse to discuss any questions. Homework is essential to achieve the learning outcomes.
+**Homework:** Most lectures will finish with some homework. Some homework is graded as part of the report, but whether it is graded or not, homework is essential to achieve the learning outcomes. Come to my office hourse to discuss any questions.

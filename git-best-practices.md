@@ -1,6 +1,6 @@
 # On the Use of Git
 
-[Git](https://en.wikipedia.org/wiki/Git) is a version control software created by Linus Torvalds (also responsible for giving us Linux). There are different commercial implementations of git. I mostly use [Github](https://github.com/) and that is what I am referring to in the following.
+[Git](https://en.wikipedia.org/wiki/Git) is a version control software created by Linus Torvalds (also responsible for giving us Linux). There are different commercial implementations of git. Even though, as some say, the [time has come to give up GitHub](https://sfconservancy.org/blog/2022/jun/30/give-up-github-launch/), the following notes still refer to [Github](https://github.com/).
 
 ## New to Git?
 
