@@ -16,4 +16,4 @@ I list the chapters of GEB that directly relate to particular topics we are goin
 - Chapter 13: for-loops v. while loops.
 - Chapter 17: Church-Turing thesis; halting problem.
 
-I will say more about the connections, but I recommend to read (at least) Chapters 1-6 ahead of time.
+If you read Chapters 1-5 ahead of time, you will have the joy of discovering many connections with the content of the lectures.
