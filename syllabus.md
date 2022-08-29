@@ -6,8 +6,7 @@
 - Lectures:
   - 354-01: TuTh 11:30 - 12:45 in Keck 130
   - 354-02: TuTh 13:00 - 14:15 in Keck 153
-- Office Hours: TuTh after the second lecture 14:15 - 15:30 in ... and/or via [zoom](https://chapman.zoom.us/j/91616790270) ... or contact me via [email](mailto:akurz@chapman.edu?subject=CPSC-354). 
-
+- Office Hours: TuTh after the second lecture 14:30 - 16:00 in *Swenson N206* or contact me via [email](mailto:akurz@chapman.edu?subject=CPSC-354). 
 
 ## Course Description 
 

@@ -2,8 +2,8 @@
 
 Instead of a midterm and final exam, you will write a report. Think of it as a take home with several deadlines throughout the semester plus a final project.
 
-- Part 1 (10x6=60 points): Homework.
-- Part 2 (40 points): Final project.
+- Part 1 (12x3=36 points): Homework.
+- Part 2 (64 points): Final project.
 
 The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf).
 
