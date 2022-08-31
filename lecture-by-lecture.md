@@ -8,9 +8,9 @@
 
 - [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw).
 
-- [Greatest Common Divisor in Different Languages](https://hackmd.io/@alexhkurz/SkqMtH0sK). 
+- L1.1: [Imperative vs functional programming](https://hackmd.io/@alexhkurz/SJKWvna6U). Homework 1 in [Greatest Common Divisor in Different Languages](https://hackmd.io/@alexhkurz/SkqMtH0sK). 
 
-- [Imperative vs functional programming](https://hackmd.io/@alexhkurz/SJKWvna6U) and [Recursive programming in Haskell](https://hackmd.io/@alexhkurz/H1jUka4Gv). For a summary on what we said about Haskell watch the [videos](videos.md) entitled [The computational model of functional programming](https://youtu.be/u_OMwv8tDVg) and [Haskell Tips I](https://youtu.be/wj0j2HjMw6w).
+- L1.2: [Recursive programming in Haskell](https://hackmd.io/@alexhkurz/H1jUka4Gv). For a summary on what we said about Haskell watch the [videos](videos.md) entitled [The computational model of functional programming](https://youtu.be/u_OMwv8tDVg) and [Haskell Tips I](https://youtu.be/wj0j2HjMw6w).
 
 - ...
 

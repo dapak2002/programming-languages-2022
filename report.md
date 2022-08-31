@@ -11,7 +11,7 @@ You will keep both report.tex and report.pdf in your private github repository.
 
 **Deadlines:**
 - Weekly deadlines for Part 1. Each week has 3 points upon completion.  10x3=30 points for content are awarded after the final deadline in December.
-- Deadline is the Sunday at midnight. This gives me time to look over your answers on Monday. I will discuss the questions Tuesday in class and you will have an opportunity to improve your answers.
+- Deadline is the Sunday at midnight. This gives me time to look over your answers on Monday. I will discuss the questions Tuesday in class and you will have an opportunity to improve your answers. (The following is preliminary, we may have to adapt it as we go along.)
     - Week 1: Writing a report in LaTeX.
     - Week 2: Executing functional programs pen-and-paper.
     - Week 3: Parsing arithmetic expressions pen-and-paper.
@@ -22,8 +22,8 @@ You will keep both report.tex and report.pdf in your private github repository.
     - Week 8: Fixed point combinator.
     - Week 9: Rewriting 3. ...
     - Week 10: Rewriting 4. ...
-    - Week 11: (Optional) Theorem Proving.
-    - Week 12: (Optional) Hoare Logic.
+    - Week 11: Theorem Proving. ...
+    - Week 12: Hoare Logic. ...
 
 - Part 2 
     - A specification of your project is due on the last day of September.
@@ -49,7 +49,7 @@ Do not make different copies of report.tex or report.pdf. I will use git to veri
 - **D:** Demonstrates adequate understanding of the material, with possibly some missed deadlines and some wrong solutions. No project.
 - **C:** Demonstrates *good* understanding of the material. No missed deadlines. Correct solutions to the homework. A straightforward project.
 - **B:** Demonstrates *very good* understanding of the material. No missed deadlines. Correct solutions to the homework. The project explores a topic related to this course and shows that the student deepened their understanding significantly.
-- **A:** Demonstrates *excellent* understanding of the material. No missed deadlines. Correct solutions to the homework.  The project explores a topic related to this course and shows that the student deepened their understanding significantly.
+- **A:** As for B. Moreover, the student is able to apply the concepts of this course to a challenging problem or project showing strong problem solving skills .
 
 A way to describe when a report gets the full 100 points: You would be proud to add it to your resume and I would be proud to show it to my colleagues bragging about how good our students are.
 
