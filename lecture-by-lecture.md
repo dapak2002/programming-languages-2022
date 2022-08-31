@@ -8,7 +8,7 @@
 
 - [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw).
 
-- L1.1: [Imperative vs functional programming](https://hackmd.io/@alexhkurz/SJKWvna6U). Homework 1 in [Greatest Common Divisor in Different Languages](https://hackmd.io/@alexhkurz/SkqMtH0sK). 
+- L1.1: [Imperative vs functional programming](https://hackmd.io/@alexhkurz/SJKWvna6U). Homework 1 in [Greatest Common Divisor in Different Languages](https://hackmd.io/@alexhkurz/SkqMtH0sK). Don't forget to install Haskell on your laptop/desktop.
 
 ---
 
