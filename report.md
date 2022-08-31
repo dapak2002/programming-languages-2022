@@ -7,7 +7,8 @@ Instead of a midterm and final exam, you will write a report. Think of it as a t
 
 The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf).
 
-You will keep both report.tex and report.pdf in your private github repository.
+- You will keep both report.tex and report.pdf in your private github repository. - Give me access to your private github repo by inviting me as a collaborator (my GitHub name is alexhkurz).
+- Submission info below.
 
 **Deadlines:**
 - Weekly deadlines for Part 1. Each week has 3 points upon completion.  10x3=30 points for content are awarded after the final deadline in December.
