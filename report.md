@@ -34,7 +34,7 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
 - The full report is due on the Sunday of the examination week. 
 
 **Submissions:** 
-- For Part 1, by [email](mailto:akurz@chapman.edu?subject=Report%20Week%20X), where you replace "X" in the subject by the relevant number of the week;
+- For now I would like you to submit both via Canvas and via [email](mailto:akurz@chapman.edu?subject=Report%20Week%20X), where you replace "X" in the subject by the relevant number of the week ... if it works out on Canvas we can drop the  email ...
 - For Part 2, by [email](mailto:akurz@chapman.edu?subject=Report%20Part%202).
 - For the final submission, [email](mailto:akurz@chapman.edu?subject=Report%20Final).
 - In all cases, send
