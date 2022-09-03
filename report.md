@@ -33,15 +33,7 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
 
 - The full report is due on the Sunday of the examination week. 
 
-**Submissions:** 
-- For now I would like you to submit both via Canvas and via [email](mailto:akurz@chapman.edu?subject=Report%20Week%20X), where you replace "X" in the subject by the relevant number of the week ... if it works out on Canvas we can drop the  email ...
-- For Part 2, by [email](mailto:akurz@chapman.edu?subject=Report%20Part%202).
-- For the final submission, [email](mailto:akurz@chapman.edu?subject=Report%20Final).
-- In all cases, send
-    - a pdf 
-    - a link to your private github where you keep your .tex and .pdf as well as any accompanying code. 
-
-(A programming project without working code on git will get no points. Get in touch early if you want to do a theory project without code.) 
+**Submission:**  Submit the URL of your github repo (containing report.tex and report.pdf) via Canvas. Make sure that you share access to your private repo with me (alexhkurz is my github name).
 
 Do not make different copies of report.tex or report.pdf. I will use git to verify timestamps and git's version control if I need to go back to an earlier version.
 
