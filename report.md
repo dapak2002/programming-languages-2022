@@ -35,7 +35,7 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
 
 **Submission:**  Submit the URL of your github repo (containing report.tex and report.pdf) via Canvas. Make sure that you share access to your private repo with me (alexhkurz is my github name).
 
-Do not make different copies of report.tex or report.pdf. I will use git to verify timestamps and git's version control if I need to go back to an earlier version.
+Do not keep different copies of your report in the repo. I will use git to verify timestamps and git's version control if I need to go back to an earlier version.
 
 ## Grading Guidelines
 
