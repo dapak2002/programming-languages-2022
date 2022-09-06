@@ -28,7 +28,7 @@ If you have latex questions, try first to find the answer on stackexchange.
 
 ---
 
-In the lecture, I emphasised that 
+In the lecture, I emphasized that 
 - the [mathematical definition](resources/gcd.jpg) of gcd can be read as a functional program in pseudo code;
 - the explanation can be written by rewriting equations.
 
