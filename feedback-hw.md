@@ -4,6 +4,8 @@ This file contains generic feedback. It may also contain instructions for future
 
 ## Week 1
 
+Using git and latex is a requirement.
+
 Naming conventions for files and folders are part of the assignment specification. Don't change them. Eg, it must be report.pdf, not some other name.
 
 Put your name on the report.
@@ -20,9 +22,7 @@ Your repo needs to be private and I need to invited as a collaborator.
 
 ---
 
-Using git and latex is a requirement.
-
-If you have latex question, try first to find the answer on stackexchange.
+If you have latex questions, try first to find the answer on stackexchange.
 
 -1 if code or explanation was missing. Also -1 if the code was not typeset properly.
 
