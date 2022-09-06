@@ -2,7 +2,7 @@
 
 This file contains generic feedback. It may also contain instructions for future homeworks, so please **read carefully**, whether you got full points or not.
 
-## Week 1
+## Week 1 
 
 Using git and latex is a requirement.
 
