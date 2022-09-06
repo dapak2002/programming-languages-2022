@@ -13,9 +13,12 @@
 
 - L1.2: *In which we learn about recursion over recursively defined data types.* [Recursive programming in Haskell](https://hackmd.io/@alexhkurz/H1jUka4Gv). For a summary on what we said about Haskell watch the [videos](videos.md) entitled [The computational model of functional programming](https://youtu.be/u_OMwv8tDVg) and [Haskell Tips I](https://youtu.be/wj0j2HjMw6w).
 
-- L2.1: *In which we look at how recursive rewriting of equation is implemented using a call stack and at how to use recursion as a powerful problem solving technique.* We started with [Rewriting and the Call Stack](https://hackmd.io/@alexhkurz/HJiulVg0U) and then looked at [Recursion as a Problem Solving Technique](https://hackmd.io/@alexhkurz/Sy7M_6yMF) and the [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY) (which contains HW 3 for the report).
+- L2.1: *In which we look at how recursive rewriting of equations is implemented using a call stack and at how to use recursion as a powerful problem solving technique.* We started with [Rewriting and the Call Stack](https://hackmd.io/@alexhkurz/HJiulVg0U) and then looked at [Recursion as a Problem Solving Technique](https://hackmd.io/@alexhkurz/Sy7M_6yMF), in particular at [Towers of Hanoi](https://hackmd.io/@alexhkurz/rJQwvpyMY) (which contains HW 3 for the report).
 
     Here are some further resources that may help. I made a video on [Euclid's algorithm](https://youtu.be/ZcJMj0antos). Read Chapter V of [Goedel, Escher, Bach](https://www.physixfan.com/wp-content/files/GEBen.pdf) and make sure to start with the dialogue "Little Harmonic Labyrinth" (it is not a coincidence that this dialogue has a similar structure to the one described in my note on "Rewriting and the Call Stack").
+
+    We started this lecture with [feedback for HW1](feedback-hw.md
+).
 
 ---
 
