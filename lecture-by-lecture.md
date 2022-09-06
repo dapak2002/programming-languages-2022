@@ -17,7 +17,7 @@
 
     Here are some further resources that may help. I made a video on [Euclid's algorithm](https://youtu.be/ZcJMj0antos). Read Chapter V of [Goedel, Escher, Bach](https://www.physixfan.com/wp-content/files/GEBen.pdf) and make sure to start with the dialogue "Little Harmonic Labyrinth" (it is not a coincidence that this dialogue has a similar structure to the one described in my note on "Rewriting and the Call Stack").
 
-    We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK)].
+    We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK).
 
 ---
 
