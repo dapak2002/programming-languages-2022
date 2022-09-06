@@ -26,6 +26,11 @@ If you have latex questions, try first to find the answer on stackexchange.
 
 -1 if code or explanation was missing. Also -1 if the code was not typeset properly.
 
+---
+
+In the lecture, I emphasised that 
+- the [mathematical definition](resources/gcd.jpg) of gcd can be read as a functional program in pseudo code;
+- the explanation can be written by rewriting equations.
 
 
 
