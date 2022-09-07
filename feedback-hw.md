@@ -2,6 +2,8 @@
 
 This file contains generic feedback. It may also contain instructions for future homeworks, so please **read carefully**, whether you got full points or not.
 
+See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blob/main/report.md).
+
 ## Week 1 
 
 Using git and latex is a requirement.

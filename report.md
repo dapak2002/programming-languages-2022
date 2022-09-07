@@ -13,18 +13,10 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
 **Deadlines:**
 - Weekly deadlines for Part 1. Each week has 3 points upon completion.  10x3=30 points for content are awarded after the final deadline in December.
 - Deadline is the Sunday at midnight. This gives me time to look over your answers on Monday. I will discuss the questions Tuesday in class and you will have an opportunity to improve your answers. (The following is preliminary, we may have to adapt it as we go along.)
-    - Week 1: Writing a report in LaTeX.
-    - Week 2: Executing functional programs pen-and-paper.
-    - Week 3: Parsing arithmetic expressions pen-and-paper.
-    - Week 4: Parsing lambda calculus expressions pen-and-paper.
-    - Week 5: Variable Binding and Church encodings.
-    - Week 6: Rewriting 1: Transitive Closure and Equivalence Relations.
-    - Week 7: Rewriting 2. Confluence, Normal Forms, Termination.
-    - Week 8: Fixed point combinator.
-    - Week 9: Rewriting 3. ...
-    - Week 10: Rewriting 4. ...
-    - Week 11: Theorem Proving. ...
-    - Week 12: Hoare Logic. ...
+    - Week 1: Writing a report in LaTeX (`gcd`).
+    - Week 2: Writing recursive programs in Haskell (`member`, etc).
+    - Week 3: Executing recursive programs pen and paper (`hanoi`).
+    - More to come: Parsing arithmetic expressions pen-and-paper. Parsing lambda calculus expressions pen-and-paper. Variable Binding and Church encodings. Rewriting 1: Transitive Closure and Equivalence Relations. Rewriting 2. Confluence, Normal Forms, Termination. Fixed point combinator. Rewriting 3 and 4. Theorem Proving. Hoare Logic.
 
 - Part 2 
     - A specification of your project is due on the last day of September.
@@ -33,7 +25,7 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
 
 - The full report is due on the Sunday of the examination week. 
 
-**Submission:**  Submit the URL of your github repo (containing report.tex and report.pdf) via Canvas. Make sure that you share access to your private repo with me (alexhkurz is my github name).
+**Submission:**  After completing the homework, each weak, **submit the URL of your github repo** (containing report.tex and report.pdf) **via Canvas** before the deadline. Make sure that you share access to your private repo with me (alexhkurz is my github name).
 
 Do not keep different copies of your report in the repo. I will use git to verify timestamps and git's version control if I need to go back to an earlier version.
 
