@@ -120,6 +120,8 @@ If you need more time for an assignment
 - convince me that you already have done substantial work (for example by showing me the code in your GitHub repository);
 - explain the special circumstances that would allow me to justify giving you more time.
 
+(The two points above need to be acted upon before the deadline.)
+
 ## Participation
 
 - It is expected that students attend every lecture and participate in the Discussion Forum. 
