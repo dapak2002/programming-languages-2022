@@ -8,6 +8,7 @@ Instead of a midterm and final exam, you will write a report. Think of it as a t
 The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf).
 
 - You will keep both report.tex and report.pdf in your private github repository. 
+- In your repo, make a subdirectory `src` where you store the program files  (if a homework requires programming). Call them `hwn.ext` where `n` is the number of the homework/week and `ext` is the extension appropriate for the programming language.
 - Always use the same repository for all submissions of the course (get in touch if you want to make an exception).
 - Give me access to your private github repo by inviting me as a collaborator (my GitHub name is alexhkurz).
 - Submission info below.
