@@ -31,6 +31,15 @@ append [1,2,3] [4,5] =
     [1,2,3,4,5]
 ```
 
+Note how each equation above is an instance of one of the equations of the definition of `append` in Haskell, which, in my case, is
+
+```haskell
+append [] ys = ys
+append (x:xs) ys = x : append xs ys
+```
+
+Of course, if you have a different definition of `append`, your execution sequence will be different as well.
+
 I will take this into account when grading HW3.
 
 ## Week 1
