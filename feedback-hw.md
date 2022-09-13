@@ -43,7 +43,7 @@ Naming conventions for files and folders are part of the assignment specificatio
 
 Put your name on the report.
 
-Do not take over my content of Section 1. 
+Recall that it says in the latex template `report.tex` "Replace this entire Section 1 with your own short introduction."
 
 Be careful about typesetting. Avoid "??" for missing links/references. If you need special symbols, they are easy to google.
 
