@@ -1,10 +1,41 @@
-# General Feedback for Homeworks
+# Feedback for Homeworks
 
-This file contains generic feedback. It may also contain instructions for future homeworks, so please **read carefully**, whether you got full points or not.
+This file contains partial feedback to homeworks for the report and will be supplemented by comments and Q&A in the Tuesday lecture. It may also contain instructions for future homeworks, so please **read carefully**, whether you got full points or not.
 
 See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blob/main/report.md).
 
-## Week 1 
+**If you don't respect the instructions below you will loose a point on the following homeworks.**
+
+
+## Week 2
+
+### General Instructions
+
+Typeset code as code not as math (eg in Task 2 of HW2).
+
+Reminder: Submit a link to your repo via Canvas. I will grade the file `report.pdf` I find your repo.
+
+### Specific Comments
+
+In `revert` do not use `++` but your own `append`. Do not use `last`.
+
+If you have not done Task 2, add it to your report. In any case, write out now one computation for each function in the following style, called "rewriting" or "equational reasoning" (you may make your own choice of linebreakes and indentation):
+
+```haskell
+append [1,2,3] [4,5] = 
+    1 : (append [2,3] [4,5]) = 
+    1 : (2 : (append [3] [4,5])) = 
+    1 : (2 : (append [3] [4,5])) = 
+    1 : (2 : (3 : (append [] [4,5]))) = 
+    1 : (2 : (3 : [4,5])) = 
+    [1,2,3,4,5]
+```
+
+I will take this into account when grading HW3.
+
+## Week 1
+
+### General Instructions
 
 Using git and latex is a requirement.
 
@@ -20,15 +51,12 @@ Use a .gitignore file to avoid committing and pushing files such as .aux, .dvi, 
 
 Your repo needs to be private and I need to invited as a collaborator.	
 
-**If you don't respect the instructions above you will loose a point on the next homework.**
-
----
 
 If you have latex questions, try first to find the answer on stackexchange.
 
--1 if code or explanation was missing. Also -1 if the code was not typeset properly.
+### Particular Comments
 
----
+-1 if code or explanation was missing. Also -1 if the code was not typeset properly.
 
 In the lecture, I emphasized that 
 - the [mathematical definition](resources/gcd.jpg) of gcd can be read as a functional program in pseudo code;
