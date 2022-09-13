@@ -13,7 +13,7 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Typeset code as code not as math (eg in Task 2 of HW2).
 
-Reminder: Submit a link to your repo via Canvas. I will grade the file `report.pdf` I find your repo.
+Reminder: Submit a link to your repo via Canvas. I will grade the file `report.pdf` I find your repo. 
 
 ### Specific Comments
 

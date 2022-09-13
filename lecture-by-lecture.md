@@ -20,11 +20,27 @@
     We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK).
 
 
+
+
 ## Part 1: A Calculator
 
-- L 2.2: *In which we learn how to write our first interpreter.* A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). For Haskell programming techniques have a look at the videos [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
+- L 2.2: *In which we learn how to write our first interpreter.* A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). 
+
+    For Haskell programming techniques have a look at the videos [Haskell Tips II](https://youtu.be/naNLE4GLrTo)
 and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
+- L 3.1: *In which we learn to parse small arithmetic expressions pen-and-paper.* A [Short Introduction to Parsing](https://hackmd.io/@alexhkurz/BkSgRX1GF). Putting it all together:  [A Calculator: Parser](https://hackmd.io/@alexhkurz/BkqOWbgMF). 
+
+    We started with Q&A and [feedback for HW2](feedback-hw.md). This also contains additional homework for Week 3.
+
+    We also went back to the interpreter using the [virtual machine](https://hackmd.io/@alexhkurz/H12igXkzK), which will be relevant for Programming Assignment 1.
+
+
+- Videos: [Order of Operations in CFGs](https://youtu.be/jf1xhZSpCvg) and [Uniqueness of Parse Trees](https://youtu.be/3ZLkPwB_c9g).
+
+<!--
+- L 3.2: Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-1.md).
+-->
 
 ---
 
