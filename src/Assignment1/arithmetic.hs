@@ -1,4 +1,5 @@
 -- A Virtual Machine (VM) for Arithmetic (template)
+-- Copyright: Alexander Kurz 2022
 
 -----------------------
 -- Data types of the VM
@@ -22,6 +23,9 @@ data QQ =  QQ II PP
 -- Arithmetic on the  VM
 ------------------------
 
+----------------
+-- PP Arithmetic
+----------------
 ----------------
 -- NN Arithmetic
 ----------------
@@ -60,8 +64,8 @@ multN (S n) m = addN (multN n m) m
 -- Testing
 ----------
 main = do
-    print $ addN (S (S O)) (S O)
-    print $ multN (S (S O)) (S (S (S O)))
+    print $ addN (S (S O)) (S O) -- S (S (S O))
+    print $ multN (S (S O)) (S (S (S O))) -- S (S (S (S (S (S O)))))
 
 
 

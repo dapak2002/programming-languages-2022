@@ -24,8 +24,8 @@ Here are the basic rules for assignments, let me know if there are any questions
 - **Partial credit:** The default is that programs that do not run get no credit. 
   - If you think that you put in a lot of effort but just couldn't get it to work use the critical appraisal (see below) to make your case. I cannot give you partial credit if all I have from you is a program that does not run. 
   - If you know that your program does not pass certain tests, do tell me about it in the critical appraisal. You may loose more points, if you try to hide known bugs. 
-- **Critical Appraisal:** Each assignment should be accompanied by a `README.md` containing a one page summary of the following information. Group members, date of submission, a description of which parts of the assignment you have accomplished and where you run into difficulties, how you tested your programs, what you learned, interesting observations you made, how you connect the assignment with the theory. (Worth **3 points**, that is, 1/10 of each assignment.)
-- **Late Submission:** I know that students have many deadlines, but I don't know when these deadlines are. If you can explain me why you are late and show me that you started in time (eg via work committed to github), you can ask me for a deadline extension. 
+- **Critical Appraisal:** Each assignment should be accompanied by a `README.md` containing a one page summary of the following information. Group members, date of submission, a description of which parts of the assignment you have accomplished and where you run into difficulties, how you tested your programs, what you learned, interesting observations you made, how you connect the assignment with the theory. 
+- **Late Submission:** I know that students have many deadlines, but I don't know when these deadlines are. If you can explain me why you are late and show me that you started in time (eg via work committed to github), you can ask me for a deadline extension (before the deadline). 
 
 Anything unclear? Any questions? Let me know ...
 
@@ -33,8 +33,8 @@ Anything unclear? Any questions? Let me know ...
 
 Assignment 1: Functional Programming. A calculator in Haskell.
 
-Assignment 2: Interpreter of a functional programming language
+Assignment 2: Interpreter of a functional programming language.
 
-Assignment 3: Interpreter of an imperative programming language
+Assignment 3: Interpreter of an imperative programming language.
 
 

@@ -1,4 +1,5 @@
 -- A Virtual Machine (VM) for Arithmetic (specification)
+-- Copyright: Alexander Kurz 2022
 
 -----------------------
 -- Data types of the VM
@@ -23,6 +24,22 @@ data QQ =  QQ II PP
 ------------------------
 
 ----------------
+-- PP Arithmetic
+----------------
+
+-- add positive numbers
+addP :: PP -> PP -> PP
+
+-- multiply positive numbers
+multP :: PP -> PP -> PP
+
+-- convert numbers of type PP to numbers of type NN
+nn_pp :: PP -> NN
+
+-- convert numbers of type PP to numbers of type II
+ii_pp :: PP -> II
+
+----------------
 -- NN Arithmetic
 ----------------
 
@@ -36,6 +53,12 @@ multN :: NN -> NN -> NN
 multN O m = O
 multN (S n) m = addN (multN n m) m
 
+-- division, eg 13 divided by 5 is 2 
+divN :: NN -> PP -> NN
+
+-- remainder, eg 13 modulo by 5 is 3
+modN :: NN -> PP -> NN
+
 ----------------
 -- II Arithmetic
 ----------------
@@ -46,24 +69,12 @@ addI :: II -> II -> II
 -- Multiplication: (a-b)*(c-d)=(ac+bd)-(ad+bc)
 multI :: II -> II -> II
 
--- Subtraction: (a-b)-(c-d)=(a+d)-(b+c)
-subtrI :: II -> II -> II
-
 -- Negation: -(a-b)=(b-a)
 negI :: II -> II
 
 ----------------
 -- QQ Arithmetic
 ----------------
-
--- add positive numbers
-addP :: PP -> PP -> PP
-
--- multiply positive numbers
-multP :: PP -> PP -> PP
-
--- convert numbers of type PP to numbers of type II
-ii_pp :: PP -> II
 
 -- Addition: (a/b)+(c/d)=(ad+bc)/(bd)
 addQ :: QQ -> QQ -> QQ
@@ -101,24 +112,12 @@ float_qq :: QQ -> Float
 -- Normalisation by Evaluation
 ------------------------------
 
-nbv :: II -> II
+nbe :: II -> II
 
 ----------
 -- Testing
 ----------
 
 main = do
-    -- Integers: (II i j) represents i-j, (II k l) represents k-l
-    let i = 4
-    let j = 2
-    let k = 1
-    let l = 3
-    print $ int_ii (addI (II (nn_int i) (nn_int j)) (II (nn_int k) (nn_int l)))
-    print $ int_ii (multI (II (nn_int i) (nn_int j)) (II (nn_int k) (nn_int l)))
-    -- Fractions: (QQ i j) represents i/j, (QQ k l) represents k/l
-    print $ float_qq (addQ (QQ (ii_int i) (pp_int j)) (QQ (ii_int k) (pp_int l)))
-    print $ float_qq (multQ (QQ (ii_int i) (pp_int j)) (QQ (ii_int k) (pp_int l)))
-    -- Normalisation (recursive definition)
-    print $ normalizeI (II (nn_int i) (nn_int j))
-    -- Normalisation (by evaluation)
-    print $ nbv (II (nn_int i) (nn_int j))
+    print $ int_nn (multN (nn_int 4) (nn_int 3)) -- 12
+    -- more tests here

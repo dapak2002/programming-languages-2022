@@ -38,17 +38,10 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - Videos: [Order of Operations in CFGs](https://youtu.be/jf1xhZSpCvg) and [Uniqueness of Parse Trees](https://youtu.be/3ZLkPwB_c9g).
 
+- L 3.2: *In which we combine the parser and interpreter to obtain a calculator.* [A Calculator: Parser](https://hackmd.io/@alexhkurz/BkqOWbgMF). Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2022/blob/main/assignment-1.md).
+
+
 ---
-
-... to be continued ...
-
-- L 3.2: ... Putting it all together:  [A Calculator: Parser](https://hackmd.io/@alexhkurz/BkqOWbgMF) ...
-
-<!--
-- L 3.2: Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2021/blob/main/assignment-1.md).
--->
-
-
 
 ## Part 2: Lambda Calculus
 
