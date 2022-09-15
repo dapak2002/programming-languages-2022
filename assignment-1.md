@@ -4,16 +4,6 @@ The assignment comes in 2 parts and will be implemented in Haskell.
 
 ***Prerequisites: Homework 1-4, Haskell and BNFC installation.***
 
-<!--
-## Deadlines
-
-**Deadline 1:** Tue, Sept 21.  
-- Implement `addP` in Part 1.  
-- Add subtraction to the calculator in Part 2.
-
-**Deadline 2:** Sun, Oct 3 for the remainder of the assignment.
--->
-
 ## Administrative Preliminaries
 
 - Read carefully my general notes on [assignments](assignments.md).
@@ -252,11 +242,12 @@ Research how these operations can be implemented using the existing Haskell oper
 **Remark:** The parser and interpreter can be developed and tested independently, but it may be easier to develop them incrementally together. 
 
 **Task 3**: 
-- If the interpreter and the parser work separately, then they should also both work together. Compile `Calculator.hs` and test the calculator.
+- If the interpreter and the parser work correctly on their own, then they should also both work together. Compile `Calculator.hs` and test the calculator.
 
 ## Critical Appraisal
 
 The Critical Appraisal is worth 5 points for each part. My expectation is that you use the critical appraisal to
+- be upfront about anything you didn't do, or any remaining bugs you know of;
 - highlight what you learned doing this assignment;
 - describe salient points of particular interest to you.
 
