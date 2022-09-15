@@ -19,7 +19,8 @@ The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf
     - Week 1: Writing a report in LaTeX (`gcd`).
     - Week 2: Writing recursive programs in Haskell (`member`, etc).
     - Week 3: Executing recursive programs pen and paper (`hanoi`).
-    - More to come: Parsing arithmetic expressions pen-and-paper. Parsing lambda calculus expressions pen-and-paper. Variable Binding and Church encodings. Rewriting 1: Transitive Closure and Equivalence Relations. Rewriting 2. Confluence, Normal Forms, Termination. Fixed point combinator. Rewriting 3 and 4. Theorem Proving. Hoare Logic.
+    - Week 4: Parsing arithmetic expressions pen-and-paper (concrete and abstract syntax trees).
+    - More to come: Parsing lambda calculus expressions pen-and-paper. Variable Binding and Church encodings. Rewriting 1: Transitive Closure and Equivalence Relations. Rewriting 2. Confluence, Normal Forms, Termination. Fixed point combinator. Rewriting 3 and 4. Theorem Proving. Hoare Logic.
 
 - Part 2 
     - A specification of your project is due on the last day of September.
