@@ -11,7 +11,7 @@ data NN = O | S NN
 
 -- Integers
 data II = II NN NN
-  deriving (Eq,Show) -- for equality and printing
+  deriving Show -- for printing (define your own equality below)
 
 -- Positive integers (to avoid dividing by 0)
 data PP = I | T PP
@@ -72,6 +72,10 @@ multI :: II -> II -> II
 -- Negation: -(a-b)=(b-a)
 negI :: II -> II
 
+-- Equality of integers
+instance Eq II where
+  (II a b) == (II c d) = <insert your code here>
+
 ----------------
 -- QQ Arithmetic
 ----------------
@@ -81,6 +85,10 @@ addQ :: QQ -> QQ -> QQ
 
 -- Multiplication: (a/b)*(c/d)=(ac)/(bd)
 multQ :: QQ -> QQ -> QQ
+
+-- Equality of fractions
+instance Eq QQ where
+  (QQ a b) == (QQ c d) = <insert your code here>
 
 ----------------
 -- Normalisation
@@ -120,4 +128,4 @@ nbe :: II -> II
 
 main = do
     print $ int_nn (multN (nn_int 4) (nn_int 3)) -- 12
-    -- more tests here
+    -- insert more tests here
