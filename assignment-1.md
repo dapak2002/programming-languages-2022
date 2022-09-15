@@ -88,9 +88,29 @@ data QQ = QQ II PN
 
 Since Haskell is strongly typed and does not have subtyping, a number of type `PP` is always different from a number of type `NN` or a number of type `II`, so we need functions such as `ii_pp :: PP -> II` that do the *type-casting*.
 
-### Normalisation
+### Equality
 
-You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that both components are as small as possible. Such special forms are often called normal forms and the process of converting data into normal form is called **normalisation**.
+If you want to use the equality test `==` on a user-defined data type, you can either ask Haskell to derive the code for the equality test automatically. This is what happens here (and similarly for printing):
+
+```haskell
+data NN = O | S NN
+  deriving (Eq,Show) 
+```
+
+But sometimes, the automatically derived equality test is not the one you want. Then you can define your own equality test:
+
+```haskell
+instance Eq II where
+  (II a b) == (II c d) = <insert your code here>
+```
+
+For more background, I recommend Learn You a Haskell on [Types and Typeclasses](http://www.learnyouahaskell.com/types-and-typeclasses).
+
+
+
+### Normalization
+
+You may have noticed that the same integer can be represented in different ways, for example `(S (S O), O)` and `(S( S (S O)), S O)` both represent 2. But `(S (S O), O)` is special in the sense that both components are as small as possible. Such special forms are often called normal forms and the process of converting data into normal form is called **normalization**.
 
 Using recursion, write a function
 
@@ -247,7 +267,7 @@ Research how these operations can be implemented using the existing Haskell oper
 ## Critical Appraisal
 
 The Critical Appraisal is worth 5 points for each part. My expectation is that you use the critical appraisal to
-- be upfront about anything you didn't do, or any remaining bugs you know of;
+- be upfront about any requirements not implemented, or any remaining bugs you know of;
 - highlight what you learned doing this assignment;
 - describe salient points of particular interest to you.
 
