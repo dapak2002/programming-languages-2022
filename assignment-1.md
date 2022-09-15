@@ -90,7 +90,7 @@ Since Haskell is strongly typed and does not have subtyping, a number of type `P
 
 ### Equality
 
-If you want to use the equality test `==` on a user-defined data type, you can either ask Haskell to derive the code for the equality test automatically. This is what happens here (and similarly for printing):
+If you want to use the equality test `==` on a user-defined data type, you can ask Haskell to derive the code for the equality test automatically. This is what happens here (and similarly for printing):
 
 ```haskell
 data NN = O | S NN
