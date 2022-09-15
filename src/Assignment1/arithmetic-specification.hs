@@ -128,4 +128,7 @@ nbe :: II -> II
 
 main = do
     print $ int_nn (multN (nn_int 4) (nn_int 3)) -- 12
-    -- insert more tests here
+    -- design your own tests and add them to main 
+    -- make sure that all relevant functionality is tested
+    -- add expected test results as comments
+    -- do not change the names of the functions in the specification, I will use them for testing
