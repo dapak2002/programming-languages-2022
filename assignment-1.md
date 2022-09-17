@@ -9,6 +9,7 @@ The assignment comes in 2 parts and will be implemented in Haskell.
 - Read carefully my general notes on [assignments](assignments.md).
 - If you work alone, in the repo you use for the report, make a folder `Assignment1` with subfolders `Part1` and `Part2`.
 - If you work in a group (up to 2 people), make a private repo for the group, and a folder `Assignment1` with subfolders `Part1` and `Part2`.
+- **Do not rename functions.** I will test your programs using the names of the functions as specified.
 
 ## Proper use of git will be taken into account for grading
 
@@ -141,7 +142,7 @@ float_qq :: QQ -> Float
 Instead of normalising as above by recursion on `NN` one can also normalise by evaluation, that is, by converting an `II` to a Haskell integer and then back to an `II`. Write a function
 
 ```haskell
-nbv :: II -> II
+nbe :: II -> II
 ```
 
 that implements this strategy.
