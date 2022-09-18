@@ -267,10 +267,15 @@ Research how these operations can be implemented using the existing Haskell oper
 
 ## Critical Appraisal
 
-The Critical Appraisal is worth 5 points for each part. My expectation is that you use the critical appraisal to
+The Critical Appraisal is worth 5 points for each part. My general expectation is that you use the critical appraisal to
 - be upfront about any requirements not implemented, or any remaining bugs you know of;
 - highlight what you learned doing this assignment;
 - describe salient points of particular interest to you.
+
+Specifically for this assignment, also include discussions on
+- what order of operations you designed for your calculator
+- what examples you used to guide this design
+- how the grammar reflects these design decisions.
 
 The number of points awarded will depend on how interesting your critical appraisal is.
 
