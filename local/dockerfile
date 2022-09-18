@@ -1,3 +1,0 @@
-FROM haskell:9
-WORKDIR /home
-COPY test/* .
