@@ -10,9 +10,31 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 ### Specific comments
 
-- For the computations via equational reasoning (aka rewriting), make sure that in the computation of a function (see the example of `append` below)
+#### HW2
+
+- For computations via equational reasoning (aka rewriting), in HW2 and elsewhere, make sure that in the computation of a function (see the example of `append` below)
   - every line contains ` = `,
-  - every ` = ` is justified by (ie an instance of) one of the equations defining the function.
+  - every ` = ` is justified by (ie an instance of) one and only one of the equations defining the function.
+  
+- Also use common sense in striking the right balance between detail and readability. For example, if your program is
+  ```haskell
+  member _ [] = False
+  member n (x:xs)
+    | x == n = True
+    | otherwise = member n xs
+  ```
+  then write computations as in
+  ```haskell
+  member 2 [1,2,3] =
+    member 2 [2,3] = 
+    True
+  ```
+  The idea is that you treat the vertical bar notation `|` as, in this case, creating three equations. If you think of the evaluation of the expressions `x == n` and `otherwise` as being part of the pattern matching (which determines which equation is chosen), then the evaluation of the conditions `x == n` and `otherwise` does not appear in the equational reasoning. This makes the computation easier to follow and is as unambiguous.
+- Good typesetting would mean to use correct Haskell syntax in the computations, for example it is `True` and not `true`.
+
+#### HW 3
+
+- When you write a formula (such as $2^N-1$) make sure that you state explicitly what the parameters ($N$ in this case) are supposed to mean.
 
 ## Week 2
 
