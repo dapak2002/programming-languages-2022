@@ -6,6 +6,13 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 **If you don't respect the instructions below you will loose a point on the following homeworks.**
 
+## Week 3
+
+### Specific comments
+
+- For the computations via equational reasoning (aka rewriting), make sure that in the computation of a function (see the example of `append` below)
+  - every line contains ` = `,
+  - every ` = ` is justified by (ie an instance of) one of the equations defining the function.
 
 ## Week 2
 
