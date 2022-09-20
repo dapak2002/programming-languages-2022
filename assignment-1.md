@@ -272,10 +272,12 @@ The Critical Appraisal is worth 5 points for each part. My general expectation i
 - highlight what you learned doing this assignment;
 - describe salient points of particular interest to you.
 
-Specifically for this assignment, also include discussions on
-- what order of operations you designed for your calculator
-- what examples you used to guide this design
-- how the grammar reflects these design decisions.
+Specifically for this assignment, 
+- for Part 1, choose 5 functions for which you show the computation using equational reasoning, similar to what I asked you to do in hw3;
+- for Part 2, also include discussions on
+    - what order of operations you designed for your calculator,
+    - what examples you used to guide this design,
+    - how the grammar reflects these design decisions.
 
 The number of points awarded will depend on how interesting your critical appraisal is.
 
