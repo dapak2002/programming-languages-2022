@@ -41,9 +41,19 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 - L 3.2: *In which we combine the parser and interpreter to obtain a calculator.* [A Calculator: Parser](https://hackmd.io/@alexhkurz/BkqOWbgMF). Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2022/blob/main/assignment-1.md).
 
 
+## Part 2: Lambda Calculus
+
+- L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
+
+- Videos: 
+    - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
+    - [Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
+    - [Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
+
 ---
 
-## Part 2: Lambda Calculus
+... more to come ...
+
 
 ## Part 3: Rewriting
 
