@@ -45,6 +45,8 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 - L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
+    We started with Q&A and [feedback for HW3](feedback-hw.md).
+
 - Videos: 
     - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
     - [Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
