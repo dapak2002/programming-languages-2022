@@ -11,7 +11,7 @@ data NN = O | S NN
 
 -- Integers
 data II = II NN NN
-  deriving (Eq,Show) -- for equality and printing
+  deriving Show -- for printing
 
 -- Positive integers (to avoid dividing by 0)
 data PP = I | T PP
