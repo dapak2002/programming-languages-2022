@@ -5,7 +5,7 @@ Instead of a midterm and final exam, you will write a report. Think of it as a t
 - Part 1 (12x3=36 points): Homework.
 - Part 2 (64 points): Final project.
 
-The [LaTeX template](report/report.tex) and the compiled [pdf](report/report.pdf).
+A template for your LaTeX source file [`report.tex`](report/report.tex) and the compiled [pdf](report/report.pdf). See also [`latex-example.tex`](report/latex-example.tex) and [`latex-example.pdf](report/latex-example.pdf).
 
 - You will keep both report.tex and report.pdf in your private github repository. 
 - In your repo, make a subdirectory `src` where you store the program files  (if a homework requires programming). Call them `hwn.ext` where `n` is the number of the homework/week and `ext` is the extension appropriate for the programming language.
