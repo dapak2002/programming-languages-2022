@@ -20,8 +20,6 @@
     We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK).
 
 
-
-
 ## Part 1: A Calculator
 
 - L 2.2: *In which we learn how to write our first interpreter.* A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). 
@@ -51,6 +49,8 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
     - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
     - [Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
     - [Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
+
+- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
 
 ---
 
