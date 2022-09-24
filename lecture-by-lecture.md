@@ -1,7 +1,7 @@
 
 # Course Materials
 
-**Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ...  [Videos](videos.md) 
+**Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ...  [Videos](videos.md) ...
 [BNFC](BNFC-installation.md) ... <!-- [Haskell projects](haskell-projects.md) ...-->
 
 ## Part 0: Functional Programming in Haskell
