@@ -4,7 +4,9 @@
 **Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ...  [Videos](videos.md) 
 [BNFC](BNFC-installation.md) ... <!-- [Haskell projects](haskell-projects.md) ...-->
 
-## Part 0: Functional Programming 
+## Part 0: Functional Programming in Haskell
+
+We need a programming language that makes it as simple as possible to implement interpreters. Choice of language always is a compromise. In my view, Haskell is the best choice for what we want to do in this course (I would welcome any challenge on this).
 
 - [First Haskell Steps](https://hackmd.io/@alexhkurz/SJgHGZ_nw).
 
@@ -21,6 +23,8 @@
 
 
 ## Part 1: A Calculator
+
+Arithmetic can be seen as a programming language (not Turing complete) and a calculator as an interpreter.
 
 - L 2.2: *In which we learn how to write our first interpreter.* A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). 
 
@@ -41,16 +45,18 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 ## Part 2: Lambda Calculus
 
+The lambda calculus plays a foundational role in Programming Languages because it is the smallest programming language that has variables and functions (and, as an aside, this language is Turing complete).
+
 - L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
     We started with Q&A and [feedback for HW3](feedback-hw.md).
 
 - Videos: 
     - [Syntax of Lambda Calculus](https://youtu.be/D0kH1BpNr14).
-    - [Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
+    - Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
     - [Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
-- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
+- L 4.2: [Semantics of Lambda Calculus](https://hackmds.io/@alexhkurz/H1e4Nv8Bv).  
 
 ---
 
