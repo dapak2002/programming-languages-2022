@@ -24,7 +24,7 @@ We need a programming language that makes it as simple as possible to implement 
 
 ## Part 1: A Calculator
 
-Arithmetic can be seen as a programming language (not Turing complete) and a calculator as an interpreter.
+Arithmetic can be seen as a programming language (not Turing complete) and a calculator as an interpreter. This is where we are going to start. Importantly, the methods we learn will scale to proper real world programming languages.
 
 - L 2.2: *In which we learn how to write our first interpreter.* A calculator: [Overview](https://hackmd.io/@alexhkurz/HkpdXJ1fK) and [Interpreter](https://hackmd.io/@alexhkurz/rJX-i1kzY) and [Virtual Machine](https://hackmd.io/@alexhkurz/H12igXkzK). 
 
