@@ -45,7 +45,7 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 ## Part 2: Lambda Calculus
 
-The lambda calculus plays a foundational role in Programming Languages because it is the smallest programming language that has variables and functions (and, as an aside, this language is Turing complete).
+The lambda calculus plays a foundational role in Programming Languages because it is the smallest programming language that has variables and functions (and, as an aside, is Turing complete).
 
 - L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
