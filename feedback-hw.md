@@ -2,9 +2,13 @@
 
 This file contains partial feedback to homeworks for the report and will be supplemented by comments and Q&A in the Tuesday lecture. It may also contain instructions for future homeworks, so please **read carefully**, whether you got full points or not.
 
-See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blob/main/report.md).
+See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blob/main/report.md). If you don't respect the instructions below you will loose a point on the following homeworks.
 
-**If you don't respect the instructions below you will loose a point on the following homeworks.**
+Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
+
+## Week 4
+
+I showed solutions to hw4 on the whiteboard.
 
 ## Week 3
 

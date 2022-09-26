@@ -1,8 +1,9 @@
 
 # Course Materials
 
-**Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ...  [Videos](videos.md) ...
-[BNFC](BNFC-installation.md) ... <!-- [Haskell projects](haskell-projects.md) ...-->
+**Quick Links**: [Installing Haskell](https://hackmd.io/@alexhkurz/Hk86XnCzD) ...  [Videos](videos.md) ... [BNFC](BNFC-installation.md) ... [Feedback for HWs](feedback-hw.md)
+
+<!-- [Haskell projects](haskell-projects.md) ...-->
 
 ## Part 0: Functional Programming in Haskell
 
@@ -56,7 +57,9 @@ The lambda calculus plays a foundational role in Programming Languages because i
     - Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
     - [Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
-- L 4.2: [Semantics of Lambda Calculus](https://hackmds.io/@alexhkurz/H1e4Nv8Bv).  
+- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
+
+- L 5.1: [Feedback for HW4](feedback-hw.md). 
 
 ---
 
