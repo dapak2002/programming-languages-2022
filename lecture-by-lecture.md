@@ -59,7 +59,9 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
 
-- L 5.1: [Feedback for HW4](feedback-hw.md). 
+- L 5.1: *In which we learn how run our lambda-calculus interpreter by hand.* A lab like interactive session, the notes of which will be [here](https://hackmd.io/@alexhkurz/ByIktUq-i). 
+
+    We started with [Feedback for HW4](feedback-hw.md) and then briefly discussed [Math Puzzles and Debugging](https://hackmd.io/@alexhkurz/rkwDAjAZj).
 
 ---
 
