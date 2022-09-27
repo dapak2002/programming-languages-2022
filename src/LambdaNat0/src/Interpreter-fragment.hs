@@ -1,5 +1,6 @@
 # The heart of the interpreter ... all else is "boilerplate"
 
+-- evaluate using the strategy call-by-name
 evalCBN :: Exp -> Exp  
 evalCBN (EApp e1 e2) = case (evalCBN e1) of
     (EAbs i e3) -> evalCBN (subst i e2 e3)
@@ -9,6 +10,7 @@ evalCBN x = x
 -- generate a fresh name
 fresh :: Exp -> String
 
+-- subst id s e performs capture avoiding substitution of id by s in e
 subst :: Id -> Exp -> Exp -> Exp
 subst id s (EVar id1) | id == id1 = s
                       | otherwise = EVar id1
