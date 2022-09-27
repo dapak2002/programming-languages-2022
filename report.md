@@ -23,7 +23,7 @@ A template for your LaTeX source file [`report.tex`](report/report.tex) and the 
     - More to come: Parsing lambda calculus expressions pen-and-paper. Variable Binding and Church encodings. Rewriting 1: Transitive Closure and Equivalence Relations. Rewriting 2. Confluence, Normal Forms, Termination. Fixed point combinator. Rewriting 3 and 4. Theorem Proving. Hoare Logic.
 
 - Part 2 
-    - A specification of your project is due on the last day of September.
+    - A specification of your project was due on the last day of September, but will be postponed until after the deadline of Assignment 1.
     - A prototype implementation (or the core section of a theoretical report) is due on the last day of October.
     - A draft of Part 2 is due on Sunday before the Thanksgiving break.
 
