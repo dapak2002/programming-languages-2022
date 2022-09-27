@@ -4,6 +4,7 @@ Thanks to everybody who contributed links (Sam Balco, Chris Chang, Pablo Labbate
 
 ## New for 2022:
 
+- [Interview with Julia Language Co-founders](https://www.youtube.com/watch?v=VgZm53qgj9Q). Julia is an up-and-coming language quickly gaining ground on Python and C++, in particular in data science and scientific computing.
 - [Symmetric Interaction Calculus](https://github.com/VictorTaelin/Symmetric-Interaction-Calculus) and an application to the programming language [HVM](https://github.com/Kindelia/HVM/blob/master/HOW.md#clones-ruin-everything) that is faster than Haskell and Rust because of a clever way of implementing cloning. I didn't look into this yet, but if you are interested that could be a great project.
 
 ## New for 2021: 

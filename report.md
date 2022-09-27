@@ -52,16 +52,16 @@ Some further considerations:
 I don't want to limit your creativity, so please get in touch if you have your own ideas.
 
 - Data Analysis:
-    - Github has an enormous amount of public available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GHArchive](https://www.gharchive.org/).
+    - Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/).
 - Programming:
     - A software package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
-    - Implementing a calculator in a programming language other than Haskell. BFNC can generate abstract syntax trees in a variety of languages.
+    - Implementing an interpreter for some programming language. You take inspiration at from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
     - Writing an interpreter for LISP.
     - A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
-    - Learn a new programming language.
+    - Learn a new programming language, write a tutorial and implement an interesting project.
     - Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
     - Programming with infinite lists in Haskell.
-- Theory:
+- Theory (may appeal to math majors):
     - A theorem proving project along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
     - Exploring Hoare logic in more depth.
     - A math project that explores the category theoretic foundations of programming languages. 
