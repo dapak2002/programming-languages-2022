@@ -48,7 +48,7 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 
 The lambda calculus plays a foundational role in Programming Languages because it is the smallest programming language that has variables and functions (and, as an aside, is Turing complete).
 
-- L 4.1: [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
+- L 4.1: **In which we meet lambda calculus for the first time.** [Syntax of Lambda Calculus](https://hackmd.io/@alexhkurz/S1D0yP8Bw).
 
     We started with Q&A and [feedback for HW3](feedback-hw.md).
 
@@ -57,15 +57,24 @@ The lambda calculus plays a foundational role in Programming Languages because i
     - Parsing lambda-calculus expressions:  [one](https://youtu.be/eYstx7uuE6c) and [two](https://youtu.be/yls1NEUlzZA).
     - [Semantics of Lambda Calculus](https://www.youtube.com/watch?v=h4aT42t7v9c#t=0m).
 
-- L 4.2: [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
+- L 4.2: *In which we learn the meaning of lambda calculus programs.* [Semantics of Lambda Calculus](https://hackmd.io/@alexhkurz/H1e4Nv8Bv).  
 
 - L 5.1: *In which we learn how run our lambda-calculus interpreter by hand.* A lab like interactive session, the notes of which will be [here](https://hackmd.io/@alexhkurz/ByIktUq-i). 
 
     We started with [Feedback for HW4](feedback-hw.md) and then briefly discussed [Math Puzzles and Debugging](https://hackmd.io/@alexhkurz/rkwDAjAZj).
 
+- L 5.2: Continued from the previous lecture.
+
+
 ---
 
 ... more to come ...
+
+<!--
+- L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
+
+- L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
+-->
 
 
 ## Part 3: Rewriting
