@@ -1,0 +1,14 @@
+(\f.\g.\z. f g z)
+    (\x.x+y)
+    (\y.2*y)
+= \z. (\x.x+y) ((\y.2*y) z)  
+= \z. ((\y.2*y) z) + y 
+= \z. 2*z+y
+
+(\code. code argument)
+    (\x. var a=10; var f = function() {\a.(var a = 2;return a+3+x;)};)
+    (a+3)
+= (\x. var a=10; var f = function() {\a.(var a = 2;return a+3+x;)};) (a+3)
+= var a=10; var f = function() {\b.(var b = 2;return b+3+(a+3);)}; 
+
+
