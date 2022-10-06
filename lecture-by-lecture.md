@@ -67,13 +67,18 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 6.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
 
+### Part 3: Rewriting
+
+
+- L 6.2: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
+
+- Read Chapter 1 of [Goedel Escher Bach](GEB.md) and use the tools from rewriting to analyze the MU puzzle.
+
 ---
 
 ... more to come ...
 
 <!--
-- L 5.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
-
 - L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
 -->
 

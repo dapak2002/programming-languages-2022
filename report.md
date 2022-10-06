@@ -20,7 +20,10 @@ A template for your LaTeX source file [`report.tex`](report/report.tex) and the 
     - Week 2: Writing recursive programs in Haskell (`member`, etc).
     - Week 3: Executing recursive programs pen and paper (`hanoi`).
     - Week 4: Parsing arithmetic expressions pen-and-paper (concrete and abstract syntax trees).
-    - More to come: Parsing lambda calculus expressions pen-and-paper. Variable Binding and Church encodings. Rewriting 1: Transitive Closure and Equivalence Relations. Rewriting 2. Confluence, Normal Forms, Termination. Fixed point combinator. Rewriting 3 and 4. Theorem Proving. Hoare Logic.
+    - Week 5: Syntax and Semantics of lambda calculus.
+    - Week 6: Evaluating lambda terms.
+    - Week 7: Free and bound variables. Confluence, termination and unique normal forms.
+    - More to come: Transitive Closure and Equivalence Relations. Fixed point combinator. Theorem Proving. Hoare Logic.
 
 - Part 2 
     - A specification of your project was due on the last day of September, but will be postponed until after the deadline of Assignment 1.
