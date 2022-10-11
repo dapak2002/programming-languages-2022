@@ -6,17 +6,60 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## Week 6
+
+### Evaluating lambda terms
+
+```
+(\exp . \two . \three . exp two three)
+(\m.\n. m n)
+(\f.\x. f (f x))
+(\f.\x. f (f (f x)))
+```
+
+The main point of this example was to practice "following the rules" which is an important skill for every programmer and computer scientist. (If you are wondering, the fact that this exercise is boring and difficult is exactly the point because "boring and difficult" is how "following the rules" feels to humans.)
+
+But there are also interesting teaching points connected with this example.
+
+- The example demonstrates that even in lambda calculus, which is sometimes understood as a calculus of nameless functions, one can name functions if one wants to, by binding variable names to functions. 
+
+  (I say "variable names" instead of "variables" to emphasize that the variables of lambda calculus often resemble mere names more than what we know as variables in mathematics or programming. (What are the differences between different concepts of variables? As with other data types, the diffferences can be best explained by the operations available on the data.))
+
+- The example demonstrates that lambda calculus can encode data types such as numbers. 
+
+  (And we do know that once one can encode numbers, one can encode all data types. (Why? (Btw, this illustrates another important skill, namely to draw technical conclusions from general knowledge))). 
+  
+  For more on this see my notes on [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).
+
+### Project topics
+
+- Lisp interpreter with parser
+- Learning a new programming language.
+  - Comments:
+    - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles etc in which the designers of the language talk about some of this background.
+    - How was the language received? How did it develop? Is it used today for what it was designed to? 
+    - What are the strengths and weaknesses of the language? How does the language compare to other langauges?
+    - Use the software project you develop to highlight some of the questions above.
+  - Some chosen examples:
+    - Javascript (plus Typescript)
+    - Ruby
+    - Rust
+    - Swift
+    - Kotlin
+    - ...
+
+
 ## Week 5
 
 **Instruction:** `report.pdf` needs a table of contents with hyperlinks to the respective sections (see `latex-exmaple.tex` for an example of how to do this).
 
-**General tip:** If `report.pdf` gets too big because of the pictures you include, upload each picture individually to github and link the pictures from `report.pdf` (using the `href` command of LaTeX).
+**General tip:** If `report.pdf` gets too big because of the pictures you include, upload pictures to github and link them from `report.pdf` (using the `href` command of LaTeX). (The smaller the number of pictures, the easier it is for me to grade though.)
 
 #### Syntax of Lambda Calculus
 
 To lay out the syntax trees in 2-dimenionsal notation is a requirement. If you want to draw the trees in Latex try [Quiver](https://q.uiver.app/?&q=WzAsMixbMCwwLCJcXE9tZWdhXntYXntvcH19Il0sWzIsMCwieyhcXE9tZWdhXkEpfV57b3B9Il0sWzAsMSwicF5cXHVwYXJyb3ciLDAseyJjdXJ2ZSI6LTJ9XSxbMSwwLCJwXlxcZG93bmFycm93IiwwLHsiY3VydmUiOi0yfV1d) (this makes it also easy to later make corrections). Otherwise you can draw them by hand, make a picture, upload the picture to your repo and link it from the report.
 
-Be careful about the trees for 7 and 8. Make sure to check carefully that all the 2-dimensional trees drawn by hand match up with the linearized trees output by the parser. 
+Be careful about the trees for 7 and 8. Make sure to check carefully that all the 2-dimensional trees drawn by hand match up with the linearized trees output by the parser: **After linearizing your 2d ASTs, the output must be identical to the output of the parser.**
 
 #### Semantics of Lambda Calculus
 
@@ -29,6 +72,8 @@ For the evaluation of the lambda terms, observe that
 `(\x.\y.y)` is "second projection", that is, it evaluates to the second component of a pair `a b`. Explicitely, `(\x.\y.y) a b = b`, whatever `a` and `b` are.
 
 Once you rephrased the problem in these terms, the answers to 3-10 should be obvious and the answers to 11 and 12 are also not difficult to find.
+
+**I didn't deduce points if the `evalCBN` part was missing, you still need to do the work.**
 
 ## Week 4
 

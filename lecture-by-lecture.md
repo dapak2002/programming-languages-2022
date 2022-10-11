@@ -69,10 +69,18 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 ### Part 3: Rewriting
 
-
 - L 6.2: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
 
 - Read Chapter 1 of [Goedel Escher Bach](GEB.md) and use the tools from rewriting to analyze the MU puzzle.
+
+- L 7.1: [Confluence and Normal Forms](https://hackmd.io/@alexhkurz/B1wB3rT4F). 
+
+    [Feedback for HW6](feedback-hw.md). [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).
+
+<!-->
+- L 7.2: [Termination](https://hackmd.io/@alexhkurz/H1O4bLBHK) and [Invariants](https://hackmd.io/@alexhkurz/r1dp-LBBt). 
+The recordings contain a detailed explanation of how to conduct a mathematical proof (that was homework 1), as well as some advice of how to tackle the [string rewriting exercises](https://hackmd.io/@alexhkurz/Syn23oMHF), in particular wrt termination and invariants. 
+-->
 
 ---
 
@@ -82,8 +90,6 @@ The lambda calculus plays a foundational role in Programming Languages because i
 - L 5.2: [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).  
 -->
 
-
-## Part 3: Rewriting
 
 ## Part 4: An Interpreter for a Functional Programming Language
 
