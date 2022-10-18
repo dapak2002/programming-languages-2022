@@ -8,6 +8,8 @@ Feedback will also be provided each Tuesday in the lecture. If you have any furt
 
 ## Week 7
 
+Introductory Question: How are the 3 topics of this HW (scope, computing `evalCBN', rewriting) related?
+
 ### Free and bound variables
 
 Don't say: "variable bounds"
