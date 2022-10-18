@@ -44,7 +44,7 @@ Don't say: "valid ARS"
 
 #### Part 1
 
-We have drawn the pictures in class. Here is the list of properties:
+We have drawn the pictures in class. Here is the list of properties of the 7 examples (check against your solution and come to my office hours in case there are any questions remaining).
 
 1. terminating, confluent, UNF
 2. terminating, confluent, UNF
@@ -54,9 +54,9 @@ We have drawn the pictures in class. Here is the list of properties:
 6. not terminating, not confluent, no UNF
 7. not terminating, not confluent, no UNF
 
-#### The Truth Table
+#### Part 2
 
-Solution linked from the homework.
+The truth table of ARS properties is linked from the homework.
 
 ## Week 6
 
