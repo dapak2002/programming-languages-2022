@@ -58,6 +58,8 @@ We have drawn the pictures in class. Here is the list of properties of the 7 exa
 
 The truth table of ARS properties is linked from the homework.
 
+For each row in the truth table that doesn't have an example, there must be a corresponding theorem (explaining why no such example can exist). Which theorems best explain the missing examples of the ARS truth table?
+
 ## Week 6
 
 ### Evaluating lambda terms
