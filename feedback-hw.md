@@ -6,6 +6,58 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## Week 7
+
+### Free and bound variables
+
+Don't say: "variable bounds"
+
+https://github.com/alexhkurz/programming-languages-2022/blob/main/src/LambdaNat0/src/Interpreter-fragment.hs
+
+line 5: `e1` and `e2` are bound on the left of `=` and the scope is to the end of line 7
+line 6:  `i` and `e3` are bound on the left of `->` and the scope is to the end of the line
+line 7: `e3` is bound on the left of `->` and the scope is to the end of the line
+line 8: `x` is bound on the left of `=` and the scope is to the end of the line
+
+line 18: `id`, `s`, `id1`, `e1` are bound on the left of `=` and the scope is to the end of line 22
+line 20: `f` is bound on the left of `=` and the scope is to the end of line 22
+line 21: `e2` is bound on the left of `=` and the scope is to the end of line 22
+
+If you are unsure about how far the scope goes, you can write little test programs such as
+
+```
+main = do 
+print $ let x = (if x == 1 then 2 else 2 )
+            y = x in 
+            x + y
+```
+
+predict the results under assumptions of scope and test your predictions against the actual outputs of the program. This is faster and more accurate than sifting through manuals.
+
+### Computing `evalCBN`
+
+The computations need to be performed on abstract syntax, showing the rewriting steps that the interpreter is taking. Again, many students did not take the time to do this. I know it is hard, but it will be a valuable skill to have in upcoming assignments.
+
+### The homework as specified in https://hackmd.io/@alexhkurz/BJ7AoGcVK
+
+Don't say: "valid ARS"
+
+#### Part 1
+
+We have drawn the pictures in class. Here is the list of properties:
+
+1. terminating, confluent, UNF
+2. terminating, confluent, UNF
+3. non terminating, confluent, no UNF
+4. terminating, not confluent, no UNF
+5. not terminating, confluent, UNF
+6. not terminating, not confluent, no UNF
+7. not terminating, not confluent, no UNF
+
+#### The Truth Table
+
+Solution linked from the homework.
+
 ## Week 6
 
 ### Evaluating lambda terms
@@ -32,6 +84,8 @@ But there are also interesting teaching points connected with this example.
   For more on this see my notes on [Church Encodings](https://hackmd.io/@alexhkurz/SyowcD9XF).
 
 ### Project topics
+
+Make sure that you build up your incrementally and document your progress by submitting regularly to git. Send me an email when you achieved a milestone.
 
 - Lisp interpreter with parser
 - Learning a new programming language.
