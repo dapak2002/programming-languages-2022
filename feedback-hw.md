@@ -14,14 +14,14 @@ Don't say: "variable bounds"
 
 https://github.com/alexhkurz/programming-languages-2022/blob/main/src/LambdaNat0/src/Interpreter-fragment.hs
 
-line 5: `e1` and `e2` are bound on the left of `=` and the scope is to the end of line 7
-line 6:  `i` and `e3` are bound on the left of `->` and the scope is to the end of the line
-line 7: `e3` is bound on the left of `->` and the scope is to the end of the line
-line 8: `x` is bound on the left of `=` and the scope is to the end of the line
+line 5: `e1` and `e2` are bound on the left of `=` and the scope is to the end of line 7  
+line 6:  `i` and `e3` are bound on the left of `->` and the scope is to the end of the line  
+line 7: `e3` is bound on the left of `->` and the scope is to the end of the line  
+line 8: `x` is bound on the left of `=` and the scope is to the end of the line  
 
-line 18: `id`, `s`, `id1`, `e1` are bound on the left of `=` and the scope is to the end of line 22
-line 20: `f` is bound on the left of `=` and the scope is to the end of line 22
-line 21: `e2` is bound on the left of `=` and the scope is to the end of line 22
+line 18: `id`, `s`, `id1`, `e1` are bound on the left of `=` and the scope is to the end of line 22  
+line 20: `f` is bound on the left of `=` and the scope is to the end of line 22  
+line 21: `e2` is bound on the left of `=` and the scope is to the end of line 22  
 
 If you are unsure about how far the scope goes, you can write little test programs such as
 
