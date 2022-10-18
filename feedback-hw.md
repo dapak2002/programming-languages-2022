@@ -12,7 +12,7 @@ Introductory Question: How are the 3 topics of this HW (scope, computing `evalCB
 
 ### Free and bound variables
 
-Don't say: "variable bounds"
+Don't say: "variable bounds" (use technical language carefully).
 
 https://github.com/alexhkurz/programming-languages-2022/blob/main/src/LambdaNat0/src/Interpreter-fragment.hs
 
