@@ -6,9 +6,14 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
-## Week 7
+## [Week 7](https://canvas.chapman.edu/courses/44405/assignments/488837)
 
-Introductory Question: How are the 3 topics of this HW (scope, computing `evalCBN', rewriting) related?
+*Introductory Question:* How are the 3 topics of this HW (scope, computing `evalCBN', rewriting) related?
+
+*One Possible Answer:* 
+- Haskell uses the defining equations of `evalCBN` to rewrite to normal form, which is then the result of the computation. Ideally, functional programming is confluent, non-terminating (because of recursion) and has unique normal forms, but real existing languages may deviate from this ideal in exceptional circumstances.
+- In our string rewriting exercises, we simplify by not considering rewriting of ASTs with variables and binders. This is good enough to learn basic concepts such as normal form, confluence, termination, having unique normal forms, invariants, etc.
+- To understand Haskell rewriting (and the meaning of any other programming language for that matter) one needs to understand the scope of variables and other names.
 
 ### Free and bound variables
 
@@ -38,7 +43,28 @@ predict the results under assumptions of scope and test your predictions against
 
 ### Computing `evalCBN`
 
+https://hackmd.io/@alexhkurz/ByIktUq-i
+
 The computations need to be performed on abstract syntax, showing the rewriting steps that the interpreter is taking. Again, many students did not take the time to do this. I know it is hard, but it will be a valuable skill to have in upcoming assignments.
+
+To help you, I write out the computations by mixing Haskell syntax and concrete lambda-calculus syntax. Your remaining task would be to write this out in the abstract lambda-calculus syntax used by Haskell and annotate each `=` by the appropriate line number from [this file](https://github.com/alexhkurz/programming-languages-2022/blob/main/src/LambdaNat0/src/Interpreter-fragment.hs).
+
+We first compute
+
+```haskell
+evalCBN ((\x.\y.x) y) =
+evalCBN (subst x y (\y.x)) = 
+evalCBN (\a.y)
+```
+
+and use this in the computation
+
+```haskell
+evalCBN ((\x.\y.x) y z) = 
+evalCBN ((\a.y) z) = 
+evalCBN (subst a z y) = 
+evalCBN z
+```
 
 ### The homework as specified in https://hackmd.io/@alexhkurz/BJ7AoGcVK
 
@@ -131,7 +157,24 @@ For the evaluation of the lambda terms, observe that
 
 Once you rephrased the problem in these terms, the answers to 3-10 should be obvious and the answers to 11 and 12 are also not difficult to find.
 
-**I didn't deduce points if the `evalCBN` part was missing, you still need to do the work.**
+#### Computing `evalCBN`
+
+(I didn't deduce points if the `evalCBN` part was missing, you still need to do the work.)
+
+https://hackmd.io/@alexhkurz/ByIktUq-i
+
+The computations need to be performed on abstract syntax, showing the rewriting steps that the interpreter is taking. Again, many students did not take the time to do this. I know it is hard, but it will be a valuable skill to have in upcoming assignments.
+
+To help you, I write out the computations by mixing Haskell syntax and concrete lambda-calculus syntax. Your remaining task would be to write this out in the abstract lambda-calculus syntax used by Haskell and annotate each `=` by the appropriate line number from [this file](https://github.com/alexhkurz/programming-languages-2022/blob/main/src/LambdaNat0/src/Interpreter-fragment.hs).
+
+```haskell
+evalCBN ((\x.x)((\y.y)a)) = 
+evalCBN (subst x (\y.y)a) x) = 
+evalCBN ((\y.y)a) = 
+evalCBN (subst y a y) = 
+evalCBN a = 
+a
+```
 
 ## Week 4
 
