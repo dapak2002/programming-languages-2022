@@ -84,11 +84,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
     [Feedback for HW7](feedback-hw.md).
 
-
-<!--
-L 7.2: [Termination](https://hackmd.io/@alexhkurz/H1O4bLBHK) and [Invariants](https://hackmd.io/@alexhkurz/r1dp-LBBt). 
-The recordings contain a detailed explanation of how to conduct a mathematical proof (that was homework 1), as well as some advice of how to tackle the [string rewriting exercises](https://hackmd.io/@alexhkurz/Syn23oMHF), in particular wrt termination and invariants. 
--->
+- L 8.2: Continued from L 8.1.
 
 ---
 
