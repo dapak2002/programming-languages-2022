@@ -88,6 +88,8 @@ The truth table of ARS properties is linked from the homework.
 
 For each row in the truth table that doesn't have an example, there must be a corresponding theorem (explaining why no such example can exist). Which theorems best explain the missing examples of the ARS truth table?
 
+(The answer was discussed in class and can be found in the lecture notes. Come to the office hours if you have any doubts.)
+
 ## Week 6
 
 ### Evaluating lambda terms
@@ -133,7 +135,7 @@ Make sure that you build up your incrementally and document your progress by sub
     - ...
 
 
-## Week 5
+## [Week 5](https://canvas.chapman.edu/courses/44405/assignments/485938)
 
 **Instruction:** `report.pdf` needs a table of contents with hyperlinks to the respective sections (see `latex-exmaple.tex` for an example of how to do this).
 
@@ -273,8 +275,7 @@ Be careful about typesetting. Avoid "??" for missing links/references. If you ne
 
 Use a .gitignore file to avoid committing and pushing files such as .aux, .dvi, .log, .out, .toc, .DS_Store, ...
 
-Your repo needs to be private and I need to invited as a collaborator.	
-
+Your repo needs to be private and I need to be invited as a collaborator.	
 
 If you have latex questions, try first to find the answer on stackexchange.
 
