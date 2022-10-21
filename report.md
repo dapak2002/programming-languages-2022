@@ -102,13 +102,14 @@ http://pyro.ai/
 
 ## Writing Tips:
 
+- Make sure that you use technical language correctly.  
 - Typeset code different from text.
 - Do not always go with the first reference that comes up, try to find interesting references for each topic. Cite your references throughout the text.
 - In case of doubt, put rather more references. The basic idea of scientific writing is that all claims must be justified. (Of course, every community has its common knowledge.) 
 - In Latex, you can use  `\href` to link to online material.
 
 The report is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) useful. 
-- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
+- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Metaphors play a lesser role in our kind of technical writing (despite still being important and deserving attention), but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
 - Orwell recommends to avoid writing something just because it sounds good. Instead, 
     - "put off using words as long as possible and get one's meaning as clear as one can through pictures". 
     - first "think wordlessly, and then, [...] describe the thing you have been visualising". 
