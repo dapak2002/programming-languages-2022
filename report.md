@@ -55,13 +55,21 @@ Some further considerations:
 I don't want to limit your creativity, so please get in touch if you have your own ideas.
 
 - Data Analysis:
-    - Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/).
+    - Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/). 
+      - Is it possible to extract data about users moving from one language into another language? 
+      - Natural Language Processing (NLP)
+        - Is it possible to use natural language processing (sentiment analysis, etc) to learn what programmers think of languages from forums such as Reddit? 
+        - Stackexchange has forums for most important languages. Can on use NLP to make interesting comparisons between two chosen languages?
 - Programming:
     - A software package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
     - Implementing an interpreter for some programming language. You take inspiration at from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
     - Writing an interpreter for LISP.
     - A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
-    - Learn a new programming language, write a tutorial and implement an interesting project.
+    - Learn a new programming language, write a tutorial and implement an interesting project. Make sure you give this project an angle that makes it interesting from the point of *Programming Languages* (note the plural). To explain bettter what I mean:
+      - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles, podcasts, etc in which the designers of the language talk about some of this background.
+      - How was the language received? How did it develop? Is it used today for what it was designed for? How did its usage change over time?  
+      - What are the strengths and weaknesses of the language? How does the language compare to other langauges?
+    - Use the software project you develop to highlight some of the questions above.
     - Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
     - Programming with infinite lists in Haskell.
     - Probabilistic Programming Languages. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:
@@ -71,7 +79,7 @@ I don't want to limit your creativity, so please get in touch if you have your o
     https://probmods.org/  
     http://pyro.ai/  
     - Functional programming and finance. I just came across https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf  ... this looks very interesting to me and could be a starting point to a project.
-    - Solidity. Some of you expressed an interest in Solidity (the programming language of NFTs, cryptocurrencies, smart contracts, etc). I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
+    - Solidity is the programming language of NFTs, cryptocurrencies, smart contracts, etc. I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
     - Comparing Programming Languages for Difficulty. I found two recent articles on methodology to measure "ease of learning" or "learnability" of natural languages. To develop some ideas of how to apply this to programming languages could be **very** interesting.
     
         (Should appeal to students with an interest in machine learning, data science and/or linguistics.)
