@@ -54,51 +54,51 @@ Some further considerations:
 
 I don't want to limit your creativity, so please get in touch if you have your own ideas.
 
-- Data Analysis:
-    - Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/). 
-      - Is it possible to extract data about users moving from one language into another language? 
-      - Natural Language Processing (NLP)
-        - Is it possible to use natural language processing (sentiment analysis, etc) to learn what programmers think of languages from forums such as Reddit? 
-        - Stackexchange has forums for most important languages. Can on use NLP to make interesting comparisons between two chosen languages?
-- Programming:
-    - A software package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
-    - Implementing an interpreter for some programming language. You take inspiration at from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
-    - Writing an interpreter for LISP.
-    - A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
-    - Learn a new programming language, write a tutorial and implement an interesting project. Make sure you give this project an angle that makes it interesting from the point of *Programming Languages* (note the plural). To explain bettter what I mean:
-      - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles, podcasts, etc in which the designers of the language talk about some of this background.
-      - How was the language received? How did it develop? Is it used today for what it was designed for? How did its usage change over time?  
-      - What are the strengths and weaknesses of the language? How does the language compare to other langauges?
-    - Use the software project you develop to highlight some of the questions above.
-    - Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
-    - Programming with infinite lists in Haskell.
-    - Probabilistic Programming Languages. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:
-    https://bitbucket.org/lazyppl/lazyppl-src/src/master/README.md and https://lazyppl.bitbucket.io/  
-    https://www.gen.dev/  
-    https://mc-stan.org/  
-    https://probmods.org/  
-    http://pyro.ai/  
-    - Functional programming and finance. I just came across https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf  ... this looks very interesting to me and could be a starting point to a project.
-    - Solidity is the programming language of NFTs, cryptocurrencies, smart contracts, etc. I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
-    - Comparing Programming Languages for Difficulty. I found two recent articles on methodology to measure "ease of learning" or "learnability" of natural languages. To develop some ideas of how to apply this to programming languages could be **very** interesting.
-    
-        (Should appeal to students with an interest in machine learning, data science and/or linguistics.)
+### Data Analysis
 
-        - [Ease of Learning Explains Semantic Universals](https://semanticsarchive.net/Archive/zM5ZGIxM/EaseLearning.pdf), 2020. "we propose a unified cognitive explanation of linguistic universals by measuring complexity in terms of learnability" ... "To operationalize the difficulty of learning, we use off-the-shelf computational tools: neural network architectures currently in widespread use in deep learning" ... "the main claim of the paper that linguistic universals reflect simplicity as measured by ease of learning"
+- Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/). 
+  - Is it possible to extract data about users moving from one language into another language? 
+  - Natural Language Processing (NLP)
+    - Is it possible to use natural language processing (sentiment analysis, etc) to learn what programmers think of languages from forums such as Reddit? 
+    - Stackexchange has forums for most important languages. Can on use NLP to make interesting comparisons between two chosen languages?
 
+### Programming
 
-        - [Complexity/informativeness trade-off in the domain of indefinite pronouns](https://semanticsarchive.net/Archive/DNmNDAxN/Denic-et-al-Indefinites-SALT.pdf), 2020. "We measure the complexity of an item c(i) as the number of features in its featural make-up. Our measure of complexity of a language Comp(L) is defined as the sum of complexity measures of each item in the language" ... "Our measure of informativeness corresponds to the probability that the communication will be successful given"
+- A software package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
+- Implementing an interpreter for some programming language. You take inspiration at from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
+- Writing an interpreter for LISP.
+- A Haskell project that is related to this course, for example developing software tools for the analysis of string rewriting systems.
+- Learn a new programming language, write a tutorial and implement an interesting project. Make sure you give this project an angle that makes it interesting from the point of *Programming Languages* (note the plural). To explain bettter what I mean:
+  - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles, podcasts, etc in which the designers of the language talk about some of this background.
+  - How was the language received? How did it develop? Is it used today for what it was designed for? How did its usage change over time?  
+  - What are the strengths and weaknesses of the language? How does the language compare to other langauges?
+- Use the software project you develop to highlight some of the questions above.
+- Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
+- Programming with infinite lists in Haskell.
+- Probabilistic Programming Languages. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:
+https://bitbucket.org/lazyppl/lazyppl-src/src/master/README.md and https://lazyppl.bitbucket.io/  
+https://www.gen.dev/  
+https://mc-stan.org/  
+https://probmods.org/  
+http://pyro.ai/  
+- Functional programming and finance. I just came across https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf  ... this looks very interesting to me and could be a starting point to a project.
+- Solidity is the programming language of NFTs, cryptocurrencies, smart contracts, etc. I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
+- Comparing Programming Languages for Difficulty. I found two recent articles on methodology to measure "ease of learning" or "learnability" of natural languages. To develop some ideas of how to apply this to programming languages could be **very** interesting. (Should appeal to students with an interest in machine learning, data science and/or linguistics.)
+    - [Ease of Learning Explains Semantic Universals](https://semanticsarchive.net/Archive/zM5ZGIxM/EaseLearning.pdf), 2020. "we propose a unified cognitive explanation of linguistic universals by measuring complexity in terms of learnability" ... "To operationalize the difficulty of learning, we use off-the-shelf computational tools: neural network architectures currently in widespread use in deep learning" ... "the main claim of the paper that linguistic universals reflect simplicity as measured by ease of learning"
+    - [Complexity/informativeness trade-off in the domain of indefinite pronouns](https://semanticsarchive.net/Archive/DNmNDAxN/Denic-et-al-Indefinites-SALT.pdf), 2020. "We measure the complexity of an item c(i) as the number of features in its featural make-up. Our measure of complexity of a language Comp(L) is defined as the sum of complexity measures of each item in the language" ... "Our measure of informativeness corresponds to the probability that the communication will be successful given"
 
-        Let me know if that interests you.
-- Theory (may appeal to math majors):
-    - A theorem proving project: 
-        - Along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
-        - Group theory in the Lean mathlib library is quite advanced at this point. So the standard results that we cover in Math 380 (Lagrange’s theorem, Cayley’s theorem, the isomorphism theorems have been formalized), but it would be interesting to find these results in the Lean3 mathlib and try to redo them in Lean4 (since the porting of mathlib from Lean3 to Lean4 is still quite a ways off in the future). To get started on this he could check out https://leanprover-community.github.io/learn.html and https://leanprover-community.github.io/undergrad_todo.html and install Lean (both versions) on his computer. 
-    - Exploring Hoare logic in more depth.
-    - A math project that explores the category theoretic foundations of programming languages. 
-    - A project on computability and/or complexity: halting problem, Turing completeness, Church-Turing thesis, etc.
-    - Applying the methods of the class to problems in the book Goedel, Escher, Bach.
-    - Typeinference in lambda calculus, natural deduction, Curry-Howard correspondence.
+### Theory 
+
+(may appeal to math majors)
+
+- A theorem proving project: 
+    - Along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
+    - Group theory in the Lean mathlib library is quite advanced at this point. So the standard results that we cover in Math 380 (Lagrange’s theorem, Cayley’s theorem, the isomorphism theorems have been formalized), but it would be interesting to find these results in the Lean3 mathlib and try to redo them in Lean4 (since the porting of mathlib from Lean3 to Lean4 is still quite a ways off in the future). To get started on this he could check out https://leanprover-community.github.io/learn.html and https://leanprover-community.github.io/undergrad_todo.html and install Lean (both versions) on his computer. 
+- Exploring Hoare logic in more depth.
+- A math project that explores the category theoretic foundations of programming languages. 
+- A project on computability and/or complexity: halting problem, Turing completeness, Church-Turing thesis, etc.
+- Applying the methods of the class to problems in the book Goedel, Escher, Bach.
+- Typeinference in lambda calculus, natural deduction, Curry-Howard correspondence.
 
 ## Writing Tips:
 
