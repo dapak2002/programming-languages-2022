@@ -64,8 +64,28 @@ I don't want to limit your creativity, so please get in touch if you have your o
     - Learn a new programming language, write a tutorial and implement an interesting project.
     - Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
     - Programming with infinite lists in Haskell.
+    - Probabilistic Programming Languages. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:
+    https://bitbucket.org/lazyppl/lazyppl-src/src/master/README.md and https://lazyppl.bitbucket.io/  
+    https://www.gen.dev/  
+    https://mc-stan.org/  
+    https://probmods.org/  
+    http://pyro.ai/  
+    - Functional programming and finance. I just came across https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf  ... this looks very interesting to me and could be a starting point to a project.
+    - Solidity. Some of you expressed an interest in Solidity (the programming language of NFTs, cryptocurrencies, smart contracts, etc). I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
+    - Comparing Programming Languages for Difficulty. I found two recent articles on methodology to measure "ease of learning" or "learnability" of natural languages. To develop some ideas of how to apply this to programming languages could be **very** interesting.
+    
+        (Should appeal to students with an interest in machine learning, data science and/or linguistics.)
+
+        - [Ease of Learning Explains Semantic Universals](https://semanticsarchive.net/Archive/zM5ZGIxM/EaseLearning.pdf), 2020. "we propose a unified cognitive explanation of linguistic universals by measuring complexity in terms of learnability" ... "To operationalize the difficulty of learning, we use off-the-shelf computational tools: neural network architectures currently in widespread use in deep learning" ... "the main claim of the paper that linguistic universals reflect simplicity as measured by ease of learning"
+
+
+        - [Complexity/informativeness trade-off in the domain of indefinite pronouns](https://semanticsarchive.net/Archive/DNmNDAxN/Denic-et-al-Indefinites-SALT.pdf), 2020. "We measure the complexity of an item c(i) as the number of features in its featural make-up. Our measure of complexity of a language Comp(L) is defined as the sum of complexity measures of each item in the language" ... "Our measure of informativeness corresponds to the probability that the communication will be successful given"
+
+        Let me know if that interests you.
 - Theory (may appeal to math majors):
-    - A theorem proving project along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
+    - A theorem proving project: 
+        - Along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
+        - Group theory in the Lean mathlib library is quite advanced at this point. So the standard results that we cover in Math 380 (Lagrange’s theorem, Cayley’s theorem, the isomorphism theorems have been formalized), but it would be interesting to find these results in the Lean3 mathlib and try to redo them in Lean4 (since the porting of mathlib from Lean3 to Lean4 is still quite a ways off in the future). To get started on this he could check out https://leanprover-community.github.io/learn.html and https://leanprover-community.github.io/undergrad_todo.html and install Lean (both versions) on his computer. 
     - Exploring Hoare logic in more depth.
     - A math project that explores the category theoretic foundations of programming languages. 
     - A project on computability and/or complexity: halting problem, Turing completeness, Church-Turing thesis, etc.
