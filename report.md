@@ -92,8 +92,8 @@ http://pyro.ai/
 (may appeal to math majors)
 
 - A theorem proving project: 
-    - Along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
-    - Group theory in the Lean mathlib library is quite advanced at this point. So the standard results that we cover in Math 380 (Lagrange’s theorem, Cayley’s theorem, the isomorphism theorems have been formalized), but it would be interesting to find these results in the Lean3 mathlib and try to redo them in Lean4 (since the porting of mathlib from Lean3 to Lean4 is still quite a ways off in the future). To get started on this he could check out https://leanprover-community.github.io/learn.html and https://leanprover-community.github.io/undergrad_todo.html and install Lean (both versions) on his computer. 
+    - (Program Verification) Along the lines of Chapter 2 and 3 of the book [Concrete Semantics](http://concrete-semantics.org/).
+    - (Mathematics) Group theory in the Lean mathlib library is quite advanced at this point. So the standard results that we cover in Math 380 (Lagrange’s theorem, Cayley’s theorem, the isomorphism theorems have been formalized), but it would be interesting to find these results in the Lean3 mathlib and try to redo them in Lean4 (since the porting of mathlib from Lean3 to Lean4 is still quite a ways off in the future). To get started on this check out https://leanprover-community.github.io/learn.html and https://leanprover-community.github.io/undergrad_todo.html and install both versions of Lean. 
 - Exploring Hoare logic in more depth.
 - A math project that explores the category theoretic foundations of programming languages. 
 - A project on computability and/or complexity: halting problem, Turing completeness, Church-Turing thesis, etc.
