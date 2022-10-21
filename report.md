@@ -5,7 +5,7 @@ Instead of a midterm and final exam, you will write a report. Think of it as a t
 - Part 1 (12x3=36 points): Homework.
 - Part 2 (64 points): Final project.
 
-A template for your LaTeX source file [`report.tex`](report/report.tex) and the compiled [pdf](report/report.pdf). See also [`latex-example.tex`](report/latex-example.tex) and [`latex-example.pdf](report/latex-example.pdf).
+A template for your LaTeX source file [`report.tex`](report/report.tex) and the compiled [pdf](report/report.pdf). See also [`latex-example.tex`](report/latex-example.tex) and [`latex-example.pdf`](report/latex-example.pdf).
 
 - You will keep both report.tex and report.pdf in your private github repository. 
 - In your repo, make a subdirectory `src` where you store the program files  (if a homework requires programming). Call them `hwn.ext` where `n` is the number of the homework/week and `ext` is the extension appropriate for the programming language.
@@ -14,7 +14,7 @@ A template for your LaTeX source file [`report.tex`](report/report.tex) and the 
 - Submission info below.
 
 **Deadlines:**
-- Weekly deadlines for Part 1. Each week has 3 points upon completion.  10x3=30 points for content are awarded after the final deadline in December.
+- Weekly deadlines for Part 1. Each week has 2 points upon completion.  The remaining points are awarded after the final deadline in December. You are expected to improve upon your weekly submissions for the final report.
 - Deadline is the Sunday at midnight. This gives me time to look over your answers on Monday. I will discuss the questions Tuesday in class and you will have an opportunity to improve your answers. (The following is preliminary, we may have to adapt it as we go along.)
     - Week 1: Writing a report in LaTeX (`gcd`).
     - Week 2: Writing recursive programs in Haskell (`member`, etc).
