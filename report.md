@@ -97,7 +97,7 @@ http://pyro.ai/
 - Exploring Hoare logic in more depth.
 - A math project that explores the category theoretic foundations of programming languages. 
 - A project on computability and/or complexity: halting problem, Turing completeness, Church-Turing thesis, etc.
-- Applying the methods of the class to problems in the book Goedel, Escher, Bach.
+- Applying the methods of the class to problems in the book Goedel, Escher, Bach. Writing a dialogue in the spirit of GEB.
 - Typeinference in lambda calculus, natural deduction, Curry-Howard correspondence.
 
 ## Writing Tips:
@@ -108,8 +108,7 @@ http://pyro.ai/
 - In Latex, you can use  `\href` to link to online material.
 
 The report is not an English assignment, but I find this classic and entertaining [advice by George Orwell](https://www.orwell.ru/library/essays/politics/english/e_polit) useful. 
-- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. 
-- "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
+- To avoid what Orwell calls "this mixture of vagueness and sheer incompetence" is particularly important in technical writing. "A scrupulous writer, in every sentence that he writes, will ask himself at least four questions, thus: What am I trying to say? What words will express it? What image or idiom will make it clearer? Is this image fresh enough to have an effect? And he will probably ask himself two more: Could I put it more shortly? Have I said anything that is avoidably ugly?" Perhaps metaphors play a lesser role in our kind of technical writing, but if you replace "image" above by "example", Orwell's remarks are again exactly to the point.
 - Orwell recommends to avoid writing something just because it sounds good. Instead, 
     - "put off using words as long as possible and get one's meaning as clear as one can through pictures". 
     - first "think wordlessly, and then, [...] describe the thing you have been visualising". 
