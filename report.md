@@ -100,7 +100,7 @@ http://pyro.ai/
 - Applying the methods of the class to problems in the book Goedel, Escher, Bach. Writing a dialogue in the spirit of GEB.
 - Typeinference in lambda calculus, natural deduction, Curry-Howard correspondence.
 
-## Writing Tips:
+## Writing Tips
 
 - Make sure that you use technical language correctly.  
 - Typeset code different from text.
