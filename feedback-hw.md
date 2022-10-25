@@ -26,7 +26,7 @@ Testing is an important aspect of software engineering. I deducted a point for i
 I also deducted a point for 
 
 - ignoring in the critical appraisal to "be upfront about any requirements not implemented, or any remaining bugs you know of" (not knowing about bugs due to a lack of testing on your side is not an argument that is likely to convince me, but you can come to office hours and discuss this with me ... I dont want to deduce a point here for accidentally missing a subtle bug)
-- not keeping the naming conventions such as `Assignment1/Part1` ... I hate doing this, but if I don't I send the signal that I don't care
+- not keeping the naming conventions such as `Assignment1/Part1` ... I hate doing this, but if I don't, I send the signal that I don't care.
 
 
 
