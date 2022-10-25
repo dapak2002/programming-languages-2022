@@ -90,6 +90,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 9.1: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
+        [Feedback for Assignment 1](feedback-hw.md).
 
 
 
