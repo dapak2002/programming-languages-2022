@@ -86,6 +86,13 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 8.2: Continued from L 8.1.
 
+### Part 4: An Interpreter for a Functional Programming Language
+
+- L 9.1: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
+
+
+
+
 ---
 
 ... more to come ...

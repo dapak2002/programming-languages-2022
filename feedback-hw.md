@@ -6,6 +6,59 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## [Assignment 1](https://canvas.chapman.edu/courses/44405/assignments/484480)
+
+(I graded this carefully, but if you feel there are questions come to my office hours to discuss.)
+
+Make sure that your software runs "out of the box". Otherwise, you may loose points, even all points. If in doubt what I mean by this, come to my office hours. (In case I could fix the problem myself quickly, I tended to be lenient, but, to be honest, I do not think that I should do this.)
+
+It is a general principle in software engineering that when you are asked to implement an interface, you are not allowed to change the interface. In our case that means: **Do not change the names of the functions.** Similarly, **you are not allowed to change the type of the functions**. If you change either names or types, your functions will not implement the given interface. For example, your implementation will fail my tests.
+
+Testing is an important aspect of software engineering. I deducted a point for ignoring the following requirement from `main` in `arithmetic-specification.hs:
+
+```haskell
+-- design your own tests and add them to main 
+-- make sure that all relevant functionality is tested
+-- add expected test results as comments
+-- do not change the names of the functions in the specification, I will use them for testing
+```
+
+I also deducted a point for 
+
+- ignoring in the critical appraisal to "be upfront about any requirements not implemented, or any remaining bugs you know of" (not knowing about bugs due to a lack of testing on your side is not an argument that is likely to convince me, but you can come to office hours and discuss this with me ... I dont want to deduce a point here for accidentally missing a subtle bug)
+- not keeping the naming conventions such as `Assignment1/Part1` ... I hate doing this, but if I don't I send the signal that I don't care
+
+
+
+### Critical Appraisal
+
+-2 if computations were missing.
+
+I did not deduce points for missing **interesting observations** but I will next time. 
+
+Many points were lost due to lack of testing. Often `arithmetic.hs` did only contain a few tests in `main`. **You need at least one test for each line of code.** (This is a rule of thumb that applies to programs like `arithmetic.hs` ... I will say more about it in class.)
+
+When you work in a team, in your writing, use "we" instead of "I" (or specify the author). 
+
+Always spell-check. Write with care. If the form is sloppy, readers will doubt the content as well. 
+
+### Part 1
+
+- `addN` and `addP` are recursive. Note how these recursive definitions reflect the recursive definition of the datatypes `NN` and `PP.
+
+- `addI` and `addQ` are not recursive. In fact, they are given by a single equation. This reflects that `II` and `QQ` are not recursive datatypes.
+
+- Equality: There is a built-in equality that is available via `deriving Eq`. This equality is defined "componentwise". The componentwise definition works for `NN` and for `PP`, but not for `II` and `QQ`. To see this let us look at some examples:
+  -  Integers: We have `(1,2)=(2,3)` even though the first components (1 and 2) and the second components (2 and 3) are different.
+  -  Fractions: We have `(1,2)=(2,4)` even though the components are different again.
+
+### Part 2
+
+I expected input such as `2*--3` and `2--3` to be legal. If your calculator did not accept such input and you did not explain why you made this decision, you lost points.
+
+I expected `2^3^2` where `^` is exponentiation to evaluate to `512`. If your calculuator evaluated to a different number and you did not explain why you made this decision, you lost a point. 
+
+
 ## [Week 7](https://canvas.chapman.edu/courses/44405/assignments/488837)
 
 *Introductory Question:* How are the 3 topics of this HW (scope, computing `evalCBN', rewriting) related?
