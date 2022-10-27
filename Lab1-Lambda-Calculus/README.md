@@ -2,7 +2,7 @@
 
 ## Summary of Commands
 
-To build LambdaNat run, in the folder `LambdaNat0`, the following from the command line. 
+To build the parser and interpreter run, in the folder `LambdaNat0`, the following from the command line. 
 
 ```bash
 cd grammar
@@ -13,7 +13,7 @@ cp grammar/*.hs src
 cabal build
 ```
 
-I collected these commands in the shell script `LambdaNat0/build.sh`, which you can run instead of the sequence of commands above.
+I collected these commands in the shell script `LambdaNat0/build.sh`, which you can run with `./build.sh` instead of the sequence of commands above.
 
 To test run
 
