@@ -115,6 +115,8 @@ pp_int :: Integer -> PP
 int_pp :: PP->Integer
 
 float_qq :: QQ -> Float
+-- use fromIntegral to convert from Integer to Float
+-- https://stackoverflow.com/questions/40751749/how-does-fromintegral-work
 
 ------------------------------
 -- Normalisation by Evaluation
