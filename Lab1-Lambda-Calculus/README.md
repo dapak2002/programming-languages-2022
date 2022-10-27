@@ -2,7 +2,7 @@
 
 ## Summary of Commands
 
-To build run
+To build LambdaNat run, in the folder `LambdaNat0`, the following from the command line. 
 
 ```bash
 cd grammar
