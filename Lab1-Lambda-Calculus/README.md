@@ -1,5 +1,26 @@
 # README
 
+## Summary of Commands
+
+To build run
+
+```bash
+cd grammar
+bnfc -m --haskell LambdaNat0.cf
+make
+cd ..
+cp grammar/*.hs src
+cabal build
+```
+
+I collected these commands in the shell script `build.sh`, which you can run instead of the sequence of commands above.
+
+To test run
+
+```bash
+cabal run LambdaNat-exe test/exercise.lc
+```
+
 ## Introduction
 
 Our aim is to learn how to extend and modify a small programming language. We start with the pure and untyped lambda calculus, available in the folder `LambdaNat0`. 
@@ -40,7 +61,7 @@ If you cannot download or build [bnfc as described here](https://github.com/alex
 - To **compile the interpreter** run (in the folder `Lab1-Lambda-Calculus/LambdaNat0`)
 
         cp grammar/*.hs src 
-        stack build
+        cabal build
 
     The first command copies bnfc-generated files such as the definition of the algebraic data type for abstract syntax. The second command builds the interpreter itself.
 
@@ -74,7 +95,7 @@ If stack build fails:
 
 - To **execute a program**  in the lambda calculus run, for example,
 
-        stack exec LambdaNat-exe test/exercise.lc
+        cabal run LambdaNat-exe test/exercise.lc
 
 <!--
 If you used `cabal build`, then `cabal exec` instead of `stack exec` should work. If it doesn't, search for the executable `LambdaNat-exe` and execute it by giving its full path, which should be `dist/build/LambdaNat-exe/LambdaNat-exe` ... if you encounter this problem under Windows try
