@@ -13,12 +13,12 @@ cp grammar/*.hs src
 cabal build
 ```
 
-I collected these commands in the shell script `build.sh`, which you can run instead of the sequence of commands above.
+I collected these commands in the shell script `LambdaNat0/build.sh`, which you can run instead of the sequence of commands above.
 
 To test run
 
 ```bash
-cabal run LambdaNat-exe test/exercise.lc
+cabal run test/exercise.lc
 ```
 
 ## Introduction
@@ -33,7 +33,7 @@ The untyped lambda calculus is a very small programming language and we want to 
 
 Requirements: git, Haskell, bnfc
 
-How to get started: Download this directory and `cd` into it in a terminal. 
+How to get started: Download this directory and `cd` into `LambdaNat0` in a terminal. 
     
 ## How to Generate a Parser
 
@@ -56,7 +56,7 @@ If you cannot download or build [bnfc as described here](https://github.com/alex
     
 ## How to Build an Interpreter
 
-- To **view the interpreter** find the folder `src` and open `interpreter.hs`.
+- To **view the interpreter** find the folder `src` and open `Interpreter.hs`.
     
 - To **compile the interpreter** run (in the folder `Lab1-Lambda-Calculus/LambdaNat0`)
 
