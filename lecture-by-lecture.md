@@ -92,6 +92,8 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
     [Feedback for Assignment 1](feedback-hw.md).
 
+- L 9.2: Starting [Assignment 2](assignment-2.md).
+
 
 
 ---
