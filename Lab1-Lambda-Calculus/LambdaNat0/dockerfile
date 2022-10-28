@@ -1,0 +1,8 @@
+FROM haskell:8
+COPY . .
+WORKDIR /
+RUN cabal update;
+RUN cabal install BNFC;
+RUN cabal install alex;
+RUN cabal install happy;
+CMD /bin/bash
