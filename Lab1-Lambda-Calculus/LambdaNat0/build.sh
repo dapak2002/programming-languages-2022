@@ -1,5 +1,5 @@
 cd grammar
-bnfc -m --haskell LambdaNat0.cf
+bnfc -m --haskell LambdaNat?.cf
 make
 cd ..
 cp grammar/*.hs src

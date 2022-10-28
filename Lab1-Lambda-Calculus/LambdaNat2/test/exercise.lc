@@ -1,4 +1,0 @@
-LambdaNat2.lc
-
-//(\x.S x) S S 0
-\x. ((\y. S x) 0)
