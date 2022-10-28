@@ -1,3 +1,6 @@
+# Run the following from the commandline:
+# docker build -t haskell-pl . 
+# docker run -it --rm haskell-pl
 FROM haskell:8
 COPY . .
 WORKDIR /
