@@ -40,7 +40,7 @@ For each constructor in the grammar there will be one clause in the definitions 
 
 As the interpreter and programs gets more complicated, you are likely to run into problems with debugging. One difficulty is to determine whether unexpected results are caused by the program or by the interpreter. If you run into unexpected behaviour create a [minimal interesting example (MIE)](MIE.md). 
 
-## Part 0: Getting Started With Natural Numbers
+## Part 0: From LambdaNat0 to LambdaNat1 - Getting Started With Natural Numbers
 
 (our work in class)
 
@@ -78,7 +78,7 @@ the idea being that to substitute in `S e3` I need to substitute in `e3` and kee
 
 (Recall that we read `subst i e2 e3` as "substitute `i` by `e2` in `e3`".)
 
-## Part 1: Conditionals and Recursion
+## Part 1: From LambdaNat2 to LambdaNat3 - Conditionals and Recursion
 
 The purpose of this part is to add conditionals and recursion to Part 0, see the [lecture notes](https://hackmd.io/@alexhkurz/rJEeYqZtw) for the necessary background. Your new version will be in a folder `LambdaNat3`.
 
@@ -106,7 +106,7 @@ Hints: For `EIf` use Haskell's if-then-else. For `ELet` use the definition of th
 
 **Extra Challenge:** Implement `ERec`.
 
-## Part 2: Computing with Lists
+## Part 2: From LambdaNat 4 to LambdaNat5 - Computing with Lists
 
 (25 points, including 5 points for the critical appraisal.)
 
