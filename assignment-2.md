@@ -100,7 +100,7 @@ internal EFix. Exp2 ::= "fix" Exp ;                           -- to implement "l
 
 `internal` means that EFix is part of the abstract syntax but not of the concrete syntax. We need EFix to implement `let rec`.
 
-**Task** (worth 5 points): Implement `EIf`, `ELet` and `EMinusOne` in the interpreter. (3 lines of code for `evalCBN` and 3 lines of code for `subst`.) 
+**Task** (worth 5 points): Implement `EIf`, `ELet` and `EMinusOne` in the interpreter. (3 equations for `evalCBN` and 3 equations for `subst`.) 
 
 Hints: For `EIf` use Haskell's if-then-else. For `ELet` use the definition of the semantics of `let` as an application of lambda-calculus. For `EMinusOne` use pattern matching (if `n` matches `ENatS m` then `m` is one less than `n`.)
 
