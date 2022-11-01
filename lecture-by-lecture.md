@@ -94,6 +94,9 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 9.2: Starting [Assignment 2](assignment-2.md).
 
+### Part 5: Operational and Denotational Semantics
+
+- L 10.1: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
 
 
 ---
