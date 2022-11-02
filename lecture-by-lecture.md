@@ -86,7 +86,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 8.2: Continued from L 8.1.
 
-### Part 4: An Interpreter for a Functional Programming Language
+## Part 4: An Interpreter for a Functional Programming Language
 
 - L 9.1: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
@@ -94,19 +94,23 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 9.2: Starting [Assignment 2](assignment-2.md).
 
-### Part 5: Operational and Denotational Semantics
+## Part 5: Operational and Denotational Semantics
 
 - L 10.1: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
+
+## Part 6: Design of a Domain Specific Language. 
+
+- L 10.2: We will discuss the article [Composing contracts: an adventure in financial engineering](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf). A link to an implementation can be found [here](https://github.com/cmahon/composing-contracts), but I did not take a closer look yet, get in touch if you are interested.
 
 
 ---
 
 ... more to come ...
 
-## Part 4: An Interpreter for a Functional Programming Language
+## An Interpreter for a Functional Programming Language
 
-## Part 5: Advanced Topics 1
+## Advanced Topics 1
 
-## Part 6: An Interpreter for an Imperative Programming Language
+## An Interpreter for an Imperative Programming Language
 
-## Part 7: Advanced Topics 2
+## Advanced Topics 2
