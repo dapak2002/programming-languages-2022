@@ -18,7 +18,7 @@ I collected these commands in the shell script `LambdaNat0/build.sh`, which you 
 To test run
 
 ```
-cabal run test/exercise.lc
+cabal run LambdaNat-exe test/exercise.lc
 ```
 
 If this does not work with your set-up, run in `LambdaNat0`
@@ -28,7 +28,7 @@ docker build -t haskell-pl .
 docker run -it --rm haskell-pl
 ```
 
-which leads you inside a docker container in which the above commands should work.
+which leads you inside a docker container in which the above commands should work. More on [how to use docker](https://hackmd.io/@alexhkurz/HJxD19_Vo).
 
 ## Introduction
 
