@@ -102,6 +102,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 10.2: We will discuss the article [Composing contracts: an adventure in financial engineering](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf). A link to an implementation can be found [here](https://github.com/cmahon/composing-contracts), but I did not take a closer look yet, get in touch if you are interested.
 
+- L 11.1: Comments on Assignment 2, Part 2.  [Feedback for Homework](feedback-hw.md).
 
 ---
 
