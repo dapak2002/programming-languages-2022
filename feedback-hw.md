@@ -10,7 +10,7 @@ Feedback will also be provided each Tuesday in the lecture. If you have any furt
 
 **General Remark on the Final Report:** Your final report should be written in such a way that it is not just a loose collection of answers to homework. It should make sense on its own terms. It should be nicely typeset. Typically, a short summary of the problem should precede the solution. The notation you use should be explained. Of course, you don't need to repeat everything we did in the lectures. In case of doubt ask me. 
 
-From my experience of writing reports, 
+From my experience of writing reports, this kind of polishing takes a lot of time ... so better start now and spend 10 min on it every day.
 
 **Remark on Notation:** If you use a font that does not allow subscripts I suggest to write `fix F`. This makes sense because `fix` is a combinator (program) which takes `F` as an argument and 'returns' the fixed point of `F` as a result. According to our rules for dropping parentheses we can then write `fix F 2` (which is also `(fix F)(2)` if you want to put in some parentheses) for the result of applying the fixed point of `F` (which is the factorial function in our example) to the argument `2`.
 
