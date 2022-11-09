@@ -79,6 +79,8 @@ cc -> b
 
 I don't want to include spoilers here. Go carefully through my notes, including the feedback for the ARS of Week 8, and give it another try. As always, come to office hours for more feedback and advice.
 
+*Hint:* Work with encoding letters as digits, use $+$ to combine digits. Also modulo arithmetic may help.
+
 **Make sure that you justify your claims.** For example, if you write
 - "There are no unique normal forms" you should exhibit an example that either has no NF or that has two different NFs. 
 - "There are (exactly) four equivalence classes" you need to show (i) there are four equivalence classes and they are all different and (ii) there are no other equivalence classes. To show that all equivalence classes you identified are different use an invariant. 
@@ -120,7 +122,11 @@ I will go through this step by step, but **see also the footnotes I added to the
 
 A full answer is explicit about what the new rewrite system is.
 
-It also shows that the new system and the old system have the same equivalence classes. To this end you need to show that in the new system w reduces to v if an only if in the old system w reduces v. 
+It also shows that the modified system and the original system have the same equivalence classes. To this end you need to show that in the modified system w reduces to v if an only if in original system w reduces v. 
+
+Also you should go back to the question about the normal forms. The normal forms of the modified system may be different. 
+
+(At this point I have four normal forms in my modified system, `[],a,b,ab`.)
 
 - Describe the specification implemented by the ARS.
 
@@ -134,17 +140,29 @@ keeps the statement *at least one `a`* invariant. To verify that this is indeed 
 
 After finding this invariant, another invariant suggests itself (the observation is that the rules are symmetric under swapping `a` and `b`).
 
-The invariant now is: 
+We have now two invariants:
+- at least on `a`
+- at least on `b`
+which combine to the following 4 possibilities.
 
-The word is empty, or it has at least on `a`, or  at least on `b`, or at least one `a` and at least one `b`.
+|Normal Form | Invariant |
+|:---:|:---:|
+| `[]` | no `a`, no `b` |
+| `a` | at least one `a`, no `b` |
+| `b` | at least one `b`, no `a` |
+| `ab` | at least one `a`, at least one `b` |
 
-At this point you should go back and check that each of these four cases corresponds to a normal form of the modified system. 
+At this point, the correspondence between normal forms and equivalence classes suggested by the table is only a conjecture. There are still things to verify:
 
-After that, we know that each word has a UNF (why?). Since the ARS is also terminating, it is an algorithm. 
+- It is clear that every normal form in the first column satisfies the corresponding property in the second column. 
+- Since these properties are invariants, it follows that all the NFs are in different equivalence classes. 
+- Since every word reduces to one of the four NFs, it follows that there are exactly four equivalence classes.
 
-What is the specification of the algorithm?
+By this point, we know that the table gives us a full characterisation of the equivalence classes.  There are exactly four of them and we have both an computational and a mathematical characterisation. 
+- Computationally, each equivalence class is characterised by its normal form. To know in which equivalence class a word is, I can reduce it to its normal form. In particular, the ARS has UNFs.
+- Mathematically, the equivalence classes can be specified, using the second column, without referring to the computation rules `->`. 
 
-The specification of the algorithm is a reformulation of the invariant:
+The specification of the algorithm is a reformulation of the invariants:
 
 For any word, decide whether it
 - is empty
