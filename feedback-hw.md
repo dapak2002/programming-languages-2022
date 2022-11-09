@@ -122,11 +122,11 @@ I will go through this step by step, but **see also the footnotes I added to the
 
 A full answer is explicit about what the new rewrite system is. Termination needs to be justified (see what we learned about measure functions in the lectures).
 
-It also needs to be shown that the modified system and the original system have the same equivalence classes. To this end you need to show that in the modified system w reduces to v if an only if in original system w reduces v. (Hint: Use that equivalence relation, by definition, allow to compute backwards.)
+It also needs to be shown that the modified system and the original system have the same equivalence classes. To this end you need to show that in the modified system w reduces to v if an only if in the original system w reduces v. (Hint: Use that equivalence relations, by definition, are symmteric (that is, intutively, allow us to compute backwards.)
 
-Also you should go back to the question about the normal forms. The normal forms of the modified system could be different. 
+Also you should go back to the question about the normal forms. The normal forms of the modified system could be different from the normal forms of the original system.  
 
-(At this point I have four normal forms in my modified system, `[],a,b,ab`.)
+(At this point I have four normal forms in my modified system: `[],a,b,ab`.)
 
 - Describe the specification implemented by the ARS.
 
@@ -136,13 +136,15 @@ For example, the rule
 
 `aa->a`
 
-keeps the statement *at least one `a`* invariant. To verify that this is indeed an invariant, you need to check that *at least one `a`* is kept invariant also by all the other rules. 
+keeps the statement *at least one `a`* invariant. To verify that this is indeed an invariant, you need to check that *at least one `a`* is kept invariant also by all the other rules.
 
 After finding this invariant, another invariant suggests itself (the observation is that the rules are symmetric under swapping `a` and `b`).
 
 We have now two invariants:
+
 - at least on `a`  
 - at least on `b`  
+
 which combine to the following 4 possibilities.
 
 |Normal Form | Invariant |
@@ -154,9 +156,10 @@ which combine to the following 4 possibilities.
 
 At this point, the correspondence between normal forms and equivalence classes suggested by the table is only a conjecture. There are still things to verify:
 
-- It is clear that every normal form in the first column satisfies the corresponding property in the second column. 
-- Since these properties are invariants, it follows that all the NFs are in different equivalence classes. 
-- Since every word reduces to one of the four NFs, it follows that there are exactly four equivalence classes.
+- Every normal form in the first column satisfies the corresponding property in the second column.   
+- (Since these properties are invariants, it follows that all the NFs are in different equivalence classes.)
+- Every word reduces to one of the four NFs.
+- (It then follows that there are exactly four equivalence classes.)
 
 By this point, we know that the table gives us a full characterisation of the equivalence classes.  There are exactly four of them and we have both a computational and a mathematical characterisation. 
 - Computationally, each equivalence class is characterised by its normal form. To know in which equivalence class a word is, I can reduce it to its normal form. In particular, the ARS has UNFs.
