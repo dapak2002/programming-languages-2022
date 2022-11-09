@@ -157,12 +157,12 @@ which combine to the following 4 possibilities.
 At this point, the correspondence between normal forms and equivalence classes suggested by the table is only a conjecture. There are still things to verify:
 
 - Every normal form in the first column satisfies the corresponding property in the second column.   
-- (Since these properties are invariants, it follows that all the NFs are in different equivalence classes.)
+- (Since these properties are invariants, it follows that all the NFs are in different equivalence classes. Hence there are at least four equivalence classes.)
 - Every word reduces to one of the four NFs.
-- (It then follows that there are exactly four equivalence classes.)
+- (Hence there are at most four equivalence classes.)
 
 By this point, we know that the table gives us a full characterisation of the equivalence classes.  There are exactly four of them and we have both a computational and a mathematical characterisation. 
-- Computationally, each equivalence class is characterised by its normal form. To know in which equivalence class a word is, I can reduce it to its normal form. In particular, the ARS has UNFs.
+- Computationally, each equivalence class is characterised by its normal form. To know in which equivalence class a word is, we can reduce it to its normal form. In particular, the ARS has UNFs.
 - Mathematically, the equivalence classes can be specified, using the second column, without referring to the computation rules `->`. 
 
 The **specification of the algorithm** reconstructed from this analysis is a reformulation of the invariants:
@@ -173,7 +173,7 @@ For any word, decide whether it
 - contains `b`s but no `a`s
 - contains `a`s and `b`s
 
-**Make sure to include this in the final version of the report and to justify all the claims you make.**
+**Make sure to include improvements along these lines in the final version of the report and to justify all the claims you make.**
 
 
 ## [Assignment 1](https://canvas.chapman.edu/courses/44405/assignments/484480)
