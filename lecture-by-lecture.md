@@ -98,7 +98,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 10.1: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
 
-## Design of a Domain Specific Language. 
+## Design of a Domain Specific Language
 
 - L 10.2: We will discuss the article [Composing contracts: an adventure in financial engineering](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf). A link to an implementation can be found [here](https://github.com/cmahon/composing-contracts), but I did not take a closer look yet, get in touch if you are interested.
 

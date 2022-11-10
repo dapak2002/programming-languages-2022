@@ -68,22 +68,21 @@ I don't want to limit your creativity, so please get in touch if you have your o
   - Write a package that allows us to benchmark programs in different programming languages and graph the results for comparison. (Doesn't need to be developed in Haskell.)
   - Developing software tools for the analysis of string rewriting systems.
 - **Writing an Interpreter**
-  - Implement an interpreter for some programming language. You take inspiration at from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
+  - Implement an interpreter for some programming language. You can take inspiration from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
   - Write **an interpreter for LISP**. LISP is the first functional programming language that became widely used. It was designed to be as simple as possible (an interpreter can be written in less than a dozen equations), introduced many fundamental concepts to programming languages (such as abstract syntax), and today is still in use and influencing the design of new programming languages.
 - **Learn a new programming language**, write a tutorial and implement an interesting project. Make sure you give this project an angle that makes it interesting from the point of *Programming Languages* (note the plural). To explain bettter what I mean:
   - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles, podcasts, etc in which the designers of the language talk about some of this background.
   - How was the language received? How did it develop? Is it used today for what it was designed for? How did its usage change over time?  
   - What are the strengths and weaknesses of the language? How does the language compare to other langauges?
   - Use the software project you develop to highlight some of the questions above.
-- Implement algorithms in LambdaFun that modify data structures on the heap. (Programming with pointers.)
-- Programming with infinite lists in Haskell. **Stream programming** has many applications and the fact that Haskell is lazy allows for elegant stream programming.
-- **Probabilistic Programming Languages**. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:  
+- Programming with infinite lists in Haskell. **Stream programming** has many applications and the fact that Haskell is lazy allows for elegant stream programming.- **Probabilistic Programming Languages**. The topic of probabilistic Programming Languages should appeal to students with an interest in machine learning and data analysis. Probabilistic programming languages are a new development and I have not looked at them myself yet, so that should be an interesting topic. Here are some links to explore:  
 https://bitbucket.org/lazyppl/lazyppl-src/src/master/README.md and https://lazyppl.bitbucket.io/  
 https://www.gen.dev/  
 https://mc-stan.org/  
 https://probmods.org/  
 http://pyro.ai/  
 https://turing.ml/stable/
+- **Programming and Verification**: [Dafny](https://dafny.org/) is a language that allows programmers to insert assertions in the code and have them automatically verified by the compiler.
 - **Functional programming and finance**. I just came across https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf  ... this looks very interesting to me and could be a starting point to a project.
 - **Solidity** is the programming language of *NFTs, cryptocurrencies, smart contracts*, etc. I have been working with students on this topic over summer and we produced a tutorial ... let me know if you find this useful. This is also under development and we'd be happy for anybody to contribute. https://github.com/alexhkurz/SmartContracts/blob/main/Tutorial/README.md  
 - **Comparing Programming Languages for Difficulty**. I found two recent articles on methodology to measure "ease of learning" or "learnability" of natural languages. To develop some ideas of how to apply this to programming languages could be **very** interesting. (Should appeal to students with an interest in machine learning, data science and/or linguistics.)
