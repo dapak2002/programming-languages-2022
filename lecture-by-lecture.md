@@ -5,7 +5,7 @@
 
 <!-- [Haskell projects](haskell-projects.md) ...-->
 
-## Functional Programming in Haskell
+## Functional Programming (Haskell)
 
 We need a programming language that makes it as simple as possible to implement interpreters. Choice of language always is a compromise. In my view, Haskell is the best choice for what we want to do in this course (I would welcome any challenge on this).
 
@@ -23,7 +23,7 @@ We need a programming language that makes it as simple as possible to implement 
     We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK).
 
 
-## A Calculator - Introduction to Parsers and Interpreters
+## Parsers and Interpreters (A Calculator)
 
 Arithmetic can be seen as a programming language (not Turing complete) and a calculator as an interpreter. This is where we are going to start. Importantly, the methods we learn will scale to proper real world programming languages.
 
@@ -101,6 +101,8 @@ The lambda calculus plays a foundational role in Programming Languages because i
 ## Design of a Domain Specific Language. 
 
 - L 10.2: We will discuss the article [Composing contracts: an adventure in financial engineering](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf). A link to an implementation can be found [here](https://github.com/cmahon/composing-contracts), but I did not take a closer look yet, get in touch if you are interested.
+
+## Interlude
 
 - L 11.1: Comments on [Assignment 2, Part 2](assignment-2.md) and [Feedback for Homework](feedback-hw.md).
 
