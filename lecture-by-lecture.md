@@ -104,14 +104,11 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 11.1: Comments on [Assignment 2, Part 2](assignment-2.md).  [Feedback for Homework](feedback-hw.md).
 
+## Part 7: Hoare Logic
+
+- L 11.2: Program Verification: After a general introduction to [Hoare Logic](https://hackmd.io/@alexhkurz/Hy135C2tH), we spent most of the time studying the [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). 
+
 ---
 
 ... more to come ...
 
-## An Interpreter for a Functional Programming Language
-
-## Advanced Topics 1
-
-## An Interpreter for an Imperative Programming Language
-
-## Advanced Topics 2
