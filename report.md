@@ -56,7 +56,7 @@ I don't want to limit your creativity, so please get in touch if you have your o
 
 ### Data Analysis
 
-- Github has an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/). 
+- Github, Stackoverflow, Reddit and other places have an enormous amount of publicly available data. If you have experience with data analysis, you can use it to learn more about how programming languages are used. For example, look at [GitHut](https://githut.info/) and  [GHArchive](https://www.gharchive.org/). 
   - Is it possible to extract data about users moving from one language into another language? 
   - Natural Language Processing (NLP)
     - Is it possible to use natural language processing (sentiment analysis, etc) to learn what programmers think of languages from forums such as Reddit? 
@@ -70,6 +70,8 @@ I don't want to limit your creativity, so please get in touch if you have your o
 - **Writing an Interpreter**
   - Implement an interpreter for some programming language. You can take inspiration from [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language) and make your own.
   - Write **an interpreter for LISP**. LISP is the first functional programming language that became widely used. It was designed to be as simple as possible (an interpreter can be written in less than a dozen equations), introduced many fundamental concepts to programming languages (such as abstract syntax), and today is still in use and influencing the design of new programming languages.
+  - Develop a domain specific language (DSL).
+<!-- Learn a new programming paradigm. Logic programming, infinite lists, reactive programming, probabilistic programming, blockchain, etc-->
 - **Learn a new programming language**, write a tutorial and implement an interesting project. Make sure you give this project an angle that makes it interesting from the point of *Programming Languages* (note the plural). To explain bettter what I mean:
   - Include some of the history of the programming language. Try to find out something about the design decisions that went into the language. What was the motivation behind the language? Find interviews, articles, podcasts, etc in which the designers of the language talk about some of this background.
   - How was the language received? How did it develop? Is it used today for what it was designed for? How did its usage change over time?  
