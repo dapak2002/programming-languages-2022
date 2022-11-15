@@ -257,13 +257,17 @@ Test case:
 
 Test case:
 
-`length a:b:c:#    --*-->    3
+```
+length a:b:c:#    --*-->    3
+```
 
 #### `even`
 
 `even l` evaluates to `1` if `l` is a list of even length and evaluates to `0` if `l` is not of even length, for example
 
-    even a1:a2:a3:a4:#      --*-->   1    
+```
+even a1:a2:a3:a4:#      --*-->   1    
+```
 
 (And, similarly `even a1:a2:a3:a4:a5:#   --*-->   0`)
 
