@@ -6,6 +6,22 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## Week 11
+
+I think we had a good discussion.
+
+One point I want to address, is that a much discussed question, whether such a DSL would be adopted by financial experts, is, while interesting, not the question that will, in my opinion, decide about the success of DSLs in that area. Here are some points to consider:
+- Finance is increasingly driven by algorithms.
+- DSLs bring value to the engineering of software tools for finance. 
+- The rise of smart contracts happens largely outside of traditional finance.
+
+**For the final report, instead of your questions, for Week 11, write a 500 word essay on the topic.**
+
+In case you want further food for thought I link an [aritcle](https://canvas.chapman.edu/courses/44405/files/4192603?module_item_id=1507721) by Chapman law professor Tom Bell that contains many thought-provoking questions about how digital contracts, machine learning and the law will interact in the future. This shifts the topic somewhat from financial contracts to smart contracts, but touches on the same big questions.
+
+And feel free to continue the discussion, even after the deadline.
+
+
 ## Week 10
 
 **General Remark on the Final Report:** Your final report should be written in such a way that it is not just a loose collection of answers to homework. It should make sense on its own terms. It should be nicely typeset. Typically, a short summary of the problem should precede the solution. The notation you use should be explained. Of course, you don't need to repeat everything we did in the lectures. In case of doubt ask me. 
