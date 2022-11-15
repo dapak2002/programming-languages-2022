@@ -277,7 +277,9 @@ even a1:a2:a3:a4:#      --*-->   1
 
 Test case:
 
-`reverse a:b:c:#    --*-->     c:b:a:#
+```
+reverse a:b:c:#    --*-->     c:b:a:#
+```
 
 #### `weave`
 
