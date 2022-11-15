@@ -39,7 +39,7 @@ library
     , Earley
     , hashable
     , unordered-containers
-    , singletons
+    , singletons <3
   default-language: Haskell2010
   -- ghc-options: -ddump-splices -fwarn-incomplete-patterns -fwarn-incomplete-uni-patterns
 

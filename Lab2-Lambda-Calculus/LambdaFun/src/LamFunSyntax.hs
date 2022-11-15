@@ -2,6 +2,7 @@
 {-# LANGUAGE DeriveFunctor, DeriveGeneric, DeriveAnyClass, DataKinds, 
   KindSignatures, TypeOperators, TypeFamilies, GADTs, StandaloneDeriving, 
   ExplicitForAll, TypeApplications, ScopedTypeVariables, TemplateHaskell #-}
+{-# LANGUAGE StandaloneKindSignatures #-}
 
 module LamFunSyntax where
 import Data.Hashable(Hashable)
