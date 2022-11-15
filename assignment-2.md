@@ -213,8 +213,9 @@ As common in functional programming I designed the grammar so that you can drop 
 - to look at the precedence levels in the grammar,
 - to put in enough parentheses so that the program runs in the expected way and then to eliminate all unnecessary parentheses two by two.
 
-
 ### Task 2: Write `LambdaNat5` programs
+
+Now you have your own programming language, it is time to write some programs in that language.
 
 - You will provide in `test/solutions.lc` the functions
 
