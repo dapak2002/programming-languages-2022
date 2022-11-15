@@ -218,12 +218,12 @@ As common in functional programming I designed the grammar so that you can drop 
 
 - You will provide in `test/solutions.lc` the functions
 
-    is_empty
-    fib
-    length
-    even
-    reverse (with append)
-    weave
+        is_empty
+        fib
+        length
+        even
+        reverse (with append)
+        weave
 
     Running 
                 
