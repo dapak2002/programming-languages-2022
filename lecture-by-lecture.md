@@ -110,7 +110,16 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 11.2: [Hoare Logic](https://hackmd.io/@alexhkurz/Hy135C2tH), a summary of the [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). 
 
+## Logic 
+
+- L 12.1 [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
+
+
+<!-- L 12.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.-->
+
+
 ---
 
 ... more to come ... An Interpreter for an Imperative Programming Language ...
 
+<!--  [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w)-->
