@@ -215,7 +215,7 @@ As common in functional programming I designed the grammar so that you can drop 
 
 ### Task 2: Write `LambdaNat5` programs
 
-Now we have our own programming language, LambdaNat5, it is time to write some programs in that language. Remember that the syntax of the languages is defined in `grammar/LambdaNat5.cf` and the operational semantics is as defined in `src/Interpreter.hs`.
+Now we have our own programming language, LambdaNat5, it is time to write some programs in that language. Remember that the syntax of the languages is defined in `grammar/LambdaNat5.cf` and the operational semantics is as defined in `src/Interpreter.hs`. For example programs see `test/test.lc`.
 
 - You will provide in `test/solutions.lc` the functions
 
