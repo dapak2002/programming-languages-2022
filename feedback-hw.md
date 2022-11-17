@@ -6,6 +6,192 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## Week 11
+
+I think we had a good discussion.
+
+One point I want to address, is that a much discussed question, whether such a DSL would be adopted by financial experts, is, while interesting, not the question that will, in my opinion, decide about the success of DSLs in that area. Here are some points to consider:
+- Finance is increasingly driven by algorithms.
+- DSLs bring value to the engineering of software tools for finance. 
+- The rise of smart contracts happens largely outside of traditional finance.
+
+**For the final report, instead of your questions, for Week 11, write a 500 word essay on the topic.**
+
+In case you want further food for thought I link an [aritcle](https://canvas.chapman.edu/courses/44405/files/4192603?module_item_id=1507721) by Chapman law professor Tom Bell that contains many thought-provoking questions about how digital contracts, machine learning and the law will interact in the future. This shifts the topic somewhat from financial contracts to smart contracts, but touches on the same big questions.
+
+And feel free to continue the discussion, even after the deadline.
+
+
+## Week 10
+
+**General Remark on the Final Report:** Your final report should be written in such a way that it is not just a loose collection of answers to homework. It should make sense on its own terms. It should be nicely typeset. Typically, a short summary of the problem should precede the solution. The notation you use should be explained. Of course, you don't need to repeat everything we did in the lectures. In case of doubt ask me. 
+
+From my experience of writing reports, this kind of polishing takes a lot of time ... so better start now and spend 10 min on it every day.
+
+**Remark on Notation:** If you use a font that does not allow subscripts I suggest to write `fix F`. This makes sense because `fix` is a combinator (program) which takes `F` as an argument and 'returns' the fixed point of `F` as a result. According to our rules for dropping parentheses we can then write `fix F 2` (which is also `(fix F)(2)` if you want to put in some parentheses) for the result of applying the fixed point of `F` (which is the factorial function in our example) to the argument `2`.
+
+After this remark on notation, we can now say that the answer must be in the format
+
+```
+fix F 2 =           -- def of fix
+F (fix F) 2 =       -- def of F
+... =               
+...                 
+... =               
+2
+```
+
+and each `=` must be justified by one of the equations defining the operational semantics of the extended lambda calculus, which are (for this homework) the equations for
+
+- beta reduction (capture avoiding substitution)
+- if then else
+- `fix`
+- arithmetic
+- `F`
+
+(Consult the lecture notes for details on these equations.)
+
+**For the final report version of this homework, make sure to write out these equations in the report and annotate each step in the equational reasoning with the corresponding equation.**
+
+## [Week 9](https://canvas.chapman.edu/courses/44405/assignments/491336)
+
+### Milestones
+
+```
+Describe (at least) 3 milestones (other than final submission). Milestones must be verifiable, that is, the description of your milestones must contain enough detail so that by the time the milestone is due, you and I can verify whether it has been achieved. In particular, each milestone must come with a due date and a list of requirements.
+```
+
+Add the description of your milestones as section 3.2 in your report.
+
+When your a milestone arrives do the following.
+- Send me an email to akurz@chapman.edu with "Milestone" in the subject.
+- Quote the description of your milestone in the email.
+- Detail what you have achieved, adding any relevant evidence, such as links to code and other documentation. 
+- If you milestone includes code, it must be on git in a folder that has a README telling me how to compile and run the code.
+
+General advice: Do not delay starting to code after you finished Milestone 2. Also recall that documenting your work by regularly committing your work to git is a requirement.
+
+General advice: Milestones are similar to a legal contract between the software developer (you) and their client (me). Describe the milestones in a language that reflects this. Avoid phrases such as "I hope to have this part done by ...". Be precise and detailed.
+
+### The ARS
+
+For those who have not solved the ARS
+
+```
+ba -> ab
+ab -> ba
+ac -> ca
+ca -> ac
+bc -> cb
+cb -> bc
+ 
+aa -> b
+ab -> c
+ac ->  
+bb ->
+cb -> a
+cc -> b
+```
+
+I don't want to include spoilers here. Go carefully through my notes, including the feedback for the ARS of Week 8, and give it another try. As always, come to office hours for more feedback and advice.
+
+*Hint:* Work with encoding letters as digits, use $+$ to combine digits. Also modulo arithmetic may help.
+
+**Make sure that you justify your claims.** For example, if you write
+- "There are no unique normal forms" you should exhibit an example that either has no NF or that has two different NFs. 
+- "There are (exactly) four equivalence classes" you need to show (i) there are four equivalence classes and they are all different and (ii) there are no other equivalence classes. To show that all equivalence classes you identified are different use an invariant. 
+
+More generally, a statement of the form "there is P" is justified by showing an example that satisfies the property P. And a statement of the form "for all P" is shown either by giving a proof that everything has to satsify P or that the existence of a thing with property P leads to a contradiction.
+
+**Make sure that your justifications use the maths we learned in the lectures** (including, but not limited to, measure functions and invariants).
+
+Also read the updated introduction to the [string rewriting exercises](https://hackmd.io/@alexhkurz/Syn23oMHF).
+
+## [Week 8](https://canvas.chapman.edu/courses/44405/assignments/490555)
+
+**Relevant material from the lectures:**  
+- https://hackmd.io/@alexhkurz/BJ7AoGcVK  
+- https://hackmd.io/@alexhkurz/B1wB3rT4F  
+- https://hackmd.io/@alexhkurz/H1O4bLBHK  
+- https://hackmd.io/@alexhkurz/r1dp-LBBt  
+- https://hackmd.io/@alexhkurz/Syn23oMHF  
+- Below I will emphasize how important it is to justify your claims. Often the justification will refer back to the material above (eg the [truth table of counter-examples](https://hackmd.io/@alexhkurz/BJ7AoGcVK) and the [theorems about the existence of UNFs](https://hackmd.io/@alexhkurz/B1wB3rT4F) and the [measure function](https://hackmd.io/@alexhkurz/H1O4bLBHK) to prove termination and [invariants](https://hackmd.io/@alexhkurz/r1dp-LBBt).)
+
+The rewrite rules of the ARS in question are
+```
+aa -> a  
+bb -> b  
+ba -> ab  
+ab -> ba  
+```
+I will go through this step by step, but **see also the footnotes I added to the [roadmap](https://hackmd.io/@alexhkurz/Syn23oMHF).**
+
+- Why does the ARS not terminate?
+
+`ab->ba->ab ...` is an infinite computation
+
+- What are the normal forms?
+
+`a, b, []` are normal forms (but see also below). 
+
+- Modify the ARS so that it is terminating, has unique normal forms (and still the same equivalence relation).
+
+A full answer is explicit about what the new rewrite system is. Termination needs to be justified (see what we learned about measure functions in the lectures).
+
+It also needs to be shown that the modified system and the original system have the same equivalence classes. To this end you need to show that in the modified system w reduces to v if an only if in the original system w reduces v. (Hint: Use that equivalence relations, by definition, are symmteric (that is, intutively, allow us to compute backwards.)
+
+Also you should go back to the question about the normal forms. The normal forms of the modified system could be different from the normal forms of the original system.  
+
+(At this point I have four normal forms in my modified system: `[],a,b,ab`.)
+
+- Describe the specification implemented by the ARS.
+
+To answer this question, one typically finds a (complete) invariant. The best method to find an invariant is to "guess and verify". 
+
+For example, the rule
+
+`aa->a`
+
+keeps the statement *at least one `a`* invariant. To verify that this is indeed an invariant, you need to check that *at least one `a`* is kept invariant also by all the other rules.
+
+After finding this invariant, another invariant suggests itself (the observation is that the rules are symmetric under swapping `a` and `b`).
+
+We have now two invariants:
+
+- at least on `a`  
+- at least on `b`  
+
+which combine to the following 4 possibilities.
+
+|Normal Form | Invariant |
+|:---:|:---:|
+| `[]` | no `a`, no `b` |
+| `a` | at least one `a`, no `b` |
+| `b` | at least one `b`, no `a` |
+| `ab` | at least one `a`, at least one `b` |
+
+At this point, the correspondence between normal forms and equivalence classes suggested by the table is only a conjecture. There are still things to verify:
+
+- Every normal form in the first column satisfies the corresponding property in the second column.   
+- (Since these properties are invariants, it follows that all the NFs are in different equivalence classes. Hence there are at least four equivalence classes.)
+- Every word reduces to one of the four NFs.
+- (Hence there are at most four equivalence classes.)
+
+By this point, we know that the table gives us a full characterisation of the equivalence classes.  There are exactly four of them and we have both a computational and a mathematical characterisation. 
+- Computationally, each equivalence class is characterised by its normal form. To know in which equivalence class a word is, we can reduce it to its normal form. In particular, the ARS has UNFs.
+- Mathematically, the equivalence classes can be specified, using the second column, without referring to the computation rules `->`. 
+
+The **specification of the algorithm** reconstructed from this analysis is a reformulation of the invariants:
+
+For any word, decide whether it
+- is empty
+- contains `a`s but no `b`s
+- contains `b`s but no `a`s
+- contains `a`s and `b`s
+
+**Make sure to include improvements along these lines in the final version of the report and to justify all the claims you make.**
+
+
 ## [Assignment 1](https://canvas.chapman.edu/courses/44405/assignments/484480)
 
 (I graded this carefully, but if you feel there are questions come to my office hours to discuss.)

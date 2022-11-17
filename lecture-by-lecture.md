@@ -5,7 +5,7 @@
 
 <!-- [Haskell projects](haskell-projects.md) ...-->
 
-## Part 0: Functional Programming in Haskell
+## Functional Programming (Haskell)
 
 We need a programming language that makes it as simple as possible to implement interpreters. Choice of language always is a compromise. In my view, Haskell is the best choice for what we want to do in this course (I would welcome any challenge on this).
 
@@ -23,7 +23,7 @@ We need a programming language that makes it as simple as possible to implement 
     We started this lecture with [feedback](feedback-hw.md) for [Homework 1](https://hackmd.io/@alexhkurz/SkqMtH0sK).
 
 
-## Part 1: A Calculator
+## Parsers and Interpreters (A Calculator)
 
 Arithmetic can be seen as a programming language (not Turing complete) and a calculator as an interpreter. This is where we are going to start. Importantly, the methods we learn will scale to proper real world programming languages.
 
@@ -44,7 +44,7 @@ and [Recursion over algebraic data types](https://youtu.be/2YLfJvOtLwA).
 - L 3.2: *In which we combine the parser and interpreter to obtain a calculator.* [A Calculator: Parser](https://hackmd.io/@alexhkurz/BkqOWbgMF). Introducing [Assignment 1](https://github.com/alexhkurz/programming-languages-2022/blob/main/assignment-1.md).
 
 
-## Part 2: Lambda Calculus
+## Lambda Calculus
 
 The lambda calculus plays a foundational role in Programming Languages because it is the smallest programming language that has variables and functions (and, as an aside, is Turing complete).
 
@@ -67,7 +67,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 6.1: [Variables, Binding, Scope and Substitution](https://hackmd.io/@alexhkurz/SkQzDC6n7).  
 
-## Part 3: Rewriting
+## Rewriting Theory
 
 - L 6.2: Rewriting: [Examples](https://hackmd.io/@alexhkurz/rkzITG4nD) and [Introduction](https://hackmd.io/@alexhkurz/BJ7AoGcVK).
 
@@ -86,7 +86,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 8.2: Continued from L 8.1.
 
-## Part 4: An Interpreter for a Functional Programming Language
+## An Interpreter for a Functional Programming Language
 
 - L 9.1: [Extensions of lambda-calculus](https://hackmd.io/@alexhkurz/rJEeYqZtw), video review of the [fixed point combinator](https://youtu.be/XvDOwbSh3xE).
 
@@ -94,23 +94,33 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 9.2: Starting [Assignment 2](assignment-2.md).
 
-## Part 5: Operational and Denotational Semantics
+## Operational and Denotational Semantics
 
 - L 10.1: [Operational and Denotational Semantics](https://hackmd.io/@alexhkurz/Hkf6BTL6P).
 
-## Part 6: Design of a Domain Specific Language. 
+## Design of a Domain Specific Language
 
 - L 10.2: We will discuss the article [Composing contracts: an adventure in financial engineering](https://www.cs.tufts.edu/~nr/cs257/archive/simon-peyton-jones/contracts.pdf). A link to an implementation can be found [here](https://github.com/cmahon/composing-contracts), but I did not take a closer look yet, get in touch if you are interested.
+
+## Interlude
+
+- L 11.1: Comments on [Assignment 2, Part 2](assignment-2.md) and [Feedback for Homework](feedback-hw.md).
+
+## Logic
+
+- L 11.2: *In which we introduce the area of Program Verification.* [Hoare Logic](https://hackmd.io/@alexhkurz/Hy135C2tH), a summary of the [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). 
+- L 12.1 *In which we discover that proving is programming.* [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
+- L 12.2 *In which we learn the rules of logical reasoning.* [Natural Deduction](https://hackmd.io/xJ8NOiK4S5qnYvEI85bHig) ... [Induction and Equational Reasoning](https://hackmd.io/@alexhkurz/BkHZL3jFS).
+
+
+<!-- L 12.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.-->
 
 
 ---
 
-... more to come ...
+... more to come ... An Interpreter for an Imperative Programming Language ...
 
-## An Interpreter for a Functional Programming Language
+<!--  [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w)
 
-## Advanced Topics 1
-
-## An Interpreter for an Imperative Programming Language
-
-## Advanced Topics 2
+- [Normalisation by Evaluation](https://hackmd.io/w9RLzXmcS86U4HVAQi5Lqg)
+- [Theorem Proving](https://hackmd.io/JrBBURefROGD1xMN44Zivw)
