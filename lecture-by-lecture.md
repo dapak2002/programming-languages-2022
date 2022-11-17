@@ -112,7 +112,8 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 ## Logic 
 
-- L 12.1 [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
+- L 12.1 *In which we discover that proving is programming.* [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
+- L 12.2 *In which we learn the rules of logical reasoning.* [Natural Deduction](https://hackmd.io/xJ8NOiK4S5qnYvEI85bHig) ... [Induction and Equational Reasoning](https://hackmd.io/@alexhkurz/BkHZL3jFS).
 
 
 <!-- L 12.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.-->
@@ -122,4 +123,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 ... more to come ... An Interpreter for an Imperative Programming Language ...
 
-<!--  [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w)-->
+<!--  [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w)
+
+- [Normalisation by Evaluation](https://hackmd.io/w9RLzXmcS86U4HVAQi5Lqg)
+- [Theorem Proving](https://hackmd.io/JrBBURefROGD1xMN44Zivw)
