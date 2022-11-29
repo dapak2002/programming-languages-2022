@@ -9,7 +9,13 @@
  \___|   \___| \__|     \______/ \__|  \__|
 ```
 
-To compile run `cabal build` and to launch the REPL, run `cabal exec lamfun`. For help, type `:help` in the REPL.
+Instructions:
+- Copy this folder to your machine.
+- Compile with `cabal build`. 
+- If the previous step does not work [use Docker](https://hackmd.io/@alexhkurz/HJxD19_Vo#Assignment-3).
+- Launch the REPL with `cabal exec lamfun`. 
+- For help, type `:help` in the REPL.
+- `:load test/examples.lc`
 
 
 The full grammar of λFun is given below:
