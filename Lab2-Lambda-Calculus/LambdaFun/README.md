@@ -12,7 +12,7 @@
 To compile run `cabal build` and to launch the REPL, run `cabal exec lamfun`. For help, type `:help` in the REPL.
 
 
-The full grammar of λFun is given below:ls
+The full grammar of λFun is given below:
 
 ```
 <statement> ::= <expr> ";;" | <defn> ";;"
