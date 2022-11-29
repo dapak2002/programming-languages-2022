@@ -9,9 +9,10 @@
  \___|   \___| \__|     \______/ \__|  \__|
 ```
 
-To compile run `stack build` and to launch the REPL, run `stack exec lamfun`. For help, type `:help` in the REPL...
+To compile run `cabal build` and to launch the REPL, run `cabal exec lamfun`. For help, type `:help` in the REPL.
 
-The full grammar of λFun is given below:
+
+The full grammar of λFun is given below:ls
 
 ```
 <statement> ::= <expr> ";;" | <defn> ";;"

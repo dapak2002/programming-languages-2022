@@ -7,7 +7,9 @@ import System.Console.Repline hiding (dontCrash)
 import Control.Monad.IO.Class(MonadIO, liftIO)
 import Control.Monad.Trans.State.Strict(StateT(..), evalStateT, get, modify)
 import Control.Monad.Trans.Class(lift)
-import System.Console.Haskeline.MonadException(catch, SomeException(..), handle,IOException)
+-- import System.Console.Haskeline.MonadException(catch, SomeException(..), handle,IOException)
+import Control.Exception(SomeException(..), handle,IOException)
+import Control.Monad.Catch(catch)
 import Data.List(isPrefixOf, intercalate) --, dropWhile, dropWhileEnd)
 import Data.List.Extra(takeEnd)
 import Data.List.Split(splitOn)
@@ -28,7 +30,6 @@ import LamRecInterpreter()
 import LamMemInterpreter()
 import LamArrayInterpreter()
 import LamFunParser
-import LamFunLexer(Token(..))
 import LamFunSyntax
 import LamFunLexer
 import Utils
@@ -142,7 +143,7 @@ byWord n = do
   return $ filter (isPrefixOf n) names
 
 -- Functions of the REPL
-help :: [String] -> Repl v ()
+help :: String -> Repl v ()
 help _ = liftIO $ putStrLn $ 
   "Commands available from the prompt:\n" ++
   "   <statement>                                            evaluate/run <statement>\n" ++
@@ -159,9 +160,8 @@ help _ = liftIO $ putStrLn $
   "   :quit                                                  exit λfun"
 
 
-loadFile :: forall v. (SingI v, Interpreter v) => [String] -> Repl v ()
-loadFile args = do
-  let fileName = unwords args
+loadFile :: forall v. (SingI v, Interpreter v) => String -> Repl v ()
+loadFile fileName = do
   oldEnv <- getEnv
   putEnv (init_env @v, empty)
   contents <- liftIO $ readFile' fileName
@@ -175,7 +175,7 @@ loadFile args = do
       return ()
 
 
-reloadFile :: forall v. (SingI v, Interpreter v) => [String] -> Repl v ()
+reloadFile :: forall v. (SingI v, Interpreter v) => String -> Repl v ()
 reloadFile _ = do
   f <- getCurrentFile
   case f of
@@ -193,31 +193,30 @@ reloadFile _ = do
           return ()
     Nothing -> return ()
 
-quit :: [String] -> Repl v ()
+quit :: String -> Repl v ()
 quit _ = liftIO $ do
   putStrLn $ "Leaving LamFun ... goodbye."
   exitSuccess
 
-parseTree :: forall v. SingI v => [String] -> Repl v ()
-parseTree args = case parse (program_Grammar @v) (map (fmap unTok)) (toS $ unwords args) of
-  Left r -> printReport r $ unwords args
+parseTree :: forall v. SingI v => String -> Repl v ()
+parseTree args = case parse (program_Grammar @v) (map (fmap unTok)) (toS args) of
+  Left r -> printReport r args
   Right progs -> mapM_ pPrint progs
 
 
 
-info :: [String] -> Repl v ()
+info :: String -> Repl v ()
 info args = do
   (_, rawEnv) <- getEnv
-  case Data.Map.lookup (toS $ unwords args) rawEnv of
+  case Data.Map.lookup (toS $ args) rawEnv of
     Just t -> pPrint t
-    Nothing -> liftIO $ putStrLn $ color red $ (unwords args) ++ " has not been defined or is a built-in function ..."
+    Nothing -> liftIO $ putStrLn $ color red $ args ++ " has not been defined or is a built-in function ..."
 
 
-setLang :: forall (v :: Version). Interpreter v => [String] -> Repl v ()
+setLang :: forall (v :: Version). Interpreter v => String -> Repl v ()
 setLang args = do
-  let a = unwords args
   verbose <- getVerbose
-  liftIO $ setLang_ a verbose (putStrLn $ "Setting language to " ++ (highlight a) ++ " ...")
+  liftIO $ setLang_ args verbose (putStrLn $ "Setting language to " ++ (highlight args) ++ " ...")
 
 
 setLang_ :: String -> Bool -> IO () -> IO ()
@@ -235,34 +234,39 @@ setLang_ version verbErrors greeting = case version of
       writeFile ".lamfun" str
       flip evalStateT (Settings Nothing verbErrors [], (init_env @v, empty)) $
         evalRepl 
-          prompt 
+          (\_ -> prompt)
           (dontCrashVerbose . void . (cmd @v)) 
           (opts @v) 
-          (Just ':') 
+          (Just ':')
+          Nothing
           (Prefix (wordCompleter byWord) defaultMatcher) 
           (liftIO greeting)
+          (liftIO (putStrLn "Goodbye!") >> return Exit)
 
 
-tokens :: [String] -> Repl v ()
-tokens args = pPrint $ tokenize defaultPosition (toS $ unwords args)
+  
 
 
-dumpEnv :: forall v. Interpreter v => [String] -> Repl v ()
+tokens :: String -> Repl v ()
+tokens args = pPrint $ tokenize defaultPosition (toS args)
+
+
+dumpEnv :: forall v. Interpreter v => String -> Repl v ()
 dumpEnv _ = do
   (e,_) <- getEnv
   liftIO $ putStrLn $ show_env e
 
 
-setVerbose :: [String] -> Repl v ()
-setVerbose args = case unwords args of
+setVerbose :: String -> Repl v ()
+setVerbose args = case args of
   "false" -> putVerbose False
   _ -> putVerbose True
 
 
-startBlock :: [String] -> Repl v ()
-startBlock args = appendBuffer [unwords args ++ "\n"]
+startBlock :: String -> Repl v ()
+startBlock args = appendBuffer [args ++ "\n"]
 
-endBlock :: (SingI v, Interpreter v) => [String] -> Repl v ()
+endBlock :: (SingI v, Interpreter v) => String -> Repl v ()
 endBlock _ = do
   buf <- getBuffer
   clearBuffer
@@ -270,7 +274,7 @@ endBlock _ = do
   return ()
 
 
-opts :: forall v. (SingI v, Interpreter v) => [(String, [String] -> Repl v ())]
+opts :: forall v. (SingI v, Interpreter v) => [(String, String -> Repl v ())]
 opts = [
     ("load", dontCrashVerbose . loadFile)    -- :say
   , ("reload", dontCrashVerbose . reloadFile)

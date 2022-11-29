@@ -30,7 +30,7 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      base >=4.9 && <5
     , array
     , containers
     , mtl
@@ -54,16 +54,17 @@ executable lamfun
       LamFun
     , transformers
     , string-conv
-    , repline
+    , repline 
     , containers
     , pretty-simple
-    , singletons
-    , haskeline
+    , singletons <3
+    , haskeline 
+    , exceptions
     , Earley
     , silently
     , split
     , extra
-    , base >=4.7 && <5
+    , base >=4.9 && <5
   default-language: Haskell2010
 
 test-suite LamFun-test
@@ -75,7 +76,7 @@ test-suite LamFun-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      base >=4.9 && <5
     , LamFun
     , filepath
     , directory
