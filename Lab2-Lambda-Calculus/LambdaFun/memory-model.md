@@ -44,6 +44,7 @@ For example, we can change not `a` but its content as follows.
 To verify that this has the expected result we inspect stack and heap:
 
     λ :env
+
     Env:
     a = <address 0>
     Memory:
@@ -54,12 +55,14 @@ We see that `a = <address 0>` did not change ("`a` is still address `0`")  while
 So far, we have seen the familiar behaviour of a variable `a` updated by assignment. The first indication that something is different comes from the following.
 
     λ a;;
+
     <address 0>
  
 As an answer to the question `λ a;;` ("What is `a`?") we do not get `3`. We get `<address 0>` ("`a` is address `0`"). To obtain the value of `a` we need to ask the question `λ !a;;` ("What is the content of `a`?"):
 
     λ !a;;
-    3
+
+    4
 
 Differently to more familiar programming languages, we decided to make the distinction between "the address of a variable" and "the content of a variable" explicit. 
 
@@ -67,6 +70,7 @@ The next experiment highlights the difference between a name that is an integer 
 
     λ val b = 5;;     
     λ :env
+
     a = <address 0>
     b = 5
     0 -> 3
@@ -79,6 +83,7 @@ On the other hand, the following works as expected:
 
     λ a:=b;;
     λ :env
+    
     a = <address 0>
     b = 5
     0 -> 5
