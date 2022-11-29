@@ -73,7 +73,7 @@ The next experiment highlights the difference between a name that is an integer 
 
     a = <address 0>
     b = 5
-    0 -> 3
+    0 -> 4
 
 **Exercise:** Explain what happens after
 
@@ -83,7 +83,7 @@ On the other hand, the following works as expected:
 
     λ a:=b;;
     λ :env
-    
+
     a = <address 0>
     b = 5
     0 -> 5
@@ -131,6 +131,8 @@ gives us
 **Remark:** The names `a` and `c` are on the stack. Their values did not change through the examples. The stack is immutable. On the other hand, the addresses themselves are on the heap and their contents were changed using assignment `:=`.
 
 **Remark:** If `a` is an address, we agreed to read `!a` as "the content of `a`", and `a` itself as "the address of `a`". In the examples of linked lists, we will see that we can also think of `!` as dereferencing a pointer, or following an indirection. 
+
+***Apart from variables on the stack being immutable, the biggest difference wrt a programming language such as C is that in LamdaFun, the meaning of `a` does not depend on whether it appears to the left of an assignment as in `a:=` or to the right of an assignment as in `:= a`. In LambdaFun, in both cases, `a` must be read as the "address of `a`". If we want to assign the content of `a` we need to write `:=!a`.***
 
 **Summary:** We encountered three new functions, which we can think of as having types as indicated:
 
