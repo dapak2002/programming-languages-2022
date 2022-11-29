@@ -11,6 +11,7 @@ local/
 *local/
 *copy/
 *copy.*
+old/
 .stack-work/
 *.lock
 .DS_Store
