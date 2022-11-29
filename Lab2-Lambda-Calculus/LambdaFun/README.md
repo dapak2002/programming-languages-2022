@@ -55,4 +55,4 @@ Remark:
 
 ## Lab2
 
-See `test/examples.lc` for examples to get started.
+See [`test/examples.lc`](Lab2-Lambda-Calculus/LambdaFun/test/examples.lc) for examples to get started.
