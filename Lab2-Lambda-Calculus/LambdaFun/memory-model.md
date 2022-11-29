@@ -132,7 +132,9 @@ gives us
 
 **Remark:** If `a` is an address, we agreed to read `!a` as "the content of `a`", and `a` itself as "the address of `a`". In the examples of linked lists, we will see that we can also think of `!` as dereferencing a pointer, or following an indirection. 
 
-***Apart from variables on the stack being immutable, the biggest difference wrt a programming language such as C is that in LambdaFun the meaning of a variable*** `a` ***does not depend on whether*** `a` ***appears to the left of an assignment as in*** `a:=` ***or to the right of an assignment as in*** `:= a`. In LambdaFun, in both cases, `a` must be read as the "address of `a`". If we want to assign the content of `a` we need to write `:=!a`.
+- ***Apart from variables on the stack being immutable, the biggest difference wrt a programming language such as C is that in LambdaFun the meaning of a variable*** `a` ***does not depend on whether*** `a` ***appears to the left of an assignment as in*** `a:=` ***or to the right of an assignment as in*** `:=a`. 
+- In LambdaFun, in both cases, `a` must be read as the "address of `a`". 
+- If we want to assign the content of `a` we need to write `:=!a`.
 
 **Summary:** We encountered three new functions, which we can think of as having types as indicated:
 
