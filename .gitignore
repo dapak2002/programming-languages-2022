@@ -9,7 +9,7 @@
 /.vscode/*
 local/
 *local/
-*copy/
+*copy*/
 *copy.*
 old/
 .stack-work/

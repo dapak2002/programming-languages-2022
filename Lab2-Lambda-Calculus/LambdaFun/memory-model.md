@@ -23,6 +23,7 @@ Our first experiment gives a familiar result.
 
     λ a:=3;;
     λ :env
+
     Env:
     a = <address 0>
     Memory:
@@ -30,7 +31,11 @@ Our first experiment gives a familiar result.
 
 This tells us that, after the assignment, address `a` (which is `0`) has content `3`. 
 
-**Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we chose a different notation and language.  We read `a = <address 0>` as "`a` is address `0`" and we read `0 -> 3` as "address `0` stores content `3`". The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
+**Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we choose a different notation and language:
+- We read `a = <address 0>` as "the value of `a` is address `0`", or, shorter, "`a` is address `0`".
+- We read `0 -> 3` as "address `0` stores content `3`". 
+
+The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
 
 For example, we can change not `a` but its content as follows.
 
