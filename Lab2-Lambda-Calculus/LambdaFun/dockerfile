@@ -8,5 +8,4 @@
 
 FROM haskell:8.10.7
 WORKDIR /
-RUN cabal update;
 CMD /bin/bash
