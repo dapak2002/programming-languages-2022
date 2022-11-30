@@ -12,7 +12,9 @@
 Instructions:
 - Copy this folder to your machine.
 - Compile with `cabal build`. 
-- If the previous step does not work [use Docker](https://hackmd.io/@alexhkurz/HJxD19_Vo#Assignment-3).
+- If the previous step does not work
+  - use docker with [my dockerfile](https://hackmd.io/@alexhkurz/HJxD19_Vo#Assignment-3)
+  - or use [`ghcup tui`](https://www.haskell.org/ghcup/install/) to select version 8.10.7 of GHC.
 - Launch the REPL with `cabal exec lamfun`. 
 - For help, type `:help` in the REPL.
 - `:load test/examples.lc`

@@ -10,7 +10,8 @@ import Control.Monad.Trans.Class(lift)
 -- import System.Console.Haskeline.MonadException(catch, SomeException(..), handle,IOException)
 import Control.Exception(SomeException(..), handle,IOException)
 import Control.Monad.Catch(catch)
-import Data.List(isPrefixOf, intercalate) --, dropWhile, dropWhileEnd)
+import Data.Char(isSpace)
+import Data.List(isPrefixOf, intercalate, dropWhileEnd)
 import Data.List.Extra(takeEnd)
 import Data.List.Split(splitOn)
 import System.Exit (exitSuccess)
@@ -161,10 +162,11 @@ help _ = liftIO $ putStrLn $
 
 
 loadFile :: forall v. (SingI v, Interpreter v) => String -> Repl v ()
-loadFile fileName = do
+loadFile fileName' = do
   oldEnv <- getEnv
   putEnv (init_env @v, empty)
-  contents <- liftIO $ readFile' fileName
+  let fileName = dropWhileEnd isSpace $ dropWhile isSpace fileName'
+  contents <- liftIO $ readFile' $ fileName
   loaded <- cmd contents
   case loaded of 
     True -> do
