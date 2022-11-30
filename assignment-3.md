@@ -93,7 +93,7 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
 ## Part 2 
 
-If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
+If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
 
 ### Programming with Linked Lists
 
