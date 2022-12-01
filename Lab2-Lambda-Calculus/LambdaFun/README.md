@@ -52,6 +52,7 @@ The full grammar of λFun is given below:
 
 Remark: 
 
+- Comments are as in Haskell.
 - `while a do b ; c` is parsed as `(while a do b) ; c`, not as `while a do (b ; c)`
 - Use `:tree` if you want to see the abstract syntax tree.
 - There are built-in functions defined in all environments as follows.

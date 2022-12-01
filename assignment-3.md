@@ -87,7 +87,16 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
     - The notation for lists changed, for example, `#` is now `[]`.
 
-- **(5 points)**: Write the programs of Assignment 2.
+- **(5 points)**: Write the programs of Assignment 2:
+
+        is_empty
+        fib
+        length
+        even
+        reverse (with append)
+        weave
+
+    For this talk you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
 
 - Let me know if there are any problems, questions, etc
 
@@ -99,10 +108,29 @@ If you want to have a look already how we will use the new features of the langu
 
 (**20 points**)
 
-... to be continued ...
+It is important for this task to be memory efficient in the sense of not creating unnecessary copies of data on the heap. In particular, you should be able to write the functions below almost without using `new`. You also should avoid the built-in lists (but using built-in lists to form pairs (or tuples) as in `[a,b]` to make elements of a linked list is allowed.)
+
+- Implement a function `insert n list` that inserts a number `n` into a linked list `list` of numbers.
+    - Invariant: If `list` is sorted (in ascending order) before `insert` then it must be sorted after `insert`.
+    - Use a pointer to walk along the linked list `list` in order to insert an element at the right position. 
+    - `insert` returns an address, the content of which is the first element of  `list` (after insertion).
+    - See also Lecture 13.2.
+
+- Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
+
+Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
+
+- Implement a function `merge list1 list2` that merges two lists into one.
+    - Invariant: If `list1` and `list2` are sorted than the merged list is sorted.
+    - Merging must be done "in place", that is, no allocations should be necessary.
+    - `merge list1 list2` returns an address, the content of which is the first element of the merged list.
+
+**Extra challenge:** (10 extra points) Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](), but this is not required reading for the assignment.
+
 
 ### Critical Appraisal
 
 (**5 points**)
 
-...
+As usual, make some **interesting** observations about this assignment. 
+
