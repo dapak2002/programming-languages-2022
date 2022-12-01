@@ -55,7 +55,7 @@ Remark:
 - Comments are as in Haskell.
 - `while a do b ; c` is parsed as `(while a do b) ; c`, not as `while a do (b ; c)`
 - Use `:tree` if you want to see the abstract syntax tree.
-- We distnguish definitions and expressions. Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope.
+- Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope.
 - There are built-in functions defined in all environments as follows.
 
   - One for each `<op>`.
