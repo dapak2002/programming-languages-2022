@@ -81,7 +81,7 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
 - Looking at the grammar and the example programs side by side, note the following.
 
-    - `let` and `let rec` are now replaced by a list of definitions introduced by keywords `val` and `rec`. The keyword `in` is not needed anymore.
+    - We distinguish now definitions and expressions. At the level of definitions, `let` and `let rec` are now replaced by `val` and `rec`. The keyword `in` is not needed anymore. Definitions are known globally throughout the file. The expression `let ... in ...` is mostly used to declare local variables inside a function.
 
     - There is now a syntax for pattern matching using `case`.
 
