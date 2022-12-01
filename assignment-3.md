@@ -38,7 +38,7 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
 - Start from [Lab2-Lambda-Calculus/LambdaFun](https://github.com/alexhkurz/programming-languages-2022/tree/master/Lab2-Lambda-Calculus/LambdaFun).
 
-- Build the interpreter (can take a while) and start the REPL as explained in the [README.md](https://github.com/alexhkurz/programming-languages-2021/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md).
+- Build the interpreter (can take a while) and start the REPL as explained in the [README.md](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md).
 
 - Study the grammar at [README.md](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/README.md). The syntax is slightly different and there are new features, most prominently, sequential composition, while loops, assignment. (You do not need the new features for Part 1).
 
