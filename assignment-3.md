@@ -125,7 +125,7 @@ Insertion sort is easy to implement, but has time complexity O(n^2), which is si
     - Merging must be done "in place", that is, no allocations should be necessary.
     - `merge list1 list2` returns an address, the content of which is the first element of the merged list.
 
-**Extra challenge:** (10 extra points) Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](), but this is not required reading for the assignment.
+**Extra challenge:** (10 extra points) Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html), but this is not required reading for the assignment.
 
 
 ### Critical Appraisal
