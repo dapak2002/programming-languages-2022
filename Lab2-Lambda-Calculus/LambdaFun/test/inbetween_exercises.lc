@@ -26,7 +26,7 @@ val tl = \a.
 -- Example: If list is 2->1->Null, and one inserts 7 inbetween 2 and 1, the result is 2->7->1->NULL.
 
 -- The aim of this note is to explain a method of how to debug functions in LamFun.
--- `inbetween`  has two mistakes: One leads to a runtime error, and the other to wrong output.
+-- `inbetween`  has two mistakes: One leads to a runtime error and the other to wrong output.
 
 val inbetween = \n.\left.\right.
     let val between = new [] in
