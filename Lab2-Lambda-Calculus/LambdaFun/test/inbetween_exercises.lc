@@ -95,3 +95,5 @@ between = <address 5>
 
 -- EXERCISE 5: Compare the heap diagram with the expected heap diagram from EXERCISE 1. 
 
+-- EXERCISE 6: Debug `inbetween`.
+
