@@ -1,6 +1,8 @@
 # The Memory Model
 
-We will look at the memory model. The memory is divided in an immutable stack [^immutable-stack] and a mutable heap. To see the difference, run
+We will look at the memory model. The memory is divided in an immutable stack [^immutable-stack] and a mutable heap. To see the difference, run [^prompt]
+
+[^prompt]: λ is the prompt of the REPL, what follows is our input. Lines that do not start with λ are output of the console. Btw, since the source code of `LamFun` is available, if there are features you do not like, you can change them. (But not for any assignment.)
 
     λ val a = new [] ;;
 
@@ -8,32 +10,28 @@ which creates a new name `a` on the stack and a new memory cell (or address) on 
 
     λ :env
 
-upon which we get to see a full list of the stack (called `Env` below for environment) and the heap (called `Memory` below). I only show part of the overall output.
+upon which we get to see a full list of the stack and the heap. I only show part of the overall output.
 
-    Env:
     a = <address 0>
-    Memory:
     0 -> un-initialized
     
-This tells us that `a` is a name for `address 0` and that the memory at address `0` has not been initialised. 
+This tells us that `a` is a name for `address 0` (on the stack) and that the memory at address `0` has not been initialised (on the heap). 
 
-**Remark:** The 'environment' and the 'memory' here are the "virtual" ones of LambdaFun (implemented in Haskell) and so are quite far removed from the actual memory of your computer. So keep in mind that we work here with a memory *model*. While this memory model is inspired by familiar imperative programming languages (C, Java, Pyton, etc), it has some notable differences, as we will explore now. 
+**Remark:** The 'stack' and the 'heap' here are the "virtual" ones of LambdaFun (implemented in Haskell) and so are more abstract than the actual memory of your computer. Thus, keep in mind that we work here with a memory *model*. While this memory model is inspired by familiar imperative programming languages (C, Java, Pyton, etc), it has some notable differences, as we will explore now. 
 
 Our first experiment gives a familiar result.
 
     λ a:=3;;
     λ :env
 
-    Env:
     a = <address 0>
-    Memory:
     0 -> 3
 
 This tells us that, after the assignment, address `a` (which is `0`) has content `3`. 
 
 **Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we choose a different notation and language:
-- We read `a = <address 0>` as "the value of `a` is address `0`", or, shorter, "`a` is address `0`".
-- We read `0 -> 3` as "address `0` stores content `3`". 
+- We read `a = <address 0>` as "the *value* of `a` is address `0`", or, shorter, "`a` is address `0`".
+- We read `0 -> 3` as "address `0` stores content `3`" or "the *content* of address `0` is `3`". 
 
 The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
 
@@ -45,9 +43,7 @@ To verify that this has the expected result we inspect stack and heap:
 
     λ :env
 
-    Env:
     a = <address 0>
-    Memory:
     0 -> 4
 
 We see that `a = <address 0>` did not change ("`a` is still address `0`")  while `0 -> 3` became `0 -> 4` ("the content of `a` changed from `3` to `4`").
