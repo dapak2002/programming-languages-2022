@@ -96,6 +96,8 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
         reverse (with append)
         weave
 
+    **You may have to change the names of the functions.** For example, if you look at the entry for `<id>`, you will see that `_` is not allowed in names.
+
     For this talk you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
 
 - Let me know if there are any problems, questions, etc
@@ -131,6 +133,8 @@ Insertion sort is easy to implement, but has time complexity O(n^2), which is si
 ### Critical Appraisal
 
 (**5 points**)
+
+Write the functions in pseudo code that is independent of the particular programming language used to implement the algorithm.
 
 As usual, make some **interesting** observations about this assignment. 
 
