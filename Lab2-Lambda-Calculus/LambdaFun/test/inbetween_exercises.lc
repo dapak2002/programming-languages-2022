@@ -1,0 +1,93 @@
+val nil = 
+    let val a = new [] in 
+    a := "NULL";
+    a ;;
+
+val cons = \e. \a. 
+    let val b = new [] in
+    b := [e,a];
+    b ;;
+
+val hd = \a.
+    case !a of {
+        "NULL"-> "tried to take the head of an empty list",
+        [e,a'] -> e 
+    } ;;
+
+val tl = \a.
+    case !a of {
+        "NULL" -> "tried to take the tail of an empty list",
+        [e,a'] -> a'
+    } ;;
+
+-- The implementation below of `inbetween` does not work.
+-- The aim of this note is to explain a method of how to debug functions in LamFun.
+-- `inbetween`  has two mistakes: One leads to a runtime error, and the other to wrong output.
+
+val inbetween = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    tl(!left) := !between;
+    left;;
+
+-- If you are in the mood to explore yourself, don't read further and test and debug the function for yourself.
+
+----------
+-- TESTING
+----------
+
+-- Setting up the environment for testing
+-----------------------------------------
+
+val a = new [];;
+val b = new [];;
+a :=  !(cons 1 nil);;
+b :=  !(cons 2 a);;
+
+-- EXERCISE 1: Draw the expected heap diagram after the execution of `inbetween 7 b a`.
+
+-- EXERCISE 2: Run the function `inbetween 7 b a` in the REPL. What happens?
+
+------------
+-- DEBUGGING
+------------
+
+-- Initialise parameters and local variables
+--------------------------------------------
+
+-- Simulate a call to `inbetween 7 a b` step by step.
+
+-- First, the parameters are instantiated as n = 7, left = b, right = a.
+-- Second, the local variable `between` is declared.
+
+val between = new [];; -- instead of putting this line in the program, one can also enter it in the REPL
+
+-- Third, we start executing the body of the function.
+
+between := [7,a];; -- replace `n` and `right` with their values
+
+-- EXERCISE 3:  Run in the REPL `tl(!b) := !between;;`. If you get the error message: `trying to access a non-address` find a replacement for `tl(!b) := !between;;` that does not cause this error. 
+
+-- Before reading on, try for yourself.
+
+-- My ANSWER: 
+-- tl(b) := !between;;
+-- Uncomment the line above to continue. 
+-- Exit the REPL, start it again, load this file again. 
+-- (This is the best way to clean up the environment.)
+-- Run `:env` to see the current environment, which should include:
+
+{-
+a = <address 1>
+b = <address 2>
+between = <address 5>
+0 -> "NULL"
+1 -> [7, <address 1>]
+2 -> [2, <address 1>]
+5 -> [7, <address 1>]
+-}
+
+-- EXERCISE 4: Draw the heap diagram for the above environment.
+
+-- EXERCISE 5: Compare the heap diagram with the expected heap diagram from the exercise above. 
+
