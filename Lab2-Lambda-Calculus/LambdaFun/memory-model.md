@@ -2,8 +2,6 @@
 
 We will look at the memory model. The memory is divided in an immutable stack [^immutable-stack] and a mutable heap. To see the difference, run [^prompt]
 
-[^prompt]: λ is the prompt of the REPL, what follows is our input. Lines that do not start with λ are output of the console. Btw, since the source code of `LamFun` is available, if there are features you do not like, you can change them. (But not for any assignment.)
-
     λ val a = new [] ;;
 
 which creates a new name `a` on the stack and a new memory cell (or address) on the heap. To see this run
@@ -213,6 +211,7 @@ It is important to practice to translate the output of `:env` more abstract pict
     λ next b;;
     <address 0>
 
+[^prompt]: λ is the prompt of the REPL, what follows is our input. Lines that do not start with λ are output of the console. Btw, since the source code of `LamFun` is available, if there are features you do not like, you can change them. (But not for any assignment.)
 
 [^immutable-stack]: The stack is mutable at the top level. This can be seen by 
 
