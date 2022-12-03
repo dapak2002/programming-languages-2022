@@ -104,7 +104,7 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
 ## Part 2 
 
-If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc). 
+If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc), which are the starting point for Part 2 of this assignment.
 
 ### Programming with Linked Lists
 
@@ -117,12 +117,14 @@ It is important for this task to be memory efficient in the sense of not creatin
     - Use a pointer to walk along the linked list `list` in order to insert an element at the right position. 
     - `insert` returns an address, the content of which is the first element of  `list` (after insertion).
     - See also Lecture 13.2.
+    - For example, `insert 3 (insert 1 (insert 4 (insert 2 (insert 5 nil))));;` should build a sorted list on the heap. (Also test `insert` in cases where not all elements are different.)
 
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
+    - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap.
 
 Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
 
-- Implement a function `merge list1 list2` that merges two lists into one.
+- Implement a function `merge list1 list2` that merges two lists into one. 
     - Invariant: If `list1` and `list2` are sorted than the merged list is sorted.
     - Merging must be done "in place", that is, no allocations should be necessary.
     - `merge list1 list2` returns an address, the content of which is the first element of the merged list.
