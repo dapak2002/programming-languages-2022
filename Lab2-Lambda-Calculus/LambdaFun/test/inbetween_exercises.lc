@@ -78,9 +78,8 @@ between := [7,a];; -- replace `n` and `right` with their values `7` and `a`
 
 -- My ANSWER: 
 -- tl(b) := !between;;
--- Uncomment the line above to continue. 
--- Exit the REPL, start it again, load this file again. 
--- (This is the best way to clean up the environment.)
+-- Uncomment the line above to continue. Load this file again. 
+-- Btw, if you just want to clear the environment, you can use `:reload`.
 -- Run `:env` to see the current environment, which should include:
 
 {-

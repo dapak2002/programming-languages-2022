@@ -31,7 +31,7 @@ This tells us that, after the assignment, address `a` (which is `0`) has content
 - We read `a = <address 0>` as "the *value* of `a` is address `0`", or, shorter, "`a` is address `0`".
 - We read `0 -> 3` as "address `0` stores content `3`" or "the *content* of address `0` is `3`". 
 
-The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
+The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. In fact, only the content of addresses can be changed, everything else is immutable, even if it looks as if it was on the 'heap'.
 
 For example, we can change not `a` but its content as follows.
 
