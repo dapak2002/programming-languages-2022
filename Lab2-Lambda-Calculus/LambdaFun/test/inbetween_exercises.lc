@@ -98,3 +98,10 @@ between = <address 5>
 
 -- EXERCISE 6: Continue debugging `inbetween`.
 
+-- HINT: You can only change the content of pointers/addresses, you cannot change the addresses themselves.
+-- For example, a data structure such as `[e,a]` is immutable and `a` cannot be replaced.
+-- If you want to insert, for example, 7 between 2 and 1 in 2->1->nil the following should work 
+--- create a new link 7->
+--- make it point to 1->nil so that that you get 7->1->nil
+--- then change the content of 2-> to 7->1->nil
+
