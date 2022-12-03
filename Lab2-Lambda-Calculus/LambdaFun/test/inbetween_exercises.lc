@@ -78,9 +78,8 @@ between := [7,a];; -- replace `n` and `right` with their values `7` and `a`
 
 -- My ANSWER: 
 -- tl(b) := !between;;
--- Uncomment the line above to continue. Load this file again. 
--- Btw, if you just want to clear the environment, you can use `:reload`.
--- Run `:env` to see the current environment, which should include:
+
+-- EXERCISE 4: Uncomment the line above. Load this file again. Draw the heap diagram of the environment, which should include:
 
 {-
 a = <address 1>
@@ -91,8 +90,6 @@ between = <address 5>
 2 -> [2, <address 1>]
 5 -> [7, <address 1>]
 -}
-
--- EXERCISE 4: Draw the heap diagram for the above environment.
 
 -- EXERCISE 5: Compare the heap diagram with the expected heap diagram from EXERCISE 1. 
 
