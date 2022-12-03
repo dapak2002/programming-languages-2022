@@ -52,10 +52,13 @@ The full grammar of λFun is given below:
 
 Remark: 
 
+- If in doubt about the syntax  
+  - check with the grammar above
+  - experiment by asking the REPL (which works similar to ghci in Haskell)
+  - use `:tree` to see the abstract syntax tree.
 - Comments are as in Haskell.
 - `while a do b ; c` is parsed as `(while a do b) ; c`, not as `while a do (b ; c)`
 - In `while a do b` the condition `a` should not be in parentheses.
-- Use `:tree` if you want to see the abstract syntax tree.
 - Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope.
 - There are built-in functions defined in all environments as follows.
 
