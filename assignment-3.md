@@ -131,7 +131,7 @@ It is important for this task to be memory efficient in the sense of not creatin
     - Invariant: If `list1` and `list2` are sorted than the merged list is sorted.
     - Merging must be done "in place", that is, no allocations should be necessary.
     - `merge list1 list2` returns an address, the content of which is the first element of the merged list.
-Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html), but this is not required reading for the assignment.
+- Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html), but this is not required reading for the assignment.
 
 
 ### Critical Appraisal
