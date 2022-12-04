@@ -9,8 +9,9 @@
 /.vscode/*
 local/
 *local/
-*copy/
+*copy*/
 *copy.*
+old/
 .stack-work/
 *.lock
 .DS_Store

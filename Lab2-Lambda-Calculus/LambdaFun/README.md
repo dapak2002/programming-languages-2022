@@ -9,7 +9,16 @@
  \___|   \___| \__|     \______/ \__|  \__|
 ```
 
-To compile run `stack build` and to launch the REPL, run `stack exec lamfun`. For help, type `:help` in the REPL...
+Instructions:
+- Copy this folder to your machine.
+- Compile with `cabal build`. 
+- If the previous step does not work
+  - use docker with [my dockerfile](https://hackmd.io/@alexhkurz/HJxD19_Vo#Assignment-3)
+  - or use [`ghcup tui`](https://www.haskell.org/ghcup/install/) to select version 8.10.7 of GHC.
+- Launch the REPL with `cabal exec lamfun`. 
+- For help, type `:help` in the REPL.
+- `:load test/examples.lc`
+
 
 The full grammar of λFun is given below:
 
@@ -43,8 +52,14 @@ The full grammar of λFun is given below:
 
 Remark: 
 
+- If in doubt about the syntax  
+  - check with the grammar above
+  - experiment by asking the REPL (which works similar to ghci in Haskell)
+  - use `:tree` to see the abstract syntax tree.
+- Comments are as in Haskell.
 - `while a do b ; c` is parsed as `(while a do b) ; c`, not as `while a do (b ; c)`
-- Use `:tree` if you want to see the abstract syntax tree.
+- In `while a do b` the condition `a` should not be in parentheses.
+- Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope.
 - There are built-in functions defined in all environments as follows.
 
   - One for each `<op>`.
@@ -54,4 +69,4 @@ Remark:
 
 ## Lab2
 
-See `test/examples.lc` for examples to get started.
+See [`test/examples.lc`](test/examples.lc) for examples to get started.

@@ -112,6 +112,11 @@ The lambda calculus plays a foundational role in Programming Languages because i
 - L 12.1 *In which we discover that proving is programming.* [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
 - L 12.2 *In which we learn the rules of logical reasoning.* [Natural Deduction](https://hackmd.io/xJ8NOiK4S5qnYvEI85bHig) ... [Induction and Equational Reasoning](https://hackmd.io/@alexhkurz/BkHZL3jFS).
 
+## Interlude
+
+- L 13.1: Introducing [LambdaFun](Lab2-Lambda-Calculus/LambdaFun/README.md) and starting on [Assignment 3](assignment-3.md). The [memory model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) of LamFun.
+
+- L 13.2: Continuing from the memory model. [How to debug a LamFun function](https://github.com/alexhkurz/programming-languages-2022/blob/main/Lab2-Lambda-Calculus/LambdaFun/test/inbetween_exercises.lc).
 
 <!-- L 12.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.-->
 

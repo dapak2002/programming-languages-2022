@@ -38,7 +38,7 @@ data Expr_ :: Version -> * -> * where
   Let_      :: (LamRec <: v ~ 'True) => Defn_ v a -> Expr_ v a -> Expr_ v a
   Assign_   :: (LamMem <: v ~ 'True) => Expr_ v a -> Expr_ v a -> Expr_ v a -- e := e'
   While_    :: (LamMem <: v ~ 'True) => Expr_ v a -> Expr_ v a -> Expr_ v a -- while e do {e'}
-  Contents_ :: (LamMem <: v ~ 'True) => Expr_ v a -> Expr_ v a            -- *e
+  Contents_ :: (LamMem <: v ~ 'True) => Expr_ v a -> Expr_ v a -- '*e'
   Sequence_ :: (LamMem <: v ~ 'True) => Expr_ v a -> Expr_ v a -> Expr_ v a -- e;e'
   StrLit_   :: (LamMem <: v ~ 'True) => a -> Expr_ v a -- "string"
 

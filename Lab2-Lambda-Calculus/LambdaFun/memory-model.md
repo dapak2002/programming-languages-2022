@@ -1,6 +1,6 @@
 # The Memory Model
 
-We will look at the memory model. The memory is divided in an immutable stack [^immutable-stack] and a mutable heap. To see the difference, run
+We will look at the memory model. The memory is divided in an immutable stack [^immutable-stack] and a mutable heap. To see the difference, run [^prompt]
 
     λ val a = new [] ;;
 
@@ -8,29 +8,30 @@ which creates a new name `a` on the stack and a new memory cell (or address) on 
 
     λ :env
 
-upon which we get to see a full list of the stack (called `Env` below for environment) and the heap (called `Memory` below). I only show part of the overall output.
+upon which we get to see a full list of the stack and the heap. I only show part of the overall output.
 
-    Env:
     a = <address 0>
-    Memory:
     0 -> un-initialized
     
-This tells us that `a` is a name for `address 0` and that the memory at address `0` has not been initialised. 
+This tells us that `a` is a name for `address 0` (on the stack) and that the memory at address `0` has not been initialised (on the heap). 
 
-**Remark:** The 'environment' and the 'memory' here are the "virtual" ones of LambdaFun (implemented in Haskell) and so are quite far removed from the actual memory of your computer. So keep in mind that we work here with a memory *model*. While this memory model is inspired by familiar imperative programming languages (C, Java, Pyton, etc), it has some notable differences, as we will explore now. 
+**Remark:** The 'stack' and the 'heap' here are the "virtual" ones of LambdaFun (implemented in Haskell) and so are more abstract than the actual memory of your computer. Thus, keep in mind that we work here with a memory *model*. While this memory model is inspired by familiar imperative programming languages (C, Java, Pyton, etc), it has some notable differences, as we will explore now. 
 
 Our first experiment gives a familiar result.
 
     λ a:=3;;
     λ :env
-    Env:
+
     a = <address 0>
-    Memory:
     0 -> 3
 
 This tells us that, after the assignment, address `a` (which is `0`) has content `3`. 
 
-**Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we chose a different notation and language.  We read `a = <address 0>` as "`a` is address `0`" and we read `0 -> 3` as "address `0` stores content `3`". The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. 
+**Remark:** While ` = ` and ` -> ` can both be read as "the name on the left refers to the value on the right" we choose a different notation and language:
+- We read `a = <address 0>` as "the *value* of `a` is address `0`", or, shorter, "`a` is address `0`".
+- We read `0 -> 3` as "address `0` stores content `3`" or "the *content* of address `0` is `3`". 
+
+The reason for this distinction is that `a` (on the left of `=`) is immutable, but address `0` (on the left of `->`) has content that can be changed via assignment. In fact, only the content of addresses can be changed, everything else is immutable, even if it looks as if it was on the 'heap'.
 
 For example, we can change not `a` but its content as follows.
 
@@ -39,9 +40,8 @@ For example, we can change not `a` but its content as follows.
 To verify that this has the expected result we inspect stack and heap:
 
     λ :env
-    Env:
+
     a = <address 0>
-    Memory:
     0 -> 4
 
 We see that `a = <address 0>` did not change ("`a` is still address `0`")  while `0 -> 3` became `0 -> 4` ("the content of `a` changed from `3` to `4`").
@@ -49,12 +49,14 @@ We see that `a = <address 0>` did not change ("`a` is still address `0`")  while
 So far, we have seen the familiar behaviour of a variable `a` updated by assignment. The first indication that something is different comes from the following.
 
     λ a;;
+
     <address 0>
  
 As an answer to the question `λ a;;` ("What is `a`?") we do not get `3`. We get `<address 0>` ("`a` is address `0`"). To obtain the value of `a` we need to ask the question `λ !a;;` ("What is the content of `a`?"):
 
     λ !a;;
-    3
+
+    4
 
 Differently to more familiar programming languages, we decided to make the distinction between "the address of a variable" and "the content of a variable" explicit. 
 
@@ -62,9 +64,10 @@ The next experiment highlights the difference between a name that is an integer 
 
     λ val b = 5;;     
     λ :env
+
     a = <address 0>
     b = 5
-    0 -> 3
+    0 -> 4
 
 **Exercise:** Explain what happens after
 
@@ -74,6 +77,7 @@ On the other hand, the following works as expected:
 
     λ a:=b;;
     λ :env
+
     a = <address 0>
     b = 5
     0 -> 5
@@ -121,6 +125,10 @@ gives us
 **Remark:** The names `a` and `c` are on the stack. Their values did not change through the examples. The stack is immutable. On the other hand, the addresses themselves are on the heap and their contents were changed using assignment `:=`.
 
 **Remark:** If `a` is an address, we agreed to read `!a` as "the content of `a`", and `a` itself as "the address of `a`". In the examples of linked lists, we will see that we can also think of `!` as dereferencing a pointer, or following an indirection. 
+
+- ***Apart from variables on the stack being immutable, the biggest difference wrt a programming language such as C is that in LambdaFun the meaning of a variable*** `a` ***does not depend on whether*** `a` ***appears to the left of an assignment as in*** `a:=` ***or to the right of an assignment as in*** `:=a`. 
+- In LambdaFun, in both cases, `a` must be read as the "address of `a`". 
+- If we want to assign the content of `a` we need to write `:=!a`.
 
 **Summary:** We encountered three new functions, which we can think of as having types as indicated:
 
@@ -203,6 +211,7 @@ It is important to practice to translate the output of `:env` more abstract pict
     λ next b;;
     <address 0>
 
+[^prompt]: λ is the prompt of the REPL, what follows is our input. Lines that do not start with λ are output of the console. Btw, since the source code of `LamFun` is available, if there are features you do not like, you can change them. (But not for any assignment.)
 
 [^immutable-stack]: The stack is mutable at the top level. This can be seen by 
 
