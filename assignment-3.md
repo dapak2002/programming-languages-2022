@@ -120,16 +120,18 @@ It is important for this task to be memory efficient in the sense of not creatin
     - For example, `insert 3 (insert 1 (insert 4 (insert 2 (insert 5 nil))));;` should build a sorted list on the heap. (Also test `insert` in cases where not all elements are different.)
 
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
-    - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap.
+    - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap. 
 
-Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
+
+**Remark:** The code of the solution is not too long, but to get there requires a large amount of problem solving. Do not be surprised if you have to write more code for testing and debugging than will be contained in the actual solution. 
+
+**Extra challenge:** (10 extra points) Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
 
 - Implement a function `merge list1 list2` that merges two lists into one. 
     - Invariant: If `list1` and `list2` are sorted than the merged list is sorted.
     - Merging must be done "in place", that is, no allocations should be necessary.
     - `merge list1 list2` returns an address, the content of which is the first element of the merged list.
-
-**Extra challenge:** (10 extra points) Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html), but this is not required reading for the assignment.
+Implement a function `mergesort` that uses `merge` above to sort in-place a linked list. For some general background on mergesort for linked lists see [here](https://www.chiark.greenend.org.uk/~sgtatham/algorithms/listsort.html), but this is not required reading for the assignment.
 
 
 ### Critical Appraisal
@@ -138,5 +140,7 @@ Insertion sort is easy to implement, but has time complexity O(n^2), which is si
 
 Write the functions in pseudo code that is independent of the particular programming language used to implement the algorithm.
 
-As usual, make some **interesting** observations about this assignment. 
+Make drawings that contain pictures of the heap illustrating your algorithms.
+
+As usual, make some **interesting** observations about this assignment. For example, show me the most interesting work you did on testing and debugging. Maybe inspecting the heap while debugging made you think of garbage collection, a topic that would be worth exploring.
 
