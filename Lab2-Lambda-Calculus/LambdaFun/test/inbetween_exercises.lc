@@ -10,13 +10,13 @@ val cons = \e. \a.
 
 val hd = \a.
     case !a of {
-        "NULL"-> "tried to take the head of an empty list",
+        "NULL"-> "tried to take the head of an empty list", -- patern match on "NULL", not nil
         [e,a'] -> e 
     } ;;
 
 val tl = \a.
     case !a of {
-        "NULL" -> "tried to take the tail of an empty list",
+        "NULL" -> "tried to take the tail of an empty list", -- patern match on "NULL", not nil
         [e,a'] -> a'
     } ;;
 
@@ -45,8 +45,8 @@ val inbetween = \n.\left.\right.
 
 val a = new [];;
 val b = new [];;
-a :=  !(cons 1 nil);;
-b :=  !(cons 2 a);;
+a :=  [1,nil];;
+b :=  [2,a];;
 
 -- REMARK: The 4 lines above, as well as what follows below could as well be entered via the REPL. In fact, this is what I did first. The REPL is great for quick experimenting. In particular, it allows you to inspect the state of the program at any time (via `:env`). However, if we want to rerun the same commands several times, it is more convenient to add them to the program. (Delete after debugging.)
 
