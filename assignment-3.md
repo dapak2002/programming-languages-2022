@@ -119,10 +119,10 @@ It is important for this task to be memory efficient in the sense of not creatin
     - See also Lecture 13.2.
     - For example, `insert 3 (insert 1 (insert 4 (insert 2 (insert 5 nil))));;` should build a sorted list on the heap. (Also test `insert` in cases where not all elements are different.)
     - Similarly,
-    ```
-    print (insert 5 (insert 4 (insert 3 (insert 2 (insert 1 nil)))));;
-    [1, 2, 3, 4, 5]
-    ```
+        ```
+        print (insert 5 (insert 4 (insert 3 (insert 2 (insert 1 nil)))));;
+        [1, 2, 3, 4, 5]
+        ```
 
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
     - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap. 
