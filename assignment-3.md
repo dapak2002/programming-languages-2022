@@ -112,8 +112,10 @@ Read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-
 
 It is important for this task to be memory efficient in the sense of not creating unnecessary copies of data on the heap. In particular, you should be able to write the functions below almost without using `new`. You also should avoid the built-in lists (but using built-in lists to form pairs (or tuples) as in `[a,b]` to make elements of a linked list is allowed.)
 
+**Task 1:**
+
 - Implement a function `insert n list` that inserts a number `n` into a linked list `list` of numbers.
-    - Invariant: If `list` is sorted (in ascending order) before `insert` then it must be sorted after `insert`.
+    - Invariant: If `list` is sorted (in ascending order) before executing `insert` then it must be sorted after executing `insert`.
     - Use a pointer to walk along the linked list `list` in order to insert an element at the right position. 
     - `insert` returns an address, the content of which is the first element of  `list` (after insertion).
     - See also Lecture 13.2.
@@ -125,6 +127,8 @@ It is important for this task to be memory efficient in the sense of not creatin
         ```
 
 **Remark:** Something to think about for your implementation is whether you want your pointers to point to content such as `[1,<address 0]` or to the address of such content.
+
+**Task 2:**
 
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
     - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap. 
