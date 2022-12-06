@@ -98,13 +98,13 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
     **You may have to change the names of the functions.** For example, if you look at the entry for `<id>`, you will see that `_` is not allowed in names.
 
-    For this talk you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
+    For this task you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
 
 - Let me know if there are any problems, questions, etc
 
 ## Part 2 
 
-If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc), which are the starting point for Part 2 of this assignment.
+Read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc), which are the starting point for Part 2 of this assignment. (You will not need the `length` functions, they only serve to illustrate some programming techniques.)
 
 ### Programming with Linked Lists
 
@@ -136,6 +136,14 @@ It is important for this task to be memory efficient in the sense of not creatin
 
 **Remark:** My code for debugging is approximately 3 times longer than the actual program, see `test/inbetween_exercises.lc` for an example of how to do this. 
 
+**Submission:** `test/sort.lc` will contain 
+- my functions `nil, cons, hd, tl, print` from `linked-list.lc`,
+- your functions `insert` and `sort` (plus auxiliary functions you may write),
+- using the `print` function, a couple of test cases for `insert` and `sort` that execute automatically when `sort.lc` is loaded in the REPL,
+- in comments the code you used for debugging/
+
+
+
 **Extra challenge:** (10 extra points) Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
 
 - Implement a function `merge list1 list2` that merges two lists into one. 
@@ -153,5 +161,7 @@ Write the functions in pseudo code that is independent of the particular program
 
 Make drawings that contain pictures of the heap illustrating your algorithms.
 
-As usual, make some **interesting** observations about this assignment. For example, show me the most interesting work you did on testing and debugging. Maybe inspecting the heap while debugging made you think of garbage collection, a topic that would be worth exploring.
+Document known bugs (if any).
+
+Make some **interesting** observations about this assignment. For example, show me the most interesting work you did on testing and debugging. Maybe inspecting the heap while debugging made you think of garbage collection, a topic that would be worth exploring.
 
