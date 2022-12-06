@@ -1,0 +1,94 @@
+val nil = 
+    let val a = new [] in 
+    a := "NULL";
+    a ;;
+
+val cons = \e. \a. 
+    let val b = new [] in
+    b := [e,a];
+    b ;;
+
+val hd = \a.
+    case !a of {
+        "NULL"-> "tried to take the head of an empty list",
+        [e,a'] -> e 
+    } ;;
+
+val tl = \a.
+    case !a of {
+        "NULL" -> "tried to take the tail of an empty list",
+        [e,a'] -> a'
+    } ;;
+
+--------------------
+-- `inbetween n left right` take a list that looks like "left->right->..." and changes it to "left->[n,*]->right->..."
+--------------------
+
+-- this works
+val inbetween1 = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    left := !(cons (hd left) between);
+    left;;
+
+-- this is the same 
+val inbetween2 = \n.\left.\right.
+    let val between = cons n right in
+    left := !(cons (hd left) between);
+    left;;
+
+-- this is the same 
+val inbetweenA = \n.\left.\right.
+    left := !(cons (hd left) (cons n right));
+    left;;
+
+-- this is slightly different
+val inbetweenB = \n.\left.\right.
+    (cons (hd left) (cons n right));;
+
+-- WRONG: this creates a strange loop
+val inbetweenZ = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    tl(left) := !between;
+    left;;
+
+-- WRONG: this behaves the same as inbetweenZ ... why does it create a loop?
+val inbetweenY = \n.\left.\right.
+    tl left := [n, right];
+    left;;
+
+-- this works ... it is similar to the inbetweenY, but creates a new link
+val inbetweenC = \n.\left.\right.
+    let val newLink = new [] in
+    newLink := !right;
+    tl left  := [n, newLink];
+    left;;
+
+-- this is similar, with one parameter less
+val inAfter = \n.\list.
+    let val newLink = new [] in
+    newLink := !(tl list);
+    tl list := [n, newLink];
+    list;;
+
+-- EXERCISE: Compare the behaviour and "memory footprint" of inbetweenA, inbetweenB, inbetweenC. Do they implement the same algorithm?
+
+------------
+-- Testing
+------------
+
+-- Setting up the environment for debugging
+
+val a = new [];;
+val b = new [];;
+a :=  [1,nil];;
+b :=  [2,a];;
+
+-- val newLink = cons 7 a ;; 
+-- stl b := !newLink;;
+
+
+
+
+
