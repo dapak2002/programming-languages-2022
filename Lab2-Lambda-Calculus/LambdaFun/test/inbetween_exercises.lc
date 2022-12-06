@@ -102,3 +102,31 @@ between = <address 5>
 --- make it point to 1->nil so that that you get 7->1->nil
 --- then change the content of 2-> to 7->1->nil
 
+{- 
+-- SUMMARY OF THE DEBUGGING PROCESS
+
+-- PROGRAM
+
+val inbetween = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    tl(!left) := !between;
+    left;;
+
+-- DATA FOR TESTING
+
+val a = new [];;
+val b = new [];;
+a :=  [1,nil];;
+b :=  [2,a];;
+
+-- STEP BY STEP DEBUGGING
+
+-- inbetween 7 b a
+val between = new [];;
+between := [7,a];; -- 7 is n, a is right
+tl(!b) := !between;; -- b is left
+-- at this stage we find the error
+
+-}
+
