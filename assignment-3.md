@@ -124,6 +124,8 @@ It is important for this task to be memory efficient in the sense of not creatin
         [1, 2, 3, 4, 5]
         ```
 
+**Remark:** Something to think about for your implementation is whether you want your pointers to point to content such as `[1,<address 0]` or to the address of such content.
+
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
     - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap. 
     - Simlarly, 
@@ -132,8 +134,7 @@ It is important for this task to be memory efficient in the sense of not creatin
         [2,4,6]
         ```
 
-
-**Remark:** The code of the solution is not too long, but to get there requires a large amount of problem solving. Do not be surprised if you have to write more code for testing and debugging than will be contained in the actual solution. 
+**Remark:** My code for debugging is approximately 3 times longer than the actual program, see `test/inbetween_exercises.lc` for an example of how to do this. 
 
 **Extra challenge:** (10 extra points) Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
 
