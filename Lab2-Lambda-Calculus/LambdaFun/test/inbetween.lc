@@ -21,7 +21,7 @@ val tl = \a.
     } ;;
 
 --------------------
--- `inbetween n left right` take a list that looks like "left->right->..." and changes it to "left->[n,*]->right->..."
+-- `inbetween n left right` takes addresses left and right and leaves "left->[n,*]->right->..." on the heap
 --------------------
 
 -- this works
@@ -65,29 +65,20 @@ val inbetweenC = \n.\left.\right.
     tl left  := [n, newLink];
     left;;
 
--- this is similar, with one parameter less
-val inAfter = \n.\list.
-    let val newLink = new [] in
-    newLink := !(tl list);
-    tl list := [n, newLink];
-    list;;
-
 -- EXERCISE: Compare the behaviour and "memory footprint" of inbetweenA, inbetweenB, inbetweenC. Do they implement the same algorithm?
 
 ------------
 -- Testing
 ------------
 
--- Setting up the environment for debugging
+-- Setting up the environment for testing
 
 val a = new [];;
 val b = new [];;
 a :=  [1,nil];;
 b :=  [2,a];;
 
--- val newLink = cons 7 a ;; 
--- stl b := !newLink;;
-
+-- insert code for testing and debuggging below
 
 
 
