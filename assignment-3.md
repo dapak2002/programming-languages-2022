@@ -139,8 +139,8 @@ It is important for this task to be memory efficient in the sense of not creatin
 **Submission:** `test/sort.lc` will contain 
 - my functions `nil, cons, hd, tl, print` from `linked-list.lc`,
 - your functions `insert` and `sort` (plus auxiliary functions you may write),
-- using the `print` function, a couple of test cases for `insert` and `sort` that execute automatically when `sort.lc` is loaded in the REPL,
-- in comments the code you used for debugging/
+- using the `print` function a couple of test cases for `insert` and `sort` that execute automatically when `sort.lc` is loaded in the REPL,
+- in comments the code you used for debugging.
 
 
 
