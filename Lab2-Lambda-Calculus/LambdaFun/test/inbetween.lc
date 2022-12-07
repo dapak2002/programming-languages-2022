@@ -25,24 +25,43 @@ val tl = \a.
 --------------------
 
 -- this works
-val inbetween1 = \n.\left.\right.
+val inbetweenA1 = \n.\left.\right.
     let val between = new [] in
     between := [n,right]; -- between := cons n right
+    left := [hd left, between]; -- left := !(cons (hd left) between)
+    left;;
+
+-- the same with cons (slightly bigger memory footprint)
+val inbetweenA2 = \n.\left.\right.
+    let val between = new [] in
+    between := !(cons n right);
     left := !(cons (hd left) between);
     left;;
 
--- this is the same 
-val inbetween2 = \n.\left.\right.
+-- this is the same without new (slightly smaller memory footprint)
+val inbetweenA3 = \n.\left.\right.
     let val between = cons n right in
     left := !(cons (hd left) between);
     left;;
 
--- this is the same 
-val inbetweenA = \n.\left.\right.
+-- this also works
+val inbetweenA4 = \n.\left.\right.
+    let val between = cons n right in           -- creates a new element at address `between`
+    left := [hd left, between];                 -- redirects the address of the content of left to the new element
+    left;;                                      -- returns the address of left
+
+
+-- this also works
+val inbetweenA5 = \n.\left.\right.
     left := !(cons (hd left) (cons n right));
     left;;
 
--- this is slightly different
+-- the same with slightly smaller memory footprint
+val inbetweenA6 = \n.\left.\right.
+    left := [hd left,cons n right];
+    left;;
+
+-- the new list is at a different address
 val inbetweenB = \n.\left.\right.
     (cons (hd left) (cons n right));;
 
@@ -75,8 +94,8 @@ val inbetweenC = \n.\left.\right.
 
 val a = new [];;
 val b = new [];;
-a :=  [1,nil];;
-b :=  [2,a];;
+a :=  [11,nil];;
+b :=  [12,a];;
 
 -- insert code for testing and debuggging below
 

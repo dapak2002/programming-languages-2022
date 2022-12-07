@@ -56,10 +56,11 @@ Remark:
   - check with the grammar above
   - experiment by asking the REPL (which works similar to ghci in Haskell)
   - use `:tree` to see the abstract syntax tree.
-- Comments are as in Haskell.
+- Comments are as in Haskell. 
+- `case` can be used for conditionals and for pattern matching.
 - `while a do b ; c` is parsed as `(while a do b) ; c`, not as `while a do (b ; c)`
 - In `while a do b` the condition `a` should not be in parentheses.
-- Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope.
+- Definitions are known globally throughout the program. `val` defines a value, including non recursive functions. `rec` defines a recursive function. `let`-expressions are used to make local definitions with limited scope inside an expression.
 - There are built-in functions defined in all environments as follows.
 
   - One for each `<op>`.
