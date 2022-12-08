@@ -118,6 +118,8 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 13.2: Continuing from the memory model. [How to debug a LamFun function](https://github.com/alexhkurz/programming-languages-2022/blob/main/Lab2-Lambda-Calculus/LambdaFun/test/inbetween_exercises.lc).
 
+- L 14.1 and 14.2: Working on the assignment. [Feedback for Homework](feedback-hw.md).
+
 <!-- L 12.1: The [memory model](memory-model.md) of LambdaFun, version LamMem.-->
 
 
