@@ -23,7 +23,7 @@ val tl = \a.
 rec lengthRec = \l. 
     case !l of { 
         "NULL" -> 0 , 
-        _ -> 1 + length (tail l) 
+        _ -> 1 + lengthRec (tail l) 
     } ;;
 
 val length = \a. 
