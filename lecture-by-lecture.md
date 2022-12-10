@@ -110,7 +110,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 
 - L 11.2: *In which we introduce the area of Program Verification.* 
     - General remarks on [Logic in Computer Science](https://hackmd.io/@alexhkurz/SyhGzLI5Y).
-    - Introduction to [Hoare Logic](https://hackmd.io/@alexhkurz/Hy135C2tH).
+    - Introduction to [Hoare Logic](https://hackmd.io/@alexhkurz/Hy135C2tH) ... [exercises](https://hackmd.io/@alexhkurz/rkhVZNzjH).
     - Summary of the [Rules of Hoare Logic](https://hackmd.io/@alexhkurz/BJyjAXGoB). 
 - L 12.1 *In which we discover that proving is programming.* [Termination of Finitely Branching Systems](https://hackmd.io/@alexhkurz/BkNlJ07IY).  
 - L 12.2 *In which we learn the rules of logical reasoning.* 
@@ -132,8 +132,7 @@ The lambda calculus plays a foundational role in Programming Languages because i
 This didn't make it into the course, but I keep it here for future reference.
 
 - [Normalisation by Evaluation](https://hackmd.io/w9RLzXmcS86U4HVAQi5Lqg).
-- [Theorem Proving](https://hackmd.io/JrBBURefROGD1xMN44Zivw).
-
+- [Typed Lambda Calculus](https://hackmd.io/@alexhkurz/S1Sopqo6w).
 - **Theorem Proving.** (Occasionally refers back to the lectures on the Curry-Howard Correspondence and on Operational and Denotational Semantics.) In this lecture we tackle a classical AI topic, namely how to implement *human-style reasoning about algorithms and mathematics*. The starting point is [NumExp.thy](https://github.com/alexhkurz/programming-languages-2022/blob/main/src/NumExp.thy) which implements a simple example of a proof in [Isabelle](https://isabelle.in.tum.de/index.html), which is a programming language that helps us to write proofs and has a proof checker to verify that proofs are correct. We then followed my notes on [Induction](https://hackmd.io/@alexhkurz/HJG08mJvY) arriving at a *formal inductive definition of proof* in a special logic called equational logic. We also proved a simple theorem about commutativity in this logic. With this background we went back into Isabelle and `NumExp.thy` and saw how proofs are implemented as elements of an inductive data type and how the commutativity proof is formally verified in Isabelle. Finally, we looked at the same proof in Idris, a **dependently typed programming language**. Idris implements the Curry-Howard Correspondence we have seen in an earlier lecture. In particular, theorems are types, proofs are programs and proof checking is type checking. More details are available in my notes on [Theorem Proving](https://hackmd.io/@alexhkurz/BkHZL3jFS). Sam Balco provided some more files for the curious, available in [this folder](Peano-Arithmetic).
 
 
