@@ -1,0 +1,104 @@
+val nil = 
+    let val a = new [] in 
+    a := "NULL";
+    a ;;
+
+val cons = \e. \a. 
+    let val b = new [] in
+    b := [e,a];
+    b ;;
+
+val hd = \a.
+    case !a of {
+        "NULL"-> "tried to take the head of an empty list",
+        [e,a'] -> e 
+    } ;;
+
+val tl = \a.
+    case !a of {
+        "NULL" -> "tried to take the tail of an empty list",
+        [e,a'] -> a'
+    } ;;
+
+--------------------
+-- `inbetween n left right` takes addresses left and right and leaves "left->[n,*]->right->..." on the heap
+--------------------
+
+-- this works
+val inbetweenA1 = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    left := [hd left, between]; -- left := !(cons (hd left) between)
+    left;;
+
+-- the same with cons (slightly bigger memory footprint)
+val inbetweenA2 = \n.\left.\right.
+    let val between = new [] in
+    between := !(cons n right);
+    left := !(cons (hd left) between);
+    left;;
+
+-- this is the same without new (slightly smaller memory footprint)
+val inbetweenA3 = \n.\left.\right.
+    let val between = cons n right in
+    left := !(cons (hd left) between);
+    left;;
+
+-- this also works
+val inbetweenA4 = \n.\left.\right.
+    let val between = cons n right in           -- creates a new element at address `between`
+    left := [hd left, between];                 -- redirects the address of the content of left to the new element
+    left;;                                      -- returns the address of left
+
+
+-- this also works
+val inbetweenA5 = \n.\left.\right.
+    left := !(cons (hd left) (cons n right));
+    left;;
+
+-- the same with slightly smaller memory footprint
+val inbetweenA6 = \n.\left.\right.
+    left := [hd left,cons n right];
+    left;;
+
+-- the new list is at a different address
+val inbetweenB = \n.\left.\right.
+    (cons (hd left) (cons n right));;
+
+-- WRONG: this creates a strange loop
+val inbetweenZ = \n.\left.\right.
+    let val between = new [] in
+    between := [n,right]; -- between := cons n right
+    tl(left) := !between;
+    left;;
+
+-- WRONG: this behaves the same as inbetweenZ ... why does it create a loop?
+val inbetweenY = \n.\left.\right.
+    tl left := [n, right];
+    left;;
+
+-- this works ... it is similar to the inbetweenY, but creates a new link
+val inbetweenC = \n.\left.\right.
+    let val newLink = new [] in
+    newLink := !right;
+    tl left  := [n, newLink];
+    left;;
+
+-- EXERCISE: Compare the behaviour and "memory footprint" of inbetweenA, inbetweenB, inbetweenC. Do they implement the same algorithm?
+
+------------
+-- Testing
+------------
+
+-- Setting up the environment for testing
+
+val a = new [];;
+val b = new [];;
+a :=  [11,nil];;
+b :=  [12,a];;
+
+-- insert code for testing and debuggging below
+
+
+
+

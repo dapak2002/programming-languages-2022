@@ -98,13 +98,13 @@ Put a copy of [LambdaFun](https://github.com/alexhkurz/programming-languages-202
 
     **You may have to change the names of the functions.** For example, if you look at the entry for `<id>`, you will see that `_` is not allowed in names.
 
-    For this talk you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
+    For this task you should use the built-in lists of LambdaFun. Your programs will look similar to those you wrote for Assignment 2.
 
 - Let me know if there are any problems, questions, etc
 
 ## Part 2 
 
-If you want to have a look already how we will use the new features of the language, read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc), which are the starting point for Part 2 of this assignment.
+Read the discussion on the [Memory Model](Lab2-Lambda-Calculus/LambdaFun/memory-model.md) and study the examples in [linked-list.lc](https://github.com/alexhkurz/programming-languages-2022/blob/master/Lab2-Lambda-Calculus/LambdaFun/test/linked-list.lc), which are the starting point for Part 2 of this assignment. (You will not need the `length` functions, they only serve to illustrate some programming techniques.)
 
 ### Programming with Linked Lists
 
@@ -112,18 +112,41 @@ If you want to have a look already how we will use the new features of the langu
 
 It is important for this task to be memory efficient in the sense of not creating unnecessary copies of data on the heap. In particular, you should be able to write the functions below almost without using `new`. You also should avoid the built-in lists (but using built-in lists to form pairs (or tuples) as in `[a,b]` to make elements of a linked list is allowed.)
 
+**Task 1:**
+
 - Implement a function `insert n list` that inserts a number `n` into a linked list `list` of numbers.
-    - Invariant: If `list` is sorted (in ascending order) before `insert` then it must be sorted after `insert`.
+    - Invariant: If `list` is sorted (in ascending order) before executing `insert` then it must be sorted after executing `insert`.
     - Use a pointer to walk along the linked list `list` in order to insert an element at the right position. 
     - `insert` returns an address, the content of which is the first element of  `list` (after insertion).
     - See also Lecture 13.2.
     - For example, `insert 3 (insert 1 (insert 4 (insert 2 (insert 5 nil))));;` should build a sorted list on the heap. (Also test `insert` in cases where not all elements are different.)
+    - Similarly,
+        ```
+        print (insert 5 (insert 4 (insert 3 (insert 2 (insert 1 nil)))));;
+        [1, 2, 3, 4, 5]
+        ```
+
+**Remark:** Something to think about for your implementation is whether you want your pointers to point to content such as `[1,<address 0]` or to the address of such content.
+
+**Task 2:**
 
 - Implement insertion sort. That is, implement a function `sort list` that sorts a linked list `list` of numbers by repeatedly using `insert`. 
     - For example, `sort (cons 3 (cons 1 (cons 4 (cons 2 (cons 5 nil)))))` should result in a sorted list on the heap. 
+    - Simlarly, 
+        ```
+        print (sort (cons 6 (cons 4 (cons 2 nil))));;
+        [2,4,6]
+        ```
+
+**Remark:** My code for debugging is approximately 3 times longer than the actual program, see `test/inbetween_exercises.lc` for an example of how to write code for debugging. 
+
+**Submission:** `test/sort.lc` will contain 
+- my functions `nil, cons, hd, tl, print` from `linked-list.lc`,
+- your functions `insert` and `sort` (plus auxiliary functions you may write),
+- using the `print` function a couple of test cases for `insert` and `sort` that execute automatically when `sort.lc` is loaded in the REPL,
+- in comments the code you used for debugging (use `{- comment -}` for block comments).
 
 
-**Remark:** The code of the solution is not too long, but to get there requires a large amount of problem solving. Do not be surprised if you have to write more code for testing and debugging than will be contained in the actual solution. 
 
 **Extra challenge:** (10 extra points) Insertion sort is easy to implement, but has time complexity O(n^2), which is significantly worse than the known optimum of O(n log n). A well-known sorting algorithm with time complexity O(n log n) is merge sort. 
 
@@ -142,5 +165,7 @@ Write the functions in pseudo code that is independent of the particular program
 
 Make drawings that contain pictures of the heap illustrating your algorithms.
 
-As usual, make some **interesting** observations about this assignment. For example, show me the most interesting work you did on testing and debugging. Maybe inspecting the heap while debugging made you think of garbage collection, a topic that would be worth exploring.
+Document known bugs (if any).
+
+Make some **interesting** observations about this assignment. For example, show me the most interesting work you did on testing and debugging. Maybe inspecting the heap while debugging made you think of garbage collection, a topic that would be worth exploring.
 

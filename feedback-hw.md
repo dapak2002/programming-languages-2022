@@ -6,6 +6,38 @@ See also [report.md](https://github.com/alexhkurz/programming-languages-2022/blo
 
 Feedback will also be provided each Tuesday in the lecture. If you have any further questions to the homework, it would be great to see you in the office hours. 
 
+## Week 12 
+
+[On Canvas](https://canvas.chapman.edu/courses/44405/assignments/495722) ... in [my notes](https://hackmd.io/@alexhkurz/Hy135C2tH#-Homework)
+
+**Reminder:** The purpose of this exercise is to better understand verification tools that are widely used in software engineering. For a software tool to implement reasoning, it is important that every reasoning step can be justified by a precise rule.
+
+I subtracted a point if there was no serious attempt at using the rules of Hoare logic to prove the correctness of the program. I also subtracted a point if the invariant was not correct. (But I only deduced 2 points if the proposed invariant was way off.)
+
+The homework was to adapt to the program
+
+```
+while (x!=0) do z:=z*y;  x:= x-1 done
+```
+
+the work we have done in class on 
+
+```
+while (x != 0) do z:=z+y;  x:= x-1 done
+```
+
+I summarized all elements that need to go into the proof in [this picture](resources/hoare-logic-proof.jpeg). (The homework has essentially the same steps, but you need to adapt it because the program is slightly different.) 
+
+Such a picture is called a proof tree and shows all the reasoning steps. In the report you don't have to give it the form of a proof tree, but all the reasoning steps need to be there. Note that the picture is only a summary and needs additional justification, in particular, **make sure that you indicate clearly which reasoning steps use which rules of Hoare logic.**
+
+**Remark:** A table is a good method to test and debug your proposed invariant, but it does not serve as a proof that the invariant is correct.
+
+**Remark:** One of the most common mistakes was to propose an invariant, that is not an invariant. Make sure to test and debug your invariant. 
+
+Another common mistake was to propose an invariant such as `z=m*k^n`. This cannot work, because `z` changes during execution but `k,m,m` do not.
+
+
+
 ## Week 11
 
 I think we had a good discussion.
